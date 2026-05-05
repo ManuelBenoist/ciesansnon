@@ -9,6 +9,12 @@
           <p class="mt-3 text-sm text-scene-muted">
             Compagnie de théâtre
           </p>
+          <a
+            href="mailto:contact@ciesansnon.com"
+            class="mt-2 inline-block text-sm text-scene-muted hover:text-scene-gold transition-colors"
+          >
+            contact@ciesansnon.com
+          </a>
         </div>
         <div>
           <h4 class="font-body text-xs uppercase tracking-widest text-scene-light mb-4">Navigation</h4>

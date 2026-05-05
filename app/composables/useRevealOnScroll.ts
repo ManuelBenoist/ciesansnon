@@ -4,20 +4,15 @@ export interface RevealOptions {
 }
 
 export function useRevealOnScroll(options: RevealOptions = {}) {
-  const { threshold = 0.15, rootMargin = '0px 0px -50px 0px' } = options
+  const { threshold = 0.15, rootMargin = '0px 0px -40px 0px' } = options
   const target = ref<HTMLElement | null>(null)
   const isRevealed = ref(false)
 
-  const prefersReducedMotion = usePreferredReducedMotion()
-
-  const { stop } = useIntersectionObserver(
+  useIntersectionObserver(
     target,
     ([{ isIntersecting }]) => {
-      if (isIntersecting && !isRevealed.value) {
+      if (isIntersecting) {
         isRevealed.value = true
-        if (!prefersReducedMotion.value) {
-          stop()
-        }
       }
     },
     { threshold, rootMargin },
