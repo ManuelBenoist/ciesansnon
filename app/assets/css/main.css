@@ -70,15 +70,13 @@ body::after {
   }
 
   .reveal-fade-up {
-    opacity: 0;
-    transform: translateY(1.25rem);
     transition: opacity 800ms ease-out, transform 800ms ease-out;
     will-change: opacity, transform;
   }
 
-  .reveal-fade-up.reveal-visible {
-    opacity: 1;
-    transform: translateY(0);
+  .reveal-fade-up:not(.reveal-visible) {
+    opacity: 0;
+    transform: translateY(1.25rem);
   }
 }
 
