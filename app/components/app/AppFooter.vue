@@ -3,14 +3,19 @@
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
-          <NuxtLink to="/" class="font-display text-2xl text-scene-cream">
-            La Cie Sans Non
+          <NuxtLink to="/" class="inline-block">
+            <NuxtImg
+              src="/images/logo_csn.webp"
+              alt="La Cie Sans Non — Accueil"
+              class="h-10 w-auto brightness-[1.6]"
+              loading="lazy"
+            />
           </NuxtLink>
           <p class="mt-3 text-sm text-scene-muted">
             Compagnie de théâtre
           </p>
           <a
-            href="mailto:contact@ciesansnon.com"
+            href="mailto:ciesansnon@gmail.com"
             class="mt-2 inline-block text-sm text-scene-muted hover:text-scene-gold transition-colors"
           >
             ciesansnon@gmail.com

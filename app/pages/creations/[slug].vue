@@ -24,6 +24,8 @@
       </div>
     </section>
 
+    <SpectacleVideo :src="creation.video_url" />
+
     <SpectacleCasting
       :mise-en-scene="creation.mise_en_scene"
       :auteur="creation.auteur"

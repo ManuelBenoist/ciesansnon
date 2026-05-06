@@ -15,6 +15,7 @@ npm run preview    # preview production build locally
 - `components/spectacle/Card.vue` (plan: `CardSpectacle.vue`)
 - `plugins/motion.client.ts` (plan: `scroll-reveal.client.ts`)
 - `<NuxtImg>` migration done — all images use `<NuxtImg>` with `data-nuxt-img`, no more CSS `background-image`
+- Logo (`logo_csn.webp`) has dark colors on dark background → uses `brightness-[1.6]` filter in header/footer/nav. If a new logo is provided, remove the `brightness-[1.6]` class from `AppHeader`, `AppFooter`, `AppNav`.
 - `content.config.ts` is required for Nuxt Content v3 collections (without it, `queryCollection` can't `where`/`order` on custom fields)
 - Content collections use `type: 'page'` + `zod` schema so custom YAML fields become queryable SQL columns
 

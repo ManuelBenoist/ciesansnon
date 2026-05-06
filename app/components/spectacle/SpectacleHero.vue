@@ -22,7 +22,7 @@
         {{ titre }}
       </h1>
 
-      <div class="flex gap-4 mt-3 font-body text-sm text-scene-muted">
+      <div class="flex gap-4 mt-3 font-body text-sm text-scene-light/60">
         <span v-if="annee">{{ annee }}</span>
         <span v-if="annee && duree" class="text-scene-border">|</span>
         <span v-if="duree">{{ duree }}</span>

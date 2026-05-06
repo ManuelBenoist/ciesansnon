@@ -45,9 +45,9 @@ withDefaults(defineProps<{
   description?: string
   vignetteStrength?: number
 }>(), {
-  image: 'https://picsum.photos/seed/ciesansnon-hero/1920/1080',
+  image: '/images/hero-homepage.jpg',
   baseline: 'Compagnie de théâtre',
-  description: 'Des mots, des corps, des silences — un théâtre qui ne dit jamais non à la vie.',
+  description: 'Le théâtre : un “notre” monde',
   vignetteStrength: 0.6,
 })
 

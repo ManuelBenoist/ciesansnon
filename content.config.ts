@@ -44,6 +44,7 @@ export default defineContentConfig({
         seo_description: z.string(),
         ordre: z.number(),
         featured: z.boolean().optional(),
+        video_url: z.string().optional(),
       }),
     }),
     membres: defineCollection({

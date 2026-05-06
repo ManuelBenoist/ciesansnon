@@ -8,10 +8,14 @@
         <div class="flex items-center justify-between p-6">
           <NuxtLink
             to="/"
-            class="font-display text-xl text-scene-cream"
             @click="close"
           >
-            La Cie Sans Non
+            <NuxtImg
+              src="/images/logo_csn.webp"
+              alt="La Cie Sans Non — Accueil"
+              class="h-8 w-auto brightness-[1.6]"
+              loading="eager"
+            />
           </NuxtLink>
           <button
             class="p-2 text-scene-light hover:text-scene-gold transition-colors"

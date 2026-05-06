@@ -25,7 +25,11 @@
         </UiButton>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <div v-if="!creations?.length" class="text-center py-10">
+        <p class="font-body text-scene-muted text-sm">Aucune création pour le moment.</p>
+      </div>
+
+      <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         <div
           v-for="(creation, index) in creations"
           :key="creation.slug"
@@ -37,8 +41,8 @@
             :titre="creation.titre"
             :slug="creation.slug"
             :statut="creation.statut"
-            :image="creation.image"
-            :accroche="creation.accroche"
+            :image="creation.image_affiche || `https://picsum.photos/seed/${creation.slug}/800/1067`"
+            :accroche="creation.accroche || ''"
           />
         </div>
       </div>
@@ -47,30 +51,9 @@
 </template>
 
 <script setup lang="ts">
-interface Creation {
-  titre: string
-  slug: string
-  statut: 'en-creation' | 'en-tournee' | 'archive'
-  image: string
-  accroche: string
-}
-
-const creations: Creation[] = [
-  {
-    titre: 'Simple',
-    slug: 'simple',
-    statut: 'en-creation',
-    image: 'https://picsum.photos/seed/simple-creation/800/1067',
-    accroche: 'Une pièce nue, essentielle, où chaque silence porte plus que les mots.',
-  },
-  {
-    titre: 'Venavi',
-    slug: 'venavi',
-    statut: 'en-tournee',
-    image: 'https://picsum.photos/seed/venavi-creation/800/1067',
-    accroche: 'Un voyage entre deux mondes, deux langues, deux silences.',
-  },
-]
+const { data: creations } = await useAsyncData('home-creations', () =>
+  queryCollection('creations').where('featured', '==', true).order('ordre', 'ASC').all()
+)
 
 const { target: headerTarget } = useRevealOnScroll()
 
@@ -78,11 +61,9 @@ const cardRefs = ref<HTMLElement[]>([])
 
 onMounted(() => {
   setTimeout(() => {
-    cardRefs.value.forEach((el, index) => {
+    cardRefs.value.forEach((el) => {
       if (!el) return
       const rect = el.getBoundingClientRect()
-      const cardIndex = index
-
       if (rect.top >= window.innerHeight || rect.bottom <= 0) {
         el.classList.remove('reveal-visible')
         const { stop } = useIntersectionObserver(

@@ -36,9 +36,11 @@
 
         <div class="order-1 lg:order-2">
           <div class="relative aspect-[4/5] overflow-hidden">
-            <div
-              class="absolute inset-0 bg-cover bg-center"
-              style="background-image: url('https://picsum.photos/seed/action-culturelle/800/1000')"
+            <NuxtImg
+              src="/images/action-culturelle.jpg"
+              alt="Action culturelle — La Cie Sans Non"
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
             />
             <div class="absolute inset-0 bg-gradient-to-r from-scene-black/30 to-transparent lg:from-transparent lg:to-scene-black/20" />
           </div>

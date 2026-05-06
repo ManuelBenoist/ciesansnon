@@ -1,5 +1,5 @@
 <template>
-  <div v-if="hasData" class="py-16 sm:py-20 bg-scene-dark">
+  <div v-if="hasData" class="py-16 sm:py-20 bg-scene-black">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="font-display text-display-lg text-scene-cream mb-10">
         Distribution & équipe

@@ -14,7 +14,7 @@ galerie:
   - "/images/creations/venavi/galerie-5.jpg"
   - "/images/creations/venavi/galerie-6.jpg"
 alt_hero: "Scène de VENAVI — Olivier Sangwa sur scène"
-accroche: "Un voyage entre deux mondes, deux langues, deux silences."
+accroche: "Deux jumeaux, un secret trop lourd — un conte africain seul en scène."
 mise_en_scene: "Marie-Hélène BENOIST, Félix BENOIST"
 auteur: "Rodrigue Norman (conte africain), adapté par Catherine Verlaguet"
 casting:
@@ -27,14 +27,13 @@ equipe_technique:
     nom: "Jean-Philippe DIMEGLIO"
   - poste: "Teaser"
     nom: "Anouck d'Onofrio"
+video_url: "/videos/venavi-teaser.mp4"
 dates: []
 seo_title: "VENAVI — Création théâtrale | La Cie Sans Non"
 seo_description: "VENAVI, un conte africain adapté par Catherine Verlaguet, mis en scène par Marie-Hélène et Félix Benoist. Un seul en scène par Olivier Sangwa."
 ordre: 2
 featured: true
 ---
-
-## Note d'intention
 
 VENAVI est un conte africain de Rodrigue Norman, adapté par Catherine Verlaguet.
 

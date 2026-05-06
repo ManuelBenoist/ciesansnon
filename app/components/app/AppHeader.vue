@@ -8,8 +8,13 @@
     ]"
   >
     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <NuxtLink to="/" class="font-display text-xl text-scene-cream relative z-20">
-        La Cie Sans Non
+      <NuxtLink to="/" class="block relative z-20 shrink-0">
+        <NuxtImg
+          src="/images/logo_csn.webp"
+          alt="La Cie Sans Non — Accueil"
+          class="h-8 w-auto brightness-[1.6]"
+          loading="eager"
+        />
       </NuxtLink>
 
       <ul class="hidden lg:flex items-center gap-8">

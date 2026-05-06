@@ -1,5 +1,5 @@
 <template>
-  <div class="py-12 sm:py-16 bg-scene-black border-t border-scene-border">
+  <div class="py-12 sm:py-16 bg-scene-dark border-t border-scene-border">
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex justify-between items-start gap-6">
         <NuxtLink
