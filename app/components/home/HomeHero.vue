@@ -1,12 +1,13 @@
 <template>
   <section class="relative h-screen min-h-[80svh] flex items-center justify-center overflow-hidden">
-    <div
-      ref="heroImageRef"
-      class="absolute inset-0 bg-cover bg-center scale-105"
-      :style="{ backgroundImage: `url('${image}')` }"
-      role="img"
-      aria-label="Scène de spectacle — La Cie Sans Non"
-    />
+    <div ref="heroImageRef" class="absolute inset-0">
+      <NuxtImg
+        :src="image"
+        alt="Scène de spectacle — La Cie Sans Non"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
 
     <div class="absolute inset-0 bg-gradient-to-t from-scene-black via-scene-black/40 to-transparent" />
 

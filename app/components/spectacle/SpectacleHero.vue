@@ -1,11 +1,11 @@
 <template>
-  <section class="relative min-h-[60vh] sm:min-h-[70vh] flex items-end bg-scene-black">
-    <div
+  <section class="relative min-h-[60vh] sm:min-h-[70vh] flex items-end bg-scene-black overflow-hidden">
+    <NuxtImg
       v-if="image"
-      class="absolute inset-0 bg-cover bg-center"
-      :style="{ backgroundImage: `url('${image}')` }"
-      role="img"
-      :aria-label="alt || titre"
+      :src="image"
+      :alt="alt || titre"
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="lazy"
     />
     <div class="absolute inset-0 bg-gradient-to-t from-scene-black via-scene-black/60 to-transparent" />
 

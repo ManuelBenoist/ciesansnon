@@ -3,11 +3,11 @@
     :to="`/creations/${slug}`"
     class="group relative block aspect-[3/4] overflow-hidden border-b-2 border-transparent hover:border-scene-gold transition-colors duration-500"
   >
-    <div
-      class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-      :style="{ backgroundImage: `url('${image}')` }"
-      role="img"
-      :aria-label="`Affiche du spectacle ${titre}`"
+    <NuxtImg
+      :src="image"
+      :alt="`Affiche du spectacle ${titre}`"
+      class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      loading="lazy"
     />
 
     <div class="absolute inset-0 bg-gradient-to-t from-scene-black via-scene-black/20 to-transparent" />

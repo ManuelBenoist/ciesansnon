@@ -1,11 +1,11 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-    <div class="aspect-[3/4] overflow-hidden rounded-sm">
-      <div
-        class="w-full h-full bg-cover bg-center"
-        :style="{ backgroundImage: `url('${photo}')` }"
-        role="img"
-        :aria-label="`Portrait de ${nom}`"
+    <div class="relative aspect-[3/4] overflow-hidden rounded-sm">
+      <NuxtImg
+        :src="photo"
+        :alt="`Portrait de ${nom}`"
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
       />
     </div>
     <div class="flex flex-col justify-center">

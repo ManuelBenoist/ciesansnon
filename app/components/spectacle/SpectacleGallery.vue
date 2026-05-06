@@ -9,11 +9,17 @@
         <button
           v-for="(img, i) in images"
           :key="i"
-          class="aspect-[4/3] bg-cover bg-center rounded-sm overflow-hidden hover:opacity-85 transition-opacity"
-          :style="{ backgroundImage: `url('${img}')` }"
+          class="relative aspect-[4/3] rounded-sm overflow-hidden hover:opacity-85 transition-opacity"
           @click="openGallery(i)"
           :aria-label="`Photo ${i + 1}`"
-        />
+        >
+          <NuxtImg
+            :src="img"
+            :alt="`Photo ${i + 1}`"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+        </button>
       </div>
 
       <UiLightbox
