@@ -6,6 +6,8 @@
     <div
       class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
       :style="{ backgroundImage: `url('${image}')` }"
+      role="img"
+      :aria-label="`Affiche du spectacle ${titre}`"
     />
 
     <div class="absolute inset-0 bg-gradient-to-t from-scene-black via-scene-black/20 to-transparent" />

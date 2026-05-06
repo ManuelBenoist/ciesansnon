@@ -13,7 +13,7 @@
             href="mailto:contact@ciesansnon.com"
             class="mt-2 inline-block text-sm text-scene-muted hover:text-scene-gold transition-colors"
           >
-            contact@ciesansnon.com
+            ciesansnon@gmail.com
           </a>
         </div>
         <div>
@@ -66,8 +66,8 @@ const links = [
 ]
 
 const socials = [
-  { name: 'Instagram', icon: 'mdi:instagram', url: '#' },
-  { name: 'Facebook', icon: 'mdi:facebook', url: '#' },
+  { name: 'Instagram', icon: 'mdi:instagram', url: 'https://www.instagram.com/cie_sans_non' },
+  { name: 'Facebook', icon: 'mdi:facebook', url: 'https://www.facebook.com/Ciesansnon' },
   { name: 'YouTube', icon: 'mdi:youtube', url: '#' },
 ]
 </script>

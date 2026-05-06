@@ -4,6 +4,8 @@
       <div
         class="w-full h-full bg-cover bg-center"
         :style="{ backgroundImage: `url('${photo}')` }"
+        role="img"
+        :aria-label="`Portrait de ${nom}`"
       />
     </div>
     <div class="flex flex-col justify-center">

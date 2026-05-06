@@ -23,7 +23,7 @@ npm run preview    # preview production build locally
 - Phase 2 (UI components): 90% — all exist, naming differs slightly
 - Phase 3 (static pages): 85% — HomeActus & OrganigrammeSection missing
 - Phase 4 (dynamic creations): 70% — index.vue + [slug].vue done, all 5 spectacle components built, VENAVI content complete with photos, Simple has placeholder content
-- Phase 5 (finish/deploy): ~20% — robots.txt done, no CI/CD, no OG images
+- Phase 5 (finish/deploy): ~30% — robots.txt + OG image done, a11y audit + fixes applied
 
 ## Key architectural facts
 - Nuxt 4 with `future: { compatibilityVersion: 4 }` — app/ directory as app root

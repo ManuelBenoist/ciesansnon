@@ -45,10 +45,10 @@
                   Email
                 </h3>
                 <a
-                  href="mailto:contact@ciesansnon.com"
+                  href="mailto:ciesansnon@gmail.com"
                   class="text-scene-light hover:text-scene-gold transition-colors text-sm"
                 >
-                  contact@ciesansnon.com
+                  ciesansnon@gmail.com
                 </a>
               </div>
 
@@ -57,11 +57,11 @@
                   Réseaux sociaux
                 </h3>
                 <div class="flex items-center gap-4">
-                  <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"
+                  <a href="https://www.instagram.com/cie_sans_non" aria-label="Instagram" target="_blank" rel="noopener noreferrer"
                     class="text-scene-muted hover:text-scene-gold transition-colors p-2">
                     <Icon name="mdi:instagram" size="22" />
                   </a>
-                  <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"
+                  <a href="https://www.facebook.com/Ciesansnon" aria-label="Facebook" target="_blank" rel="noopener noreferrer"
                     class="text-scene-muted hover:text-scene-gold transition-colors p-2">
                     <Icon name="mdi:facebook" size="22" />
                   </a>
@@ -119,7 +119,7 @@ useHead({
       '@type': 'Organization',
       name: 'La Cie Sans Non',
       url: 'https://ciesansnon.com/contact',
-      email: 'contact@ciesansnon.com',
+      email: 'ciesansnon@gmail.com',
     }),
   }],
 })

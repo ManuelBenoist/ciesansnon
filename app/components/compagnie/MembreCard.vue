@@ -7,6 +7,8 @@
       <div
         class="absolute inset-0 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700"
         :style="{ backgroundImage: `url('${photo}')` }"
+        role="img"
+        :aria-label="`Portrait de ${nom}`"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-scene-black via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
     </div>

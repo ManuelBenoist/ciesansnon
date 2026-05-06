@@ -4,6 +4,8 @@
       ref="heroImageRef"
       class="absolute inset-0 bg-cover bg-center scale-105"
       :style="{ backgroundImage: `url('${image}')` }"
+      role="img"
+      aria-label="Scène de spectacle — La Cie Sans Non"
     />
 
     <div class="absolute inset-0 bg-gradient-to-t from-scene-black via-scene-black/40 to-transparent" />
