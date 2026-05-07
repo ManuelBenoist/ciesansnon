@@ -34,6 +34,8 @@ equipe_technique:
     nom: "Vasil TASEVSKI"
   - poste: "Création costumes"
     nom: "Lucie DURANTEAU"
+  - poste: "Photographe plateau"
+    nom: "Laure BAUER-TRAUNECKER"
 dates: []
 video_url: "https://youtu.be/9ldGa8VGn3o"
 seo_title: "SIMPLE — Création théâtrale | La Cie Sans Non"

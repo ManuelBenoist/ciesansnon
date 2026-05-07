@@ -36,6 +36,8 @@ equipe_technique:
     nom: "Khaled RABAH"
   - poste: "Régie Lumières (installation autonome)"
     nom: "Félix BENOIST"
+  - poste: "Photographe plateau"
+    nom: "Laure BAUER-TRAUNECKER"
 video_url: "/videos/venavi-teaser.mp4"
 dates: []
 seo_title: "VENAVI — Création théâtrale | La Cie Sans Non"
