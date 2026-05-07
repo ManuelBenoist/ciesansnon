@@ -3,27 +3,24 @@ import { readdirSync, unlinkSync } from 'fs'
 import { join } from 'path'
 
 const dirs = [
-  { path: 'public/images/creations/venavi', prefix: 'galerie-', start: 1 },
-  { path: 'public/images/creations/simple', prefix: 'galerie-', start: 1 },
+  { path: 'public/images/creations/venavi' },
+  { path: 'public/images/creations/simple' },
 ]
 
-for (const { path, prefix, start } of dirs) {
+for (const { path } of dirs) {
   const files = readdirSync(path)
-    .filter(f => /\.(JPG|jpeg|jpg|PNG|png)$/i.test(f))
-    .sort()
+    .filter(f => /\.(jpeg|jpg|JPG|JPEG)$/i.test(f) && f.startsWith('galerie-'))
+    .sort((a, b) => {
+      const na = parseInt(a.match(/(\d+)/)?.[1] || '0', 10)
+      const nb = parseInt(b.match(/(\d+)/)?.[1] || '0', 10)
+      return na - nb
+    })
 
-  let count = start
   for (const file of files) {
-    const name = file.replace(/\.(JPG|jpeg|jpg|PNG|png)$/i, '')
-    if (name.toLowerCase() === 'affiche' || name.toLowerCase() === 'hero') {
-      console.log(`Skipping: ${file}`)
-      continue
-    }
-
+    const num = file.match(/(\d+)/)?.[1]
     const inputPath = join(path, file)
-    const outputPath = join(path, `${prefix}${count}.webp`)
-
-    console.log(`${file} → ${prefix}${count}.webp`)
+    const outputPath = join(path, `galerie-${num}.webp`)
+    console.log(`${file} → galerie-${num}.webp`)
 
     const img = sharp(inputPath)
     const meta = await img.metadata()
@@ -31,11 +28,10 @@ for (const { path, prefix, start } of dirs) {
 
     await img
       .resize(Math.min(width, 2000), undefined, { fit: 'inside', withoutEnlargement: true })
-      .webp({ quality: 80 })
+      .webp({ quality: 95 })
       .toFile(outputPath)
 
     unlinkSync(inputPath)
-    count++
   }
 }
 
