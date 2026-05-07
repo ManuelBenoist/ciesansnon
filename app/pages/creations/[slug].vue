@@ -13,7 +13,7 @@
     />
 
     <section class="py-16 sm:py-20 bg-scene-black">
-      <div class="max-w-4xl mx-auto px-6">
+      <div class="max-w-7xl mx-auto px-6">
         <ContentRenderer :value="creation">
           <template #empty>
             <p class="font-body text-scene-muted italic leading-relaxed">
@@ -24,7 +24,9 @@
       </div>
     </section>
 
-    <SpectacleVideo :src="creation.video_url" />
+    <SpectacleCarousel
+      :images="creation.galerie || []"
+    />
 
     <SpectacleCasting
       :mise-en-scene="creation.mise_en_scene"
@@ -33,9 +35,7 @@
       :equipe-technique="creation.equipe_technique"
     />
 
-    <SpectacleGallery
-      :images="creation.galerie || []"
-    />
+    <SpectacleVideo :src="creation.video_url" />
 
     <SpectacleDates
       :dates="creation.dates || []"

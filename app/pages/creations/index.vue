@@ -5,12 +5,9 @@
         <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-gold mb-3">
           La Cie Sans Non
         </p>
-        <h1 class="font-display text-display-2xl text-scene-cream">
+        <h1 class="font-display text-display-xl text-scene-cream">
           Créations
         </h1>
-        <p class="font-body text-sm text-scene-muted mt-4 max-w-2xl leading-relaxed">
-          Disponibles en tournée, pour des salles équipées ou en version autonome techniquement — pour toucher le plus grand nombre.
-        </p>
       </div>
 
       <div v-if="!creations?.length" class="text-center py-20">

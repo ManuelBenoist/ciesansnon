@@ -13,14 +13,10 @@
             Actions culturelles
           </h2>
           <p class="font-body text-scene-light/80 text-base leading-relaxed mb-4">
-            Aller vers tous les publics. La Cie Sans Non conçoit des projets de médiation culturelle 
-            aux côtés des établissements scolaires, des structures spécialisées et des quartiers 
-            prioritaires.
+            Année après année, la compagnie Sans Non mène des ateliers de pratique artistique en direction des publics jeunes vivant en quartier prioritaire.
           </p>
           <p class="font-body text-scene-muted text-sm leading-relaxed mb-8">
-            Ateliers de pratique artistique, rencontres avec les artistes, parcours de découverte — 
-            chaque action est pensée sur mesure, dans la durée, avec la conviction que l'art de la 
-            scène appartient à tout le monde.
+            Jeu, chant, danse, acrobatie : les projets, accessibles à tous, ont permis d'initier aux arts de la scène des centaines de jeunes de 11 à 25 ans en les fédérant autour d'un spectacle musical sur un thème qui touche notre humanité commune.
           </p>
           <UiButton
             label="Découvrir nos actions"
@@ -37,7 +33,7 @@
         <div class="order-1 lg:order-2">
           <div class="relative aspect-[4/5] overflow-hidden">
             <NuxtImg
-              src="/images/action-culturelle.jpg"
+              src="/images/actions-culturelles.jpeg"
               alt="Action culturelle — La Cie Sans Non"
               class="absolute inset-0 w-full h-full object-cover"
               loading="lazy"

@@ -16,17 +16,19 @@ galerie:
 alt_hero: "Scène de VENAVI — Olivier Sangwa sur scène"
 accroche: "Deux jumeaux, un secret trop lourd — un conte africain seul en scène."
 mise_en_scene: "Marie-Hélène BENOIST, Félix BENOIST"
-auteur: "Rodrigue Norman (conte africain), adapté par Catherine Verlaguet"
+auteur: "Catherine VERLAGUET (adaptation, commande du Festival Odyssées en Yvelines, du CDN de Sartrouville) d'après une œuvre de Yao NORMAN"
 casting:
   - nom: "Olivier Sangwa"
     role: "Seul en scène"
+  - nom: "Vivien BENOIST, Marie-Hélène BENOIST"
+    role: "Accompagnement musical et vocal"
 equipe_technique:
-  - poste: "Régie lumière"
+  - poste: "Création Lumières"
+    nom: "Félix BENOIST, Khaled RABAH"
+  - poste: "Dispositif Lumières"
+    nom: "Khaled RABAH"
+  - poste: "Régie Lumières (installation autonome)"
     nom: "Félix BENOIST"
-  - poste: "Photographie"
-    nom: "Jean-Philippe DIMEGLIO"
-  - poste: "Teaser"
-    nom: "Anouck d'Onofrio"
 video_url: "/videos/venavi-teaser.mp4"
 dates: []
 seo_title: "VENAVI — Création théâtrale | La Cie Sans Non"
@@ -42,5 +44,3 @@ C'est l'histoire de deux jumeaux. Les jumeaux sont sacrés dans le village où i
 Ce spectacle est interprété, seul en scène, par Olivier Sangwa. En 1h, il porte tous les personnages de ce conte haut en couleurs, tour à tour drôle et tragique. Il est accompagné musicalement sur scène.
 
 Le dispositif scénique, très simple, permet de jouer le spectacle aussi bien dans des salles équipées (pour une jauge jusqu'à 150 spectateurs environ) que dans des lieux aux dimensions limitées (salle polyvalente des lycées, réfectoires d'associations où l'on peut faire le noir, etc.).
-
-Spectacle disponible en tournée. Contactez la Cie Sans Non si vous êtes intéressé !
