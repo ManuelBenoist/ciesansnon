@@ -69,8 +69,8 @@
       <p v-if="errors.message" id="error-message" class="form-error">{{ errors.message }}</p>
     </div>
 
-    <div v-if="state.status === 'success'" class="p-4 border border-scene-gold/30 bg-scene-gold/5 rounded-sm">
-      <p class="text-scene-gold text-sm font-body">{{ state.message }}</p>
+    <div v-if="state.status === 'success'" class="p-4 border border-scene-brick/30 bg-scene-brick/5 rounded-sm">
+      <p class="text-scene-brick text-sm font-body">{{ state.message }}</p>
     </div>
 
     <div v-if="state.status === 'error'" class="p-4 border border-scene-rouge/30 bg-scene-rouge/5 rounded-sm">
@@ -166,7 +166,7 @@ async function onSubmit() {
 }
 
 .form-input:focus {
-  border-color: #c9a84c;
+  border-color: #C4573A;
 }
 
 .form-input::placeholder {

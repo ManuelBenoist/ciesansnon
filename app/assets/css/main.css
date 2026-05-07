@@ -1,9 +1,9 @@
-@import '@fontsource/cormorant-garamond/300.css';
-@import '@fontsource/cormorant-garamond/400.css';
-@import '@fontsource/cormorant-garamond/500.css';
 @import '@fontsource/cormorant-garamond/600.css';
-@import '@fontsource/cormorant-garamond/400-italic.css';
-@import '@fontsource/cormorant-garamond/500-italic.css';
+@import '@fontsource/nunito-sans/300.css';
+@import '@fontsource/nunito-sans/400.css';
+@import '@fontsource/nunito-sans/500.css';
+@import '@fontsource/nunito-sans/600.css';
+@import '@fontsource/nunito-sans/700.css';
 @import '@fontsource/dm-sans/300.css';
 @import '@fontsource/dm-sans/400.css';
 @import '@fontsource/dm-sans/500.css';
@@ -15,8 +15,7 @@
 :root {
   --grain-opacity: 0.055;
   --vignette-strength: 0.6;
-  --transition-page: 400ms ease;
-  --spotlight-color: rgba(201, 168, 76, 0.06);
+  --transition-page: 250ms ease;
 }
 
 html {
@@ -35,7 +34,7 @@ body {
 }
 
 *:focus-visible {
-  outline: 2px solid #c9a84c;
+  outline: 2px solid #C4573A;
   outline-offset: 2px;
 }
 
@@ -63,7 +62,7 @@ body::after {
     left: 0;
     right: 0;
     height: 1px;
-    background: #c9a84c;
+    background: #C4573A;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 300ms ease;

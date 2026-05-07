@@ -12,10 +12,10 @@
       <h3 class="font-display text-3xl sm:text-4xl text-scene-cream mb-2">
         {{ nom }}
       </h3>
-      <p class="font-body text-base text-scene-gold mb-6">
+      <p class="font-body text-base text-scene-brick mb-6">
         {{ role }}
       </p>
-      <div class="w-12 h-px bg-scene-gold/40 mb-6" />
+      <div class="w-12 h-px bg-[#2a2a2a] mb-6" />
       <div class="font-body text-scene-light/80 leading-relaxed text-sm space-y-4">
         <p v-if="bio">{{ bio }}</p>
         <p v-else class="text-scene-muted italic">Biographie à venir.</p>

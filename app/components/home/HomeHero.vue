@@ -21,10 +21,10 @@
     />
 
     <div class="relative z-10 text-center px-6 max-w-5xl">
-      <p class="font-body text-xs sm:text-sm uppercase tracking-[0.35em] text-scene-gold mb-6">
+      <p class="font-body text-xs sm:text-sm uppercase tracking-[0.35em] text-scene-brick mb-6">
         {{ baseline }}
       </p>
-      <h1 class="font-display text-display-2xl text-scene-cream leading-none mb-8">
+      <h1 class="font-serif text-display-2xl text-scene-cream leading-none mb-8">
         La Cie Sans Non
       </h1>
       <p class="font-body text-scene-light/80 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
@@ -67,7 +67,7 @@ watch(y, (scrollY) => {
 .scroll-indicator {
   width: 1px;
   height: 60px;
-  background: linear-gradient(to bottom, transparent, rgba(201, 168, 76, 0.5));
+  background: linear-gradient(to bottom, transparent, rgba(196, 87, 58, 0.5));
   animation: scrollPulse 2s ease-in-out infinite;
 }
 

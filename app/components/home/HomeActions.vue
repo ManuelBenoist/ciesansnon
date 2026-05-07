@@ -6,10 +6,10 @@
         :class="['reveal-fade-up reveal-visible grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center']"
       >
         <div class="order-2 lg:order-1">
-          <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-gold mb-4">
+          <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-4">
             Engagement
           </p>
-          <h2 class="font-display text-display-lg text-scene-cream mb-6">
+          <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-6">
             Actions culturelles
           </h2>
           <p class="font-body text-scene-light/80 text-base leading-relaxed mb-4">

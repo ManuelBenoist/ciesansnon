@@ -5,10 +5,10 @@
         ref="heroTarget"
         :class="['reveal-fade-up reveal-visible max-w-4xl mx-auto']"
       >
-        <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-gold mb-4">
+        <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-4">
           Échangeons
         </p>
-        <h1 class="font-display text-display-xl text-scene-cream mb-8">
+        <h1 class="font-display font-bold text-display-xl text-scene-cream mb-8">
           Contact
         </h1>
         <p class="font-body text-scene-light/80 text-lg leading-relaxed max-w-xl">
@@ -25,7 +25,7 @@
             ref="formTarget"
             :class="['reveal-fade-up reveal-visible lg:col-span-3']"
           >
-            <h2 class="font-display text-3xl text-scene-cream mb-8">
+            <h2 class="font-display font-semibold text-3xl text-scene-cream mb-8">
               Envoyez-nous un message
             </h2>
             <ContactForm />
@@ -35,7 +35,7 @@
             ref="infoTarget"
             :class="['reveal-fade-up reveal-visible lg:col-span-2']"
           >
-            <h2 class="font-display text-3xl text-scene-cream mb-8">
+            <h2 class="font-display font-semibold text-3xl text-scene-cream mb-8">
               Nos coordonnées
             </h2>
 
@@ -46,7 +46,7 @@
                 </h3>
                 <a
                   href="mailto:ciesansnon@gmail.com"
-                  class="text-scene-light hover:text-scene-gold transition-colors text-sm"
+                  class="text-scene-light hover:text-scene-brick transition-colors text-sm"
                 >
                   ciesansnon@gmail.com
                 </a>
@@ -58,15 +58,15 @@
                 </h3>
                 <div class="flex items-center gap-4">
                   <a href="https://www.instagram.com/cie_sans_non" aria-label="Instagram" target="_blank" rel="noopener noreferrer"
-                    class="text-scene-muted hover:text-scene-gold transition-colors p-2">
+                    class="text-scene-muted hover:text-scene-brick transition-colors p-2">
                     <Icon name="mdi:instagram" size="22" />
                   </a>
                   <a href="https://www.facebook.com/Ciesansnon" aria-label="Facebook" target="_blank" rel="noopener noreferrer"
-                    class="text-scene-muted hover:text-scene-gold transition-colors p-2">
+                    class="text-scene-muted hover:text-scene-brick transition-colors p-2">
                     <Icon name="mdi:facebook" size="22" />
                   </a>
                   <a href="#" aria-label="YouTube" target="_blank" rel="noopener noreferrer"
-                    class="text-scene-muted hover:text-scene-gold transition-colors p-2">
+                    class="text-scene-muted hover:text-scene-brick transition-colors p-2">
                     <Icon name="mdi:youtube" size="22" />
                   </a>
                 </div>

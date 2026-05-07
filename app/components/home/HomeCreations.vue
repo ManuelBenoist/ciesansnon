@@ -6,10 +6,10 @@
         :class="['reveal-fade-up reveal-visible flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12']"
       >
         <div>
-          <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-gold mb-3">
+          <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-3">
             Nos créations
           </p>
-          <h2 class="font-display text-display-lg text-scene-cream">
+          <h2 class="font-display font-semibold text-display-lg text-scene-cream">
             À l'affiche
           </h2>
         </div>

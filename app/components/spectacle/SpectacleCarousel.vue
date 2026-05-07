@@ -35,7 +35,7 @@
             v-for="(_, i) in images"
             :key="i"
             class="w-2 h-2 rounded-full transition-all duration-300"
-            :class="i === current ? 'bg-scene-gold w-5' : 'bg-scene-light/30 hover:bg-scene-light/50'"
+            :class="i === current ? 'bg-scene-brick w-5' : 'bg-scene-light/30 hover:bg-scene-light/50'"
             @click="goTo(i)"
             :aria-label="`Photo ${i + 1}`"
           />

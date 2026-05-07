@@ -18,7 +18,7 @@
             />
           </NuxtLink>
           <button
-            class="p-2 text-scene-light hover:text-scene-gold transition-colors"
+            class="p-2 text-scene-light hover:text-scene-brick transition-colors"
             @click="close"
             aria-label="Fermer le menu"
           >
@@ -31,7 +31,7 @@
             v-for="(link, i) in links"
             :key="link.to"
             :to="link.to"
-            class="font-display text-display-lg text-scene-light hover:text-scene-gold transition-colors"
+            class="font-display text-display-lg text-scene-light hover:text-scene-brick transition-colors"
             :style="{ transitionDelay: isOpen ? `${i * 80}ms` : '0ms' }"
             @click="close"
           >
@@ -47,7 +47,7 @@
             :aria-label="social.name"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-scene-muted hover:text-scene-gold transition-colors"
+            class="text-scene-muted hover:text-scene-brick transition-colors"
           >
             <Icon :name="social.icon" size="22" />
           </a>

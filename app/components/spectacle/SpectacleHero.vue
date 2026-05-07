@@ -11,14 +11,14 @@
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 pb-12 sm:pb-16 w-full">
       <nav class="font-body text-xs uppercase tracking-widest text-scene-muted mb-4">
-        <NuxtLink to="/" class="hover:text-scene-gold transition-colors">Accueil</NuxtLink>
+        <NuxtLink to="/" class="hover:text-scene-brick transition-colors">Accueil</NuxtLink>
         <span class="mx-2">/</span>
-        <NuxtLink to="/creations" class="hover:text-scene-gold transition-colors">Créations</NuxtLink>
+        <NuxtLink to="/creations" class="hover:text-scene-brick transition-colors">Créations</NuxtLink>
         <span class="mx-2">/</span>
         <span class="text-scene-light/60">{{ titre }}</span>
       </nav>
 
-      <h1 class="font-display text-display-xl sm:text-display-2xl text-scene-cream">
+      <h1 class="font-display font-bold text-display-xl sm:text-display-2xl text-scene-cream">
         {{ titre }}
       </h1>
 

@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-scene-black border-t border-scene-border py-16 px-6">
+  <footer class="bg-[#111111] border-t border-scene-border py-16 px-6">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
@@ -16,7 +16,7 @@
           </p>
           <a
             href="mailto:ciesansnon@gmail.com"
-            class="mt-2 inline-block text-sm text-scene-muted hover:text-scene-gold transition-colors"
+            class="mt-2 inline-block text-sm text-scene-muted hover:text-scene-brick transition-colors"
           >
             ciesansnon@gmail.com
           </a>
@@ -27,7 +27,7 @@
             <li v-for="link in links" :key="link.to">
               <NuxtLink
                 :to="link.to"
-                class="text-sm text-scene-muted hover:text-scene-gold transition-colors"
+                class="text-sm text-scene-muted hover:text-scene-brick transition-colors"
               >
                 {{ link.label }}
               </NuxtLink>
@@ -44,7 +44,7 @@
               :aria-label="social.name"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-scene-muted hover:text-scene-gold transition-colors"
+              class="text-scene-muted hover:text-scene-brick transition-colors"
             >
               <Icon :name="social.icon" size="20" />
             </a>
@@ -54,7 +54,7 @@
       <div class="mt-12 pt-8 border-t border-scene-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-scene-muted">
         <p>&copy; {{ new Date().getFullYear() }} La Cie Sans Non</p>
         <div class="flex items-center gap-4">
-          <NuxtLink to="/mention-legales" class="hover:text-scene-gold transition-colors">Mentions légales</NuxtLink>
+          <NuxtLink to="/mention-legales" class="hover:text-scene-brick transition-colors">Mentions légales</NuxtLink>
           <span>Crédits photos</span>
         </div>
       </div>

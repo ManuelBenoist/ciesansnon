@@ -12,10 +12,10 @@
       />
       <div class="absolute inset-0 bg-gradient-to-t from-scene-black via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
     </div>
-    <h3 class="font-display text-xl text-scene-cream group-hover:text-scene-gold transition-colors">
+    <h3 class="font-display text-xl text-scene-cream group-hover:text-scene-brick transition-colors">
       {{ nom }}
     </h3>
-    <p class="font-body text-xs uppercase tracking-widest text-scene-gold/70 mt-1.5">
+    <p class="font-body text-xs uppercase tracking-widest text-scene-brick/70 mt-1.5">
       {{ roleCourt }}
     </p>
   </button>

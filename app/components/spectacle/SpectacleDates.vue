@@ -1,7 +1,7 @@
 <template>
   <div v-if="dates?.length" class="py-16 sm:py-20 bg-scene-black">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="font-display text-display-lg text-scene-cream mb-10">
+      <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-10">
         Dates
       </h2>
 
@@ -27,7 +27,7 @@
             :href="d.lien_billetterie"
             target="_blank"
             rel="noopener"
-            class="inline-block mt-3 font-body text-xs uppercase tracking-widest text-scene-gold hover:text-scene-cream transition-colors"
+            class="inline-block mt-3 font-body text-xs uppercase tracking-widest text-scene-brick hover:text-scene-cream transition-colors"
           >
             Billetterie →
           </a>

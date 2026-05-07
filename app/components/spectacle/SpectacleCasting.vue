@@ -1,13 +1,13 @@
 <template>
   <div v-if="hasData" class="py-16 sm:py-20 bg-scene-black">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="font-display text-display-lg text-scene-cream mb-10">
+      <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-10">
         Distribution & équipe
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div>
-          <h3 class="font-body text-xs uppercase tracking-[0.3em] text-scene-gold mb-6">
+          <h3 class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-6">
             Distribution
           </h3>
 
@@ -32,7 +32,7 @@
         </div>
 
         <div v-if="equipeTechnique?.length">
-          <h3 class="font-body text-xs uppercase tracking-[0.3em] text-scene-gold mb-6">
+          <h3 class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-6">
             Équipe technique
           </h3>
 

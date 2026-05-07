@@ -39,9 +39,9 @@ const props = withDefaults(defineProps<{
 })
 
 const variants: Record<string, string> = {
-  primary: 'bg-scene-gold text-scene-black hover:bg-scene-gold-dim border-scene-gold',
-  ghost: 'text-scene-gold hover:text-scene-cream border-transparent',
-  outline: 'border-scene-gold text-scene-gold hover:bg-scene-gold/10',
+  primary: 'bg-scene-brick text-white hover:bg-scene-brick/80 border-scene-brick',
+  ghost: 'text-scene-brick hover:text-scene-cream border-transparent',
+  outline: 'border-scene-brick text-scene-brick hover:bg-scene-brick/10',
 }
 
 const sizes: Record<string, string> = {

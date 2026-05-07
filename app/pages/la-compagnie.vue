@@ -1,14 +1,14 @@
 <template>
   <div>
-    <section class="relative pt-32 pb-20 sm:pt-48 sm:pb-28 px-6">
+    <section class="relative pt-28 pb-16 sm:pt-40 sm:pb-24 px-6">
       <div
         ref="heroTarget"
         :class="['reveal-fade-up reveal-visible max-w-4xl mx-auto']"
       >
-        <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-gold mb-4">
+        <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-4">
           La Compagnie
         </p>
-        <h1 class="font-display text-display-xl text-scene-cream mb-8">
+        <h1 class="font-display font-bold text-display-xl text-scene-cream mb-8">
           La Cie Sans Non
         </h1>
         <p class="font-body text-scene-light/80 text-lg leading-relaxed max-w-2xl">
@@ -19,12 +19,12 @@
       </div>
     </section>
 
-    <section class="py-20 sm:py-28 bg-scene-dark px-6">
+    <section class="py-16 sm:py-24 bg-scene-dark px-6">
       <div
         ref="presentationTarget"
         :class="['reveal-fade-up reveal-visible max-w-4xl mx-auto']"
       >
-        <h2 class="font-display text-display-lg text-scene-cream mb-8">
+        <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-8">
           Notre histoire
         </h2>
         <div class="font-body text-scene-light/80 text-base leading-relaxed space-y-4">
@@ -47,16 +47,16 @@
       </div>
     </section>
 
-    <section class="py-20 sm:py-28 bg-scene-black px-6">
+    <section class="py-16 sm:py-24 bg-scene-black px-6">
       <div class="max-w-6xl mx-auto">
         <div
           ref="equipeTarget"
           :class="['reveal-fade-up reveal-visible mb-16']"
         >
-          <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-gold mb-4">
+          <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-4">
             Celles et ceux qui font la compagnie
           </p>
-          <h2 class="font-display text-display-lg text-scene-cream">
+          <h2 class="font-display font-semibold text-display-lg text-scene-cream">
             L'équipe
           </h2>
         </div>
@@ -81,12 +81,12 @@
       </div>
     </section>
 
-    <section class="py-20 sm:py-28 bg-scene-dark px-6">
+    <section class="py-16 sm:py-24 bg-scene-dark px-6">
       <div
         ref="partnersTarget"
         :class="['reveal-fade-up reveal-visible max-w-4xl mx-auto text-center']"
       >
-        <h2 class="font-display text-display-lg text-scene-cream mb-4">
+        <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-4">
           Partenaires & soutiens
         </h2>
         <p class="font-body text-scene-muted text-sm mb-12 max-w-xl mx-auto">

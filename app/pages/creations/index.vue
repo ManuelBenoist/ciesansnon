@@ -1,11 +1,8 @@
 <template>
-  <section class="py-24 sm:py-32 bg-scene-black min-h-screen">
+    <section class="pt-20 sm:pt-28 pb-24 sm:pb-32 bg-scene-black min-h-screen">
     <div class="max-w-7xl mx-auto px-6">
       <div ref="headerTarget" class="reveal-fade-up reveal-visible mb-12 sm:mb-16">
-        <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-gold mb-3">
-          La Cie Sans Non
-        </p>
-        <h1 class="font-display text-display-xl text-scene-cream">
+        <h1 class="font-display font-bold text-display-xl text-scene-cream">
           Créations
         </h1>
       </div>

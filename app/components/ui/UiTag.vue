@@ -7,20 +7,21 @@ import { computed } from 'vue'
 
 const props = withDefaults(defineProps<{
   label: string
-  color?: 'gold' | 'rouge' | 'muted'
+  color?: 'brick' | 'navy' | 'muted'
 }>(), {
-  color: 'gold',
+  color: 'brick',
 })
 
 const colors: Record<string, string> = {
-  gold: 'bg-scene-gold/15 text-scene-gold border-scene-gold/30',
-  rouge: 'bg-scene-rouge/15 text-scene-rouge border-scene-rouge/30',
-  muted: 'bg-scene-muted/15 text-scene-muted border-scene-muted/30',
+  brick: 'bg-scene-brick text-white',
+  navy: 'bg-scene-navy text-white',
+  muted: 'bg-transparent border border-[#444] text-[#888]',
 }
 
 const computedClasses = computed(() =>
   [
-    'inline-block px-3 py-1 text-xs font-body uppercase tracking-widest border rounded-sm',
+    'inline-block px-3 py-1 font-semibold uppercase tracking-[0.15em] border rounded-sm',
+    'font-display text-[0.65rem]',
     colors[props.color],
   ].join(' '),
 )

@@ -1,12 +1,12 @@
 <template>
   <NuxtLink
     :to="`/creations/${slug}`"
-    class="group relative block aspect-[3/4] overflow-hidden border-b-2 border-transparent hover:border-scene-gold transition-colors duration-500"
+    class="group relative block aspect-[3/4] overflow-hidden bg-[#1a1a1a] border border-[#2a2a2a] rounded-sm transition-colors duration-500 hover:border-scene-brick"
   >
     <NuxtImg
       :src="image"
       :alt="`Affiche du spectacle ${titre}`"
-      class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-80"
       loading="lazy"
     />
 
@@ -38,9 +38,9 @@ const props = withDefaults(defineProps<{
   accroche: '',
 })
 
-const statusMap: Record<string, { label: string; color: 'gold' | 'rouge' | 'muted' }> = {
-  'en-creation': { label: 'En création', color: 'rouge' },
-  'en-tournee': { label: 'En tournée', color: 'gold' },
+const statusMap: Record<string, { label: string; color: 'brick' | 'navy' | 'muted' }> = {
+  'en-creation': { label: 'En création', color: 'brick' },
+  'en-tournee': { label: 'En tournée', color: 'navy' },
   'archive': { label: 'Archive', color: 'muted' },
 }
 

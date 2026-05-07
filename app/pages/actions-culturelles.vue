@@ -5,10 +5,10 @@
         ref="heroTarget"
         :class="['reveal-fade-up reveal-visible max-w-4xl mx-auto']"
       >
-        <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-gold mb-4">
+        <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-4">
           Arts de la scène
         </p>
-        <h1 class="font-display text-display-xl text-scene-cream mb-8">
+        <h1 class="font-display font-bold text-display-xl text-scene-cream mb-8">
           Actions culturelles
         </h1>
         <p class="font-body text-scene-light/80 text-lg leading-relaxed max-w-2xl">
@@ -25,7 +25,7 @@
             ref="artsTarget"
             :class="['reveal-fade-up reveal-visible order-2 lg:order-1']"
           >
-            <h2 class="font-display text-display-lg text-scene-cream mb-6">
+            <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-6">
               Arts de la scène
             </h2>
             <div class="font-body text-scene-light/80 text-base leading-relaxed space-y-4">
@@ -72,7 +72,7 @@
             ref="publicsTarget"
             :class="['reveal-fade-up reveal-visible']"
           >
-            <h2 class="font-display text-display-lg text-scene-cream mb-6">
+            <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-6">
               Tous les publics
             </h2>
             <div class="font-body text-scene-light/80 text-base leading-relaxed space-y-4">
@@ -82,19 +82,19 @@
               </p>
               <ul class="list-none space-y-3">
                 <li class="flex items-start gap-3">
-                  <span class="text-scene-gold mt-1.5">▸</span>
+                  <span class="text-scene-brick mt-1.5">▸</span>
                   <span><strong class="text-scene-light">Scolaires</strong> &mdash; du primaire au lycée, parcours de découverte et pratique artistique en lien avec les programmes.</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="text-scene-gold mt-1.5">▸</span>
+                  <span class="text-scene-brick mt-1.5">▸</span>
                   <span><strong class="text-scene-light">Établissements spécialisés</strong> &mdash; ateliers adaptés pour les personnes en situation de handicap, avec des artistes formés à la médiation inclusive.</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="text-scene-gold mt-1.5">▸</span>
+                  <span class="text-scene-brick mt-1.5">▸</span>
                   <span><strong class="text-scene-light">Quartiers prioritaires</strong> &mdash; résidences d'artistes, stages gratuits, restitutions publiques dans l'espace urbain.</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="text-scene-gold mt-1.5">▸</span>
+                  <span class="text-scene-brick mt-1.5">▸</span>
                   <span><strong class="text-scene-light">Public adulte</strong> &mdash; stages amateurs, rencontres, bords de scène.</span>
                 </li>
               </ul>
@@ -109,7 +109,7 @@
         ref="ctaTarget"
         :class="['reveal-fade-up reveal-visible max-w-2xl mx-auto text-center']"
       >
-        <h2 class="font-display text-3xl sm:text-4xl text-scene-cream mb-4">
+        <h2 class="font-display font-semibold text-3xl sm:text-4xl text-scene-cream mb-4">
           Envie de monter un projet ?
         </h2>
         <p class="font-body text-scene-muted text-sm mb-8">

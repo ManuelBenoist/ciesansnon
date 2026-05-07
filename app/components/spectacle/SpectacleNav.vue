@@ -5,12 +5,12 @@
         <NuxtLink
           v-if="prev"
           :to="`/creations/${prev.slug}`"
-          class="group flex items-center gap-3 font-body text-sm text-scene-muted hover:text-scene-gold transition-colors"
+          class="group flex items-center gap-3 font-body text-sm text-scene-muted hover:text-scene-brick transition-colors"
         >
           <Icon name="mdi:chevron-left" size="24" class="shrink-0" />
           <span>
             <span class="block text-xs uppercase tracking-wider text-scene-muted/60">Précédent</span>
-            <span class="block font-display text-lg text-scene-light group-hover:text-scene-gold transition-colors mt-0.5">
+            <span class="block font-display text-lg text-scene-light group-hover:text-scene-brick transition-colors mt-0.5">
               {{ prev.titre }}
             </span>
           </span>
@@ -21,11 +21,11 @@
         <NuxtLink
           v-if="next"
           :to="`/creations/${next.slug}`"
-          class="group flex items-center gap-3 font-body text-sm text-scene-muted hover:text-scene-gold transition-colors text-right"
+          class="group flex items-center gap-3 font-body text-sm text-scene-muted hover:text-scene-brick transition-colors text-right"
         >
           <span>
             <span class="block text-xs uppercase tracking-wider text-scene-muted/60">Suivant</span>
-            <span class="block font-display text-lg text-scene-light group-hover:text-scene-gold transition-colors mt-0.5">
+            <span class="block font-display text-lg text-scene-light group-hover:text-scene-brick transition-colors mt-0.5">
               {{ next.titre }}
             </span>
           </span>

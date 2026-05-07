@@ -21,7 +21,7 @@
         <li v-for="link in links" :key="link.to">
           <NuxtLink
             :to="link.to"
-            class="nav-underline font-body text-sm uppercase tracking-widest text-scene-light hover:text-scene-gold transition-colors"
+            class="nav-underline font-body text-sm uppercase tracking-widest text-scene-light hover:text-scene-brick transition-colors"
           >
             {{ link.label }}
           </NuxtLink>
@@ -29,7 +29,7 @@
       </ul>
 
       <button
-        class="lg:hidden relative z-20 p-2 text-scene-light hover:text-scene-gold transition-colors"
+        class="lg:hidden relative z-20 p-2 text-scene-light hover:text-scene-brick transition-colors"
         @click="isMenuOpen = true"
         aria-label="Menu"
       >
