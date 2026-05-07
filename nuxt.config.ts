@@ -4,6 +4,10 @@ export default defineNuxtConfig({
 
   future: { compatibilityVersion: 4 },
 
+  experimental: {
+    payloadExtraction: true,
+  },
+
   nitro: {
     preset: 'static',
     prerender: {

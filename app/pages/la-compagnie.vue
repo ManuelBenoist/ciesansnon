@@ -12,9 +12,7 @@
           La Cie Sans Non
         </h1>
         <p class="font-body text-scene-light/80 text-lg leading-relaxed max-w-2xl">
-          Une compagnie de théâtre qui ne dit jamais non à la vie. Fondée sur la conviction
-          que l'art de la scène est un espace de rencontre, de questionnement et de
-          célébration du vivant.
+          Implantée à Mulhouse, la Compagnie Sans Non développe des spectacles de théâtre de récit qui donnent une place importante à l’engagement du corps. Les comédiens sont amenés à plonger instantanément d’un personnage à l’autre pour que jamais ne soit rompu le fil de la fiction.
         </p>
       </div>
     </section>
@@ -29,19 +27,10 @@
         </h2>
         <div class="font-body text-scene-light/80 text-base leading-relaxed space-y-4">
           <p>
-            Née de la rencontre entre des artistes venus d'horizons différents, la Compagnie Sans Non
-            explore les frontières entre le théâtre, la danse et la performance. Notre travail s'ancre
-            dans une recherche exigeante du geste juste, du mot précis, du silence qui résonne.
+            La Compagnie Sans Non est fondée alors qu’Olivier Sangwa entame la formation de comédien qui va le mener au Conservatoire national supérieur d’Art Dramatique. Avec Marie-Hélène Benoist et Félix Benoist, il monte un seul en scène d’une heure qui installe les fondements de son jeu physique, engagé, généreux et pose les bases du style de la compagnie : l’imaginaire du spectateur y est constamment sollicité par un narrateur - qui est aussi le personnage central - pour que l’espace, les personnages, la temporalité de la fiction naissent d’un geste, d’une voix ou d’une lumière qui change.
           </p>
           <p>
-            Chaque création est une aventure collective, un processus long où le texte, le corps et
-            l'espace dialoguent jusqu'à trouver leur équilibre. Nous croyons au temps long de la
-            maturation artistique, aux résidences qui permettent l'expérimentation, à la rencontre
-            avec les publics qui nourrit le spectacle.
-          </p>
-          <p>
-            La compagnie est implantée en région et rayonne à travers ses créations en tournée,
-            ses actions de médiation et ses partenariats avec les structures culturelles du territoire.
+            Sa formation achevée, et parallèlement aux projets pour lesquels il est employé comme comédien, Olivier relance un nouveau projet pour la compagnie avec Félix et Marie-Hélène, mais aussi avec les jeunes artistes qu’il a rencontrés au Conservatoire, comédienne, régisseur, costumière…
           </p>
         </div>
       </div>

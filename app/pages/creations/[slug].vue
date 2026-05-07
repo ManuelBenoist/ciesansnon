@@ -50,18 +50,17 @@
 
 <script setup lang="ts">
 const route = useRoute()
-const slug = route.params.slug as string
 
-const { data: creation } = await useAsyncData(`creation-${slug}`, () =>
-  queryCollection('creations').where('slug', '==', slug).first()
-)
+const { data: creation } = await useAsyncData('creation-' + route.params.slug, () =>
+  queryCollection('creations').where('slug', '==', route.params.slug).first()
+, { watch: [() => route.params.slug] })
 
 const { data: allCreations } = await useAsyncData('creations-all', () =>
   queryCollection('creations').order('ordre', 'ASC').all()
 )
 
 const currentIndex = computed(() =>
-  allCreations.value?.findIndex((c: any) => c.slug === slug) ?? -1
+  allCreations.value?.findIndex((c: any) => c.slug === route.params.slug) ?? -1
 )
 
 const prev = computed(() => {
