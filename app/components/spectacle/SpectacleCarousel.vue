@@ -1,7 +1,7 @@
 <template>
-  <div v-if="images?.length" class="py-16 sm:py-20 bg-scene-dark">
+  <div v-if="images?.length" class="bg-scene-dark">
     <div class="relative overflow-hidden">
-      <div class="relative aspect-[4/3] sm:aspect-[16/9]">
+      <div class="relative h-[calc(100dvh-4rem)]">
         <NuxtImg
           v-for="(img, i) in images"
           :key="i"
