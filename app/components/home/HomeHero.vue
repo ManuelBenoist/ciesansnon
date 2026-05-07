@@ -47,7 +47,7 @@ withDefaults(defineProps<{
 }>(), {
   image: '/images/hero-homepage.jpg',
   baseline: 'Compagnie de théâtre',
-  description: 'Le théâtre : un “notre” monde',
+  description: 'pour toucher l’imaginaire et les émotions d’un public qui ne fait pas forcément du théâtre une pratique culturelle habituelle',
   vignetteStrength: 0.6,
 })
 

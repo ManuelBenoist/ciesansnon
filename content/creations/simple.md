@@ -21,7 +21,7 @@ galerie:
   - "/images/creations/simple/galerie-12.webp"
   - "/images/creations/simple/galerie-15.webp"
 alt_hero: "Scène de SIMPLE"
-accroche: "Adaptation du roman de Marie-Aude Murail / théâtre-récit"
+accroche: "Adaptation du roman de Marie-Aude Murail / théâtre-récit."
 mise_en_scene: "Félix BENOIST, Marie-Hélène BENOIST"
 auteur: "Félix BENOIST, adaptation d'après le roman de Marie-Aude MURAIL"
 casting:

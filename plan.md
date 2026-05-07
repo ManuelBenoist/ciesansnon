@@ -305,7 +305,7 @@ galerie:
   - "/images/creations/venavi/photo-1.jpg"
   - "/images/creations/venavi/photo-2.jpg"
   - "/images/creations/venavi/photo-3.jpg"
-alt_hero: "Scène de Venavi — deux comédiens face à face dans la pénombre"
+alt_hero: "Scène de Venavi — deux comédiens face à face dans la pénombre."
 
 # ── Textes ────────────────────────────────────────────────────────
 accroche: "Un voyage entre deux mondes, deux langues, deux silences."

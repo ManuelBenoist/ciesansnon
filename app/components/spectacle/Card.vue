@@ -20,7 +20,7 @@
       <h3 class="font-display text-2xl sm:text-3xl text-scene-cream mb-1">
         {{ titre }}
       </h3>
-      <p class="font-body text-sm text-scene-light/70 line-clamp-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+      <p class="font-body text-base text-scene-light/70 line-clamp-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
         {{ accroche }}
       </p>
     </div>
