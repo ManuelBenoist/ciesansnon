@@ -1,9 +1,6 @@
 <template>
   <div v-if="src" class="py-16 sm:py-20 bg-scene-dark">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-10">
-        Teaser
-      </h2>
       <div class="relative aspect-video overflow-hidden rounded-sm bg-scene-black">
         <iframe
           v-if="isYoutube"
