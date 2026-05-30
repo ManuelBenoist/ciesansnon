@@ -3,7 +3,7 @@
     <section class="relative pt-32 pb-20 sm:pt-48 sm:pb-28 px-6">
       <div
         ref="heroTarget"
-        :class="['reveal-fade-up reveal-visible max-w-4xl mx-auto']"
+        :class="['reveal-fade-up reveal-visible max-w-7xl mx-auto']"
       >
         <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-4">
           Aller vers tous les publics
@@ -15,7 +15,7 @@
     </section>
 
     <section class="py-20 sm:py-28 bg-scene-dark px-6">
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
           <div
             ref="artsTarget"
@@ -108,7 +108,7 @@
     <section class="py-20 sm:py-28 bg-scene-black px-6">
       <div
         ref="partenairesTarget"
-        :class="['reveal-fade-up reveal-visible max-w-4xl mx-auto text-center']"
+        :class="['reveal-fade-up reveal-visible max-w-7xl mx-auto text-center']"
       >
         <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-12">
           Partenaires & soutiens

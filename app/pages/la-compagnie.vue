@@ -3,7 +3,7 @@
     <section class="relative pt-28 pb-16 sm:pt-40 sm:pb-24 px-6">
       <div
         ref="heroTarget"
-        :class="['reveal-fade-up reveal-visible max-w-4xl mx-auto']"
+        :class="['reveal-fade-up reveal-visible max-w-7xl mx-auto']"
       >
         <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-4">
           La Compagnie
@@ -11,7 +11,7 @@
         <h1 class="font-display font-bold text-display-xl text-scene-cream mb-8">
           La Cie Sans Non
         </h1>
-        <p class="font-body text-scene-light/80 text-lg leading-relaxed max-w-2xl">
+        <p class="font-body text-scene-light/80 text-lg leading-relaxed max-w-3xl">
           Implantée à Mulhouse, la Compagnie Sans Non développe des spectacles de théâtre de récit qui donnent une place importante à l’engagement du corps.
         </p>
       </div>
@@ -20,12 +20,12 @@
     <section class="py-16 sm:py-24 bg-scene-dark px-6">
       <div
         ref="presentationTarget"
-        :class="['reveal-fade-up reveal-visible max-w-4xl mx-auto']"
+        :class="['reveal-fade-up reveal-visible max-w-7xl mx-auto']"
       >
         <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-8">
           Notre histoire
         </h2>
-        <div class="font-body text-scene-light/80 text-base leading-relaxed space-y-4">
+        <div class="font-body text-scene-light/80 text-base leading-relaxed space-y-4 max-w-3xl">
           <p>
             La Compagnie Sans Non est fondée alors qu’Olivier Sangwa entame la formation de comédien qui va le mener au Conservatoire national supérieur d’Art Dramatique. Avec Marie-Hélène Benoist et Félix Benoist, il monte un seul en scène d’une heure qui installe les fondements de son jeu physique, engagé, généreux et pose les bases du style de la compagnie : l’imaginaire du spectateur y est constamment sollicité par un narrateur - qui est aussi le personnage central - pour que l’espace, les personnages, la temporalité de la fiction naissent d’un geste, d’une voix ou d’une lumière qui change.
           </p>
@@ -37,7 +37,7 @@
     </section>
 
     <section class="py-16 sm:py-24 bg-scene-black px-6">
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-7xl mx-auto">
         <div
           ref="equipeTarget"
           :class="['reveal-fade-up reveal-visible mb-16']"

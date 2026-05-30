@@ -1,6 +1,6 @@
 <template>
-    <section class="pt-20 sm:pt-28 pb-24 sm:pb-32 bg-scene-black min-h-screen">
-    <div class="max-w-7xl mx-auto px-6">
+    <section class="pt-20 sm:pt-28 pb-24 sm:pb-32 bg-scene-black min-h-screen px-6">
+    <div class="max-w-7xl mx-auto">
       <div ref="headerTarget" class="reveal-fade-up reveal-visible mb-12 sm:mb-16">
         <h1 class="font-display font-bold text-display-xl text-scene-cream">
           Créations

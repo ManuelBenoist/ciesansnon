@@ -3,7 +3,7 @@
     <section class="relative pt-32 pb-20 sm:pt-48 sm:pb-28 px-6">
       <div
         ref="heroTarget"
-        :class="['reveal-fade-up reveal-visible max-w-4xl mx-auto']"
+        :class="['reveal-fade-up reveal-visible max-w-7xl mx-auto']"
       >
         <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-4">
           Échangeons
@@ -11,7 +11,7 @@
         <h1 class="font-display font-bold text-display-xl text-scene-cream mb-8">
           Contact
         </h1>
-        <p class="font-body text-scene-light/80 text-lg leading-relaxed max-w-xl">
+        <p class="font-body text-scene-light/80 text-lg leading-relaxed">
           Une question sur nos créations, un projet d'action culturelle, une demande de résidence ?
           Nous sommes à votre écoute.
         </p>
@@ -19,7 +19,7 @@
     </section>
 
     <section class="py-20 sm:py-28 bg-scene-dark px-6">
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20">
           <div
             ref="formTarget"
