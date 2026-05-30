@@ -55,7 +55,6 @@
         <p>&copy; {{ new Date().getFullYear() }} La Cie Sans Non</p>
         <div class="flex items-center gap-4">
           <NuxtLink to="/mention-legales" class="hover:text-scene-brick transition-colors">Mentions légales</NuxtLink>
-          <span>Crédits photos</span>
         </div>
       </div>
     </div>

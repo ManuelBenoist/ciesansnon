@@ -4,6 +4,13 @@ export default defineNuxtConfig({
 
   future: { compatibilityVersion: 4 },
 
+  site: {
+    url: 'https://ciesansnon.com',
+    name: 'La Cie Sans Non',
+    description: 'Compagnie de théâtre — créations et actions culturelles',
+    defaultLocale: 'fr',
+  },
+
   experimental: {
     payloadExtraction: true,
   },
@@ -21,6 +28,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     '@nuxt/icon',
+    '@nuxtjs/sitemap',
   ],
 
   content: { highlight: false },

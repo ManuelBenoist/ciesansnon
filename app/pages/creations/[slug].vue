@@ -112,14 +112,24 @@ const jsonLd = computed(() => {
   return ld.length === 1 ? ld[0] : ld
 })
 
-useHead({
-  script: jsonLd.value
-    ? [
-        {
-          type: 'application/ld+json',
-          innerHTML: JSON.stringify(jsonLd.value),
-        },
-      ]
-    : [],
+const breadcrumbLd = computed(() => {
+  if (!creation.value) return null
+  const c = creation.value as any
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://ciesansnon.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Créations', item: 'https://ciesansnon.com/creations' },
+      { '@type': 'ListItem', position: 3, name: c.titre, item: `https://ciesansnon.com/creations/${c.slug}` },
+    ],
+  }
 })
+
+useHead(() => ({
+  script: [
+    ...(jsonLd.value ? [{ type: 'application/ld+json', innerHTML: JSON.stringify(jsonLd.value) }] : []),
+    ...(breadcrumbLd.value ? [{ type: 'application/ld+json', innerHTML: JSON.stringify(breadcrumbLd.value) }] : []),
+  ],
+}))
 </script>

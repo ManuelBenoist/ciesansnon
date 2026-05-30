@@ -5,7 +5,9 @@
         :src="image"
         alt="Scène de spectacle — La Cie Sans Non"
         class="w-full h-full object-cover"
-        loading="lazy"
+        loading="eager"
+        width="1920"
+        height="1080"
       />
     </div>
 

@@ -151,8 +151,12 @@ useSeo({
   description: 'La Cie Sans Non conçoit des projets de médiation culturelle : ateliers théâtre, interventions scolaires, résidences en quartiers prioritaires. L\'art de la scène pour tous les publics.',
 })
 
-const { data: ateliers } = await useAsyncData('ateliers-list', () =>
+const { data: rawAteliers } = await useAsyncData('ateliers-list', () =>
   queryCollection('ateliers').order('ordre', 'ASC').all()
+)
+
+const ateliers = computed(() =>
+  (rawAteliers.value || []).filter((a: any) => a.slug && a.titre)
 )
 
 const isAtelierModalOpen = ref(false)

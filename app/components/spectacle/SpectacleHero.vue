@@ -5,7 +5,9 @@
       :src="image"
       :alt="alt || titre"
       class="absolute inset-0 w-full h-full object-cover"
-      loading="lazy"
+      loading="eager"
+      width="1600"
+      height="900"
     />
     <div class="absolute inset-0 bg-gradient-to-t from-scene-black via-scene-black/60 to-transparent" />
 
