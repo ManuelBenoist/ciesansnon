@@ -3,7 +3,7 @@
     class="group block w-full text-left"
     @click="$emit('select', slug)"
   >
-    <div class="relative aspect-[3/4] overflow-hidden mb-4">
+    <div v-if="photo" class="relative aspect-[3/4] overflow-hidden mb-4">
       <NuxtImg
         :src="photo"
         :alt="`Portrait de ${nom}`"
@@ -11,6 +11,9 @@
         loading="lazy"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-scene-black via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
+    </div>
+    <div v-else class="relative aspect-[3/4] overflow-hidden mb-4 bg-scene-surface flex items-center justify-center rounded-sm group-hover:bg-scene-border transition-colors duration-500">
+      <Icon name="mdi:account-outline" size="48" class="text-scene-muted/30 group-hover:text-scene-muted/50 transition-colors duration-500" />
     </div>
     <h3 class="font-display text-xl text-scene-cream group-hover:text-scene-brick transition-colors">
       {{ nom }}

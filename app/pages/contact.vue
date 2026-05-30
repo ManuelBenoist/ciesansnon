@@ -78,10 +78,10 @@
                   La Cie Sans Non
                 </p>
                 <p class="text-scene-muted text-sm">
-                  SIRET : À renseigner
+                  SIRET : 889 998 498 00030
                 </p>
                 <p class="text-scene-muted text-sm">
-                  Licence d'entrepreneur du spectacle : À renseigner
+                  Licence d'entrepreneur du spectacle : 2022 - 005057 / 2022 - 005058
                 </p>
               </div>
 

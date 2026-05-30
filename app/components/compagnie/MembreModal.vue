@@ -1,12 +1,17 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-    <div class="relative aspect-[3/4] overflow-hidden rounded-sm">
-      <NuxtImg
-        :src="photo"
-        :alt="`Portrait de ${nom}`"
-        class="absolute inset-0 w-full h-full object-cover"
-        loading="lazy"
-      />
+    <template v-if="photo">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-sm">
+        <NuxtImg
+          :src="photo"
+          :alt="`Portrait de ${nom}`"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </template>
+    <div v-else class="aspect-[3/4] bg-scene-surface flex items-center justify-center rounded-sm">
+      <Icon name="mdi:account-outline" size="64" class="text-scene-muted/30" />
     </div>
     <div class="flex flex-col justify-center">
       <h3 class="font-display text-3xl sm:text-4xl text-scene-cream mb-2">
