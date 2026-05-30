@@ -19,9 +19,9 @@
       <div class="font-body text-scene-light/80 leading-relaxed text-sm space-y-4">
         <template v-if="bio">
           <div v-for="(block, i) in parsedBio" :key="i">
-            <p v-if="block.type === 'p'" class="text-scene-light/80">{{ block.content }}</p>
+            <p v-if="block.type === 'p'" class="text-scene-light/80" v-html="block.content" />
             <ul v-else class="list-disc list-inside space-y-1 text-scene-light/70">
-              <li v-for="(item, j) in block.items" :key="j">{{ item }}</li>
+              <li v-for="(item, j) in block.items" :key="j" v-html="item"></li>
             </ul>
           </div>
         </template>
@@ -39,6 +39,10 @@ const props = defineProps<{
   bio?: string
 }>()
 
+function formatInline(text: string): string {
+  return text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+}
+
 const parsedBio = computed(() => {
   if (!props.bio) return []
   const blocks: { type: 'p' | 'ul'; content?: string; items?: string[] }[] = []
@@ -48,9 +52,9 @@ const parsedBio = computed(() => {
     if (lines.length === 0) continue
     const allListItems = lines.every(l => l.trim().startsWith('- '))
     if (allListItems) {
-      blocks.push({ type: 'ul', items: lines.map(l => l.trim().slice(2).trim()) })
+      blocks.push({ type: 'ul', items: lines.map(l => formatInline(l.trim().slice(2).trim())) })
     } else {
-      blocks.push({ type: 'p', content: lines.join(' ') })
+      blocks.push({ type: 'p', content: formatInline(lines.join(' ')) })
     }
   }
   return blocks

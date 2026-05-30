@@ -106,21 +106,26 @@
 
     <section class="py-20 sm:py-28 bg-scene-black px-6">
       <div
-        ref="ctaTarget"
-        :class="['reveal-fade-up reveal-visible max-w-2xl mx-auto text-center']"
+        ref="partenairesTarget"
+        :class="['reveal-fade-up reveal-visible max-w-4xl mx-auto text-center']"
       >
-        <h2 class="font-display font-semibold text-3xl sm:text-4xl text-scene-cream mb-4">
-          Envie de monter un projet ?
+        <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-12">
+          Partenaires & soutiens
         </h2>
-        <p class="font-body text-scene-muted text-sm mb-8">
-          Vous êtes enseignant, directeur de structure culturelle, élu ou responsable associatif ?
-          Parlons-en.
-        </p>
-        <UiButton label="Nous contacter" variant="primary" size="lg" to="/contact">
-          <template #icon-after>
-            <Icon name="mdi:arrow-right" size="16" />
-          </template>
-        </UiButton>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-50">
+          <div class="h-12 border border-scene-border rounded-sm flex items-center justify-center">
+            <span class="text-xs text-scene-muted uppercase tracking-widest">Partenaire</span>
+          </div>
+          <div class="h-12 border border-scene-border rounded-sm flex items-center justify-center">
+            <span class="text-xs text-scene-muted uppercase tracking-widest">Partenaire</span>
+          </div>
+          <div class="h-12 border border-scene-border rounded-sm flex items-center justify-center">
+            <span class="text-xs text-scene-muted uppercase tracking-widest">Partenaire</span>
+          </div>
+          <div class="h-12 border border-scene-border rounded-sm flex items-center justify-center">
+            <span class="text-xs text-scene-muted uppercase tracking-widest">Partenaire</span>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -137,5 +142,5 @@ const { target: artsTarget } = useRevealOnScroll()
 const { target: artsImgTarget } = useRevealOnScroll()
 const { target: publicsTarget } = useRevealOnScroll()
 const { target: publicsImgTarget } = useRevealOnScroll()
-const { target: ctaTarget } = useRevealOnScroll()
+const { target: partenairesTarget } = useRevealOnScroll()
 </script>

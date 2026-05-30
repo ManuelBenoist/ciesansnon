@@ -50,6 +50,16 @@ export default defineContentConfig({
     membres: defineCollection({
       type: 'page',
       source: 'membres/*.md',
+      schema: z.object({
+        nom: z.string(),
+        slug: z.string(),
+        role_compagnie: z.string(),
+        role_court: z.string(),
+        photo: z.string().optional(),
+        bio: z.string().optional(),
+        ordre: z.number().optional(),
+        dans_organigramme: z.boolean().optional(),
+      }),
     }),
     actus: defineCollection({
       type: 'page',

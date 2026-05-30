@@ -70,35 +70,6 @@
       </div>
     </section>
 
-    <section class="py-16 sm:py-24 bg-scene-dark px-6">
-      <div
-        ref="partnersTarget"
-        :class="['reveal-fade-up reveal-visible max-w-4xl mx-auto text-center']"
-      >
-        <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-4">
-          Partenaires & soutiens
-        </h2>
-        <p class="font-body text-scene-muted text-sm mb-12 max-w-xl mx-auto">
-          La compagnie est soutenue par des institutions et des structures culturelles
-          qui partagent notre vision d'un théâtre vivant et accessible.
-        </p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-50">
-          <div class="h-12 border border-scene-border rounded-sm flex items-center justify-center">
-            <span class="text-xs text-scene-muted uppercase tracking-widest">Partenaire</span>
-          </div>
-          <div class="h-12 border border-scene-border rounded-sm flex items-center justify-center">
-            <span class="text-xs text-scene-muted uppercase tracking-widest">Partenaire</span>
-          </div>
-          <div class="h-12 border border-scene-border rounded-sm flex items-center justify-center">
-            <span class="text-xs text-scene-muted uppercase tracking-widest">Partenaire</span>
-          </div>
-          <div class="h-12 border border-scene-border rounded-sm flex items-center justify-center">
-            <span class="text-xs text-scene-muted uppercase tracking-widest">Partenaire</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <UiModal v-model="isModalOpen">
       <CompagnieMembreModal
         v-if="selectedMembre"
@@ -130,53 +101,38 @@ useHead({
   }],
 })
 
-interface Membre {
+const { data: rawMembres } = await useAsyncData('membres-equipe', () =>
+  queryCollection('membres').order('ordre', 'ASC').all()
+)
+
+const membres = computed(() =>
+  (rawMembres.value || []).map((m: any) => ({
+    nom: m.nom,
+    slug: m.slug,
+    roleCourt: m.role_court,
+    role: m.role_compagnie,
+    photo: m.photo || '',
+    bio: m.bio || undefined,
+  }))
+)
+
+const isModalOpen = ref(false)
+const selectedMembre = ref<{
   nom: string
-  slug: string
-  roleCourt: string
   role: string
   photo: string
   bio?: string
-}
-
-const membres: Membre[] = [
-  {
-    nom: 'Prénom Nom',
-    slug: 'prenom-nom-1',
-    roleCourt: 'Direction artistique',
-    role: 'Metteur en scène / Comédien',
-    photo: 'https://picsum.photos/seed/membre1/600/800',
-  },
-  {
-    nom: 'Prénom Nom',
-    slug: 'prenom-nom-2',
-    roleCourt: 'Interprétation',
-    role: 'Comédienne',
-    photo: 'https://picsum.photos/seed/membre2/600/800',
-  },
-  {
-    nom: 'Prénom Nom',
-    slug: 'prenom-nom-3',
-    roleCourt: 'Scénographie',
-    role: 'Scénographe',
-    photo: 'https://picsum.photos/seed/membre3/600/800',
-  },
-  {
-    nom: 'Prénom Nom',
-    slug: 'prenom-nom-4',
-    roleCourt: 'Lumières',
-    role: 'Éclairagiste',
-    photo: 'https://picsum.photos/seed/membre4/600/800',
-  },
-]
-
-const isModalOpen = ref(false)
-const selectedMembre = ref<Membre | null>(null)
+} | null>(null)
 
 function openMemberModal(slug: string) {
-  const membre = membres.find(m => m.slug === slug)
+  const membre = membres.value.find(m => m.slug === slug)
   if (membre) {
-    selectedMembre.value = membre
+    selectedMembre.value = {
+      nom: membre.nom,
+      role: membre.role,
+      photo: membre.photo,
+      bio: membre.bio,
+    }
     isModalOpen.value = true
   }
 }
@@ -184,8 +140,6 @@ function openMemberModal(slug: string) {
 const { target: heroTarget } = useRevealOnScroll()
 const { target: presentationTarget } = useRevealOnScroll()
 const { target: equipeTarget } = useRevealOnScroll()
-const { target: partnersTarget } = useRevealOnScroll()
-
 const membreCardRefs = ref<HTMLElement[]>([])
 
 onMounted(() => {
