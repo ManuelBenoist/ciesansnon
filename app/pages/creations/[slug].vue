@@ -126,10 +126,14 @@ const breadcrumbLd = computed(() => {
   }
 })
 
+function safeJsonLd(obj: any) {
+  return JSON.stringify(obj).replace(/</g, '\\u003c')
+}
+
 useHead(() => ({
   script: [
-    ...(jsonLd.value ? [{ type: 'application/ld+json', innerHTML: JSON.stringify(jsonLd.value) }] : []),
-    ...(breadcrumbLd.value ? [{ type: 'application/ld+json', innerHTML: JSON.stringify(breadcrumbLd.value) }] : []),
+    ...(jsonLd.value ? [{ type: 'application/ld+json', innerHTML: safeJsonLd(jsonLd.value) }] : []),
+    ...(breadcrumbLd.value ? [{ type: 'application/ld+json', innerHTML: safeJsonLd(breadcrumbLd.value) }] : []),
   ],
 }))
 </script>

@@ -88,10 +88,14 @@ useSeo({
   description: 'Découvrez la Compagnie Sans Non : son histoire, ses membres, son organigramme et ses partenaires. Une compagnie de théâtre ancrée dans le vivant.',
 })
 
+function safeJsonLd(obj: any) {
+  return JSON.stringify(obj).replace(/</g, '\\u003c')
+}
+
 useHead({
   script: [{
     type: 'application/ld+json',
-    innerHTML: JSON.stringify({
+    innerHTML: safeJsonLd({
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'La Cie Sans Non',

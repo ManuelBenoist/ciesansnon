@@ -84,8 +84,17 @@ function openLightbox(index: number) {
   lightboxIndex.value = index
 }
 
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;')
+}
+
 function formatInline(text: string): string {
-  return text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+  return escapeHtml(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
 }
 
 const parsedDescription = computed(() => {

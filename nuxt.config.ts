@@ -11,10 +11,6 @@ export default defineNuxtConfig({
     defaultLocale: 'fr',
   },
 
-  experimental: {
-    payloadExtraction: true,
-  },
-
   nitro: {
     preset: 'static',
     prerender: {

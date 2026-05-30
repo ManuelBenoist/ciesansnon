@@ -13,10 +13,14 @@ useSeo({
   type: 'website',
 })
 
+function safeJsonLd(obj: any) {
+  return JSON.stringify(obj).replace(/</g, '\\u003c')
+}
+
 useHead({
   script: [{
     type: 'application/ld+json',
-    innerHTML: JSON.stringify({
+    innerHTML: safeJsonLd({
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: 'La Cie Sans Non',
@@ -25,7 +29,7 @@ useHead({
     }),
   }, {
     type: 'application/ld+json',
-    innerHTML: JSON.stringify({
+    innerHTML: safeJsonLd({
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'La Cie Sans Non',
