@@ -12,7 +12,7 @@
           La Cie Sans Non
         </h1>
         <p class="font-body text-scene-light/80 text-lg leading-relaxed max-w-2xl">
-          Implantée à Mulhouse, la Compagnie Sans Non développe des spectacles de théâtre de récit qui donnent une place importante à l’engagement du corps. Les comédiens sont amenés à plonger instantanément d’un personnage à l’autre pour que jamais ne soit rompu le fil de la fiction.
+          Implantée à Mulhouse, la Compagnie Sans Non développe des spectacles de théâtre de récit qui donnent une place importante à l’engagement du corps.
         </p>
       </div>
     </section>
@@ -30,7 +30,7 @@
             La Compagnie Sans Non est fondée alors qu’Olivier Sangwa entame la formation de comédien qui va le mener au Conservatoire national supérieur d’Art Dramatique. Avec Marie-Hélène Benoist et Félix Benoist, il monte un seul en scène d’une heure qui installe les fondements de son jeu physique, engagé, généreux et pose les bases du style de la compagnie : l’imaginaire du spectateur y est constamment sollicité par un narrateur - qui est aussi le personnage central - pour que l’espace, les personnages, la temporalité de la fiction naissent d’un geste, d’une voix ou d’une lumière qui change.
           </p>
           <p>
-            Sa formation achevée, et parallèlement aux projets pour lesquels il est employé comme comédien, Olivier relance un nouveau projet pour la compagnie avec Félix et Marie-Hélène, mais aussi avec les jeunes artistes qu’il a rencontrés au Conservatoire, comédienne, régisseur, costumière…
+            Sa formation achevée, et parallèlement aux projets pour lesquels il est employé comme comédien, Olivier relance un nouveau projet pour la compagnie avec Félix et Marie-Hélène, mais aussi avec les jeunes artistes qu’il a rencontrés au CNSAD : comédienne, régisseur, costumière…
           </p>
         </div>
       </div>
@@ -105,6 +105,7 @@
         :nom="selectedMembre.nom"
         :role="selectedMembre.role"
         :photo="selectedMembre.photo"
+        :bio="selectedMembre.bio"
       />
     </UiModal>
   </div>
@@ -135,6 +136,7 @@ interface Membre {
   roleCourt: string
   role: string
   photo: string
+  bio?: string
 }
 
 const membres: Membre[] = [

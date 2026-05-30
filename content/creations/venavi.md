@@ -31,7 +31,7 @@ casting:
     role: "Accompagnement musical et vocal"
 equipe_technique:
   - poste: "Création Lumières"
-    nom: "Félix BENOIST, Khaled RABAH"
+    nom: "Félix BENOIST"
   - poste: "Dispositif Lumières"
     nom: "Khaled RABAH"
   - poste: "Régie Lumières (installation autonome)"
