@@ -1,6 +1,6 @@
 # AGENTS.md — La Cie Sans Non
 
-Stack : Nuxt 4 (SSG) · Tailwind CSS · Nuxt Content v3 · Formspree · motion-v · GitHub Actions → OVH
+Stack : Nuxt 4 (SSG) · Tailwind CSS · Nuxt Content v3 · Formspree · motion-v · GitHub Actions → GitHub Pages
 
 ## Commands
 ```bash
@@ -68,7 +68,20 @@ npm run preview    # preview production build locally
 - Component naming: directory-prefixed multi-word, e.g. `compagnie/MembreCard.vue`, `spectacle/Card.vue`
 - No lint or test commands configured. Verify with `npm run generate`.
 
+## Deployment (GitHub Pages)
+
+The site is deployed via GitHub Actions to GitHub Pages. The workflow at `.github/workflows/deploy.yml`:
+1. Checks out the repo
+2. Sets up Node.js
+3. Installs dependencies
+4. Runs `npm run generate` → outputs to `.output/public/`
+5. Uploads the artifact
+6. Deploys to GitHub Pages
+
+The `public/.nojekyll` file prevents GitHub Pages from processing the site with Jekyll.
+
+**Custom domain**: `https://ciesansnon.com` — configure in repo Settings > Pages, or add a CNAME record to your DNS provider pointing to `ciesansnon.github.io`.
+
 ## Current gaps & next steps
 1. `content/membres/*.md` files exist but need `bio:` body content and `photo:` paths filled
-2. `.github/workflows/deploy.yml` not created yet (OVH FTP deploy)
-3. `content/creations/simple.md` body content (synopsis) is placeholder — VENAVI is complete
+2. `content/creations/simple.md` body content (synopsis) is placeholder — VENAVI is complete
