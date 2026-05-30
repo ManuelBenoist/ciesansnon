@@ -9,7 +9,7 @@
         <div class="absolute inset-0 bg-scene-black/85 backdrop-blur-sm" />
         <div class="relative z-10 bg-scene-surface border border-scene-border rounded-sm w-full max-w-4xl max-h-[85vh] overflow-y-auto shadow-2xl">
           <button
-            class="absolute top-4 right-4 text-scene-muted hover:text-scene-cream transition-colors p-2"
+            class="absolute top-4 right-4 z-20 text-scene-light/70 hover:text-scene-cream transition-colors p-2"
             @click="close"
             aria-label="Fermer"
           >
