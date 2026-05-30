@@ -54,19 +54,22 @@
           <h3 class="font-display font-semibold text-2xl text-scene-cream mb-6">
             Les spectacles
           </h3>
-          <div class="flex gap-4 overflow-x-auto pb-4 snap-x md:justify-center md:flex-wrap md:overflow-visible md:snap-none">
-            <div
-              v-for="atelier in ateliers"
-              :key="atelier.slug"
-              class="flex-shrink-0 w-28 md:w-36 snap-start"
-            >
-              <AtelierCard
-                :titre="atelier.titre"
-                :slug="atelier.slug"
-                :affiche="atelier.affiche"
-                @select="openAtelierModal"
-              />
+          <div class="relative">
+            <div class="flex gap-4 overflow-x-auto pb-4 snap-x hide-scrollbar md:justify-center md:flex-wrap md:overflow-visible md:snap-none pr-8">
+              <div
+                v-for="atelier in ateliers"
+                :key="atelier.slug"
+                class="flex-shrink-0 w-28 md:w-36 snap-start"
+              >
+                <AtelierCard
+                  :titre="atelier.titre"
+                  :slug="atelier.slug"
+                  :affiche="atelier.affiche"
+                  @select="openAtelierModal"
+                />
+              </div>
             </div>
+            <div class="absolute right-0 top-0 bottom-4 w-16 bg-gradient-to-l from-scene-dark via-scene-dark/80 to-transparent pointer-events-none md:hidden" />
           </div>
         </div>
 

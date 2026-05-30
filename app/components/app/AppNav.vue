@@ -3,7 +3,7 @@
     <Transition name="nav-overlay">
       <div
         v-if="modelValue"
-        class="fixed inset-0 z-[9997] bg-scene-black/98 flex flex-col"
+        class="fixed inset-0 z-[9997] bg-scene-black flex flex-col"
       >
         <div class="flex items-center justify-between p-6">
           <NuxtLink
@@ -26,12 +26,12 @@
           </button>
         </div>
 
-        <nav class="flex-1 flex flex-col items-center justify-center gap-8">
+        <nav class="flex-1 flex flex-col items-center justify-center gap-4">
           <NuxtLink
             v-for="(link, i) in links"
             :key="link.to"
             :to="link.to"
-            class="font-display text-display-lg text-scene-light hover:text-scene-brick transition-colors"
+            class="font-display text-display-lg text-scene-light hover:text-scene-brick transition-colors py-3"
             :style="{ transitionDelay: isOpen ? `${i * 80}ms` : '0ms' }"
             @click="close"
           >
@@ -47,7 +47,7 @@
             :aria-label="social.name"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-scene-muted hover:text-scene-brick transition-colors"
+            class="text-scene-muted hover:text-scene-brick transition-colors p-2"
           >
             <Icon :name="social.icon" size="22" />
           </a>

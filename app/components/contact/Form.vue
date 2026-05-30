@@ -160,7 +160,7 @@ async function onSubmit() {
   border-radius: 2px;
   color: #e8e2d9;
   font-family: 'DM Sans', system-ui, sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
   transition: border-color 0.3s ease;
   outline: none;
 }

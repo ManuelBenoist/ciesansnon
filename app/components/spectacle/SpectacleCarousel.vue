@@ -7,15 +7,15 @@
           :key="i"
           :src="img"
           :alt="`Photo ${i + 1}`"
-          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+          class="absolute inset-0 w-full h-full object-contain sm:object-cover transition-opacity duration-700"
           :class="i === current ? 'opacity-100' : 'opacity-0 pointer-events-none'"
           loading="lazy"
         />
 
-        <div class="absolute inset-0 bg-gradient-to-t from-scene-black/40 to-transparent" />
+        <div class="absolute inset-0 bg-gradient-to-t from-scene-black/40 to-transparent hidden sm:block" />
 
         <button
-          class="absolute left-6 top-1/2 -translate-y-1/2 z-10 text-scene-light/60 hover:text-scene-cream transition-colors p-3"
+          class="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-10 text-scene-light/60 hover:text-scene-cream transition-colors p-3"
           @click="prev"
           aria-label="Photo précédente"
         >
@@ -23,7 +23,7 @@
         </button>
 
         <button
-          class="absolute right-6 top-1/2 -translate-y-1/2 z-10 text-scene-light/60 hover:text-scene-cream transition-colors p-3"
+          class="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-10 text-scene-light/60 hover:text-scene-cream transition-colors p-3"
           @click="next"
           aria-label="Photo suivante"
         >

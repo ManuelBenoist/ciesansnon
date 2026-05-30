@@ -38,7 +38,7 @@
 
         <div
           ref="containerRef"
-          class="w-full h-full flex items-center justify-center p-16"
+          class="w-full h-full flex items-center justify-center p-4 sm:p-8 lg:p-16"
           @touchstart="onTouchStart"
           @touchend="onTouchEnd"
         >
