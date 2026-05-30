@@ -6,15 +6,11 @@
         :class="['reveal-fade-up reveal-visible max-w-4xl mx-auto']"
       >
         <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-4">
-          Arts de la scène
+          Aller vers tous les publics
         </p>
         <h1 class="font-display font-bold text-display-xl text-scene-cream mb-8">
           Actions culturelles
         </h1>
-        <p class="font-body text-scene-light/80 text-lg leading-relaxed max-w-2xl">
-          Aller vers tous les publics. Parce que l'art ne se partage pas seulement sur scène,
-          mais aussi dans les salles de classe, les quartiers et les établissements.
-        </p>
       </div>
     </section>
 
@@ -26,18 +22,14 @@
             :class="['reveal-fade-up reveal-visible order-2 lg:order-1']"
           >
             <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-6">
-              Arts de la scène
+              Un atelier annuel pour les jeunes de 15 à 25 ans
             </h2>
             <div class="font-body text-scene-light/80 text-base leading-relaxed space-y-4">
               <p>
-                Nous concevons des ateliers de pratique théâtrale pour tous les âges et tous les
-                niveaux. Du jeu dramatique à l'écriture de plateau, chaque atelier est une invitation
-                à explorer sa propre créativité, à trouver sa voix et son corps sur scène.
+                 La Compagnie sans Non cherche à développer des actions culturelles variées et ouvertes à un public large, en portant une attention plus particulière aux publics dits « éloignés » de l’offre culturelle.
               </p>
               <p>
-                Nos interventions s'appuient sur les créations de la compagnie : les participants
-                découvrent l'univers d'un spectacle, rencontrent les artistes, puis expérimentent
-                par eux-mêmes les outils du théâtre.
+                 Chaque année elle anime un atelier à destination des jeunes de 15 à 25 ans résidant en Quartiers Prioritaires de la Ville et crée, des spectacles théâtraux et musicaux.
               </p>
             </div>
           </div>
@@ -46,9 +38,11 @@
             :class="['reveal-fade-up reveal-visible order-1 lg:order-2']"
           >
             <div class="relative aspect-[4/3] overflow-hidden rounded-sm">
-              <div
-                class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('https://picsum.photos/seed/arts-scene/800/600')"
+              <NuxtImg
+                src="/images/actions-culturelles/illu-spectacle-prise-de-risque.webp"
+                alt="Scène de théâtre avec des jeunes participants en atelier"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-scene-dark/40 to-transparent" />
             </div>
@@ -61,9 +55,11 @@
             :class="['reveal-fade-up reveal-visible']"
           >
             <div class="relative aspect-[4/3] overflow-hidden rounded-sm">
-              <div
-                class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('https://picsum.photos/seed/publics/800/600')"
+              <NuxtImg
+                src="/images/actions-culturelles/illu-actions-culturelles.webp"
+                alt="Groupe de participants lors d'un atelier de médiation culturelle"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-scene-dark/40 to-transparent" />
             </div>
@@ -73,31 +69,15 @@
             :class="['reveal-fade-up reveal-visible']"
           >
             <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-6">
-              Tous les publics
+              Une création de spectacles qui s’appuie sur des ateliers de sensibilisation
             </h2>
             <div class="font-body text-scene-light/80 text-base leading-relaxed space-y-4">
               <p>
-                Notre engagement envers l'accessibilité se décline à travers des projets sur mesure
-                pour chaque public :
+                Pendant la période de création du spectacle, des ateliers sont proposés aux usagers des lieux culturels ainsi qu’aux écoles primaires et aux collèges. En plus d’offrir une sensibilisation à la présence scénique (respiration, conscience du corps, de soi et des autres, communication non verbale entre autres), ceux-ci sont centrés sur une initiation au jeu sur le thème de l’interdépendance : en quoi avons-nous besoin des autres ? Il y a donc un travail sur le regard et le toucher, et comment le jugement sur autrui se manifeste sans un mot.
               </p>
-              <ul class="list-none space-y-3">
-                <li class="flex items-start gap-3">
-                  <span class="text-scene-brick mt-1.5">▸</span>
-                  <span><strong class="text-scene-light">Scolaires</strong> &mdash; du primaire au lycée, parcours de découverte et pratique artistique en lien avec les programmes.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-scene-brick mt-1.5">▸</span>
-                  <span><strong class="text-scene-light">Établissements spécialisés</strong> &mdash; ateliers adaptés pour les personnes en situation de handicap, avec des artistes formés à la médiation inclusive.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-scene-brick mt-1.5">▸</span>
-                  <span><strong class="text-scene-light">Quartiers prioritaires</strong> &mdash; résidences d'artistes, stages gratuits, restitutions publiques dans l'espace urbain.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-scene-brick mt-1.5">▸</span>
-                  <span><strong class="text-scene-light">Public adulte</strong> &mdash; stages amateurs, rencontres, bords de scène.</span>
-                </li>
-              </ul>
+              <p>
+                Nous proposons aux participants un questionnaire sur leur vécu quant à se sentir jugé par les autres ou être dans une attitude de rejet de l’autre : à quelle occasion cela leur est-il arrivé ? Dans quelle situation précise ? Est-ce que cela a évolué avec l’âge ? A partir des réponses des participants, nous proposons de réaliser des scènes improvisées, si possible sans paroles.
+              </p>
             </div>
           </div>
         </div>
@@ -112,19 +92,25 @@
         <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-12">
           Partenaires & soutiens
         </h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-50">
-          <div class="h-12 border border-scene-border rounded-sm flex items-center justify-center">
-            <span class="text-xs text-scene-muted uppercase tracking-widest">Partenaire</span>
-          </div>
-          <div class="h-12 border border-scene-border rounded-sm flex items-center justify-center">
-            <span class="text-xs text-scene-muted uppercase tracking-widest">Partenaire</span>
-          </div>
-          <div class="h-12 border border-scene-border rounded-sm flex items-center justify-center">
-            <span class="text-xs text-scene-muted uppercase tracking-widest">Partenaire</span>
-          </div>
-          <div class="h-12 border border-scene-border rounded-sm flex items-center justify-center">
-            <span class="text-xs text-scene-muted uppercase tracking-widest">Partenaire</span>
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <NuxtImg
+            src="/images/soutiens/logo-cite-etudcative-mulhouse.webp"
+            alt="Logo de la Cité Éducative de Mulhouse"
+            class="h-20 w-auto object-contain mx-auto"
+            loading="lazy"
+          />
+          <NuxtImg
+            src="/images/soutiens/logo-fdva.webp"
+            alt="Logo du FDVA — Fonds pour le Développement de la Vie Associative"
+            class="h-20 w-auto object-contain mx-auto"
+            loading="lazy"
+          />
+          <NuxtImg
+            src="/images/soutiens/logo-ville-de-mulhouse.webp"
+            alt="Logo de la Ville de Mulhouse"
+            class="h-20 w-auto object-contain mx-auto"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
