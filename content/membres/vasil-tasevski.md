@@ -2,7 +2,7 @@
 nom: "Vasil Tasevski"
 slug: "vasil-tasevski"
 role_compagnie: "Conseiller scénographe"
-role_court: "conseiller-scenographe"
+role_court: "conseiller-scénographe"
 bio: |
   **Vasil Tasevski intervient dans la scénographie de SIMPLE** et, ponctuellement, dans l'accompagnement physique de la performance physique des comédiens.
 

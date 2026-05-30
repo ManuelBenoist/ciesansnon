@@ -2,7 +2,7 @@
 nom: "Olivier Sangwa"
 slug: "olivier-sangwa"
 role_compagnie: "Comédien"
-role_court: "comedien"
+role_court: "comédien"
 bio: |
   **Promotion 2025 du CNSAD (Conservatoire National Supérieur d'Art Dramatique)**
 

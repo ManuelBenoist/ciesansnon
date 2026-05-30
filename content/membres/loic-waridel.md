@@ -2,7 +2,7 @@
 nom: "Loïc Waridel"
 slug: "loic-waridel"
 role_compagnie: "Créateur lumières"
-role_court: "createur-lumieres"
+role_court: "créateur-lumières"
 bio:
 photo:
 ordre: 5

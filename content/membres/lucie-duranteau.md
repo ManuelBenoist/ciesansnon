@@ -2,7 +2,7 @@
 nom: "Lucie Duranteau"
 slug: "lucie-duranteau"
 role_compagnie: "Costumière"
-role_court: "costumiere"
+role_court: "costumière"
 bio: |
   **Lucie Duranteau intervient dans la création et l'adaptation des costumes,** essentiellement de seconde main, pour permettre une grande fluidité dans le passage d'un personnage à un autre par les comédiens.
 

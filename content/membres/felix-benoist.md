@@ -2,7 +2,7 @@
 nom: "Félix Benoist"
 slug: "felix-benoist"
 role_compagnie: "Metteur en scène"
-role_court: "metteur-en-scene"
+role_court: "metteur-en-scène"
 bio: |
   **2022 — Mise en scène :** Venavi texte de Catherine Verlaguet et Norman Yao.
 

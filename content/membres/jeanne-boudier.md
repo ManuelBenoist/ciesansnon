@@ -2,7 +2,7 @@
 nom: "Jeanne Boudier"
 slug: "jeanne-boudier"
 role_compagnie: "Comédienne"
-role_court: "Interprétation"
+role_court: "comédienne"
 bio: |
   **Promotion 2025 du CNSAD (Conservatoire National Supérieur d'Art Dramatique)**
 

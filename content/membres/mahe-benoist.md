@@ -2,7 +2,7 @@
 nom: "Marie-Hélène Benoist"
 slug: "marie-helene-benoist"
 role_compagnie: "Metteuse en scène"
-role_court: "metteuse-en-scene"
+role_court: "metteuse-en-scène"
 bio: |
   **2022 — Mise en scène :** Venavi texte de Catherine Verlaguet et Norman Yao.
 
