@@ -49,6 +49,27 @@
           </div>
         </div>
 
+        <!-- Bandeau spectacles d'atelier -->
+        <div class="mb-20">
+          <h3 class="font-display font-semibold text-2xl text-scene-cream mb-6">
+            Les spectacles
+          </h3>
+          <div class="flex gap-4 overflow-x-auto pb-4 snap-x md:justify-center md:flex-wrap md:overflow-visible md:snap-none">
+            <div
+              v-for="atelier in ateliers"
+              :key="atelier.slug"
+              class="flex-shrink-0 w-28 md:w-36 snap-start"
+            >
+              <AtelierCard
+                :titre="atelier.titre"
+                :slug="atelier.slug"
+                :affiche="atelier.affiche"
+                @select="openAtelierModal"
+              />
+            </div>
+          </div>
+        </div>
+
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div
             ref="publicsImgTarget"
@@ -114,6 +135,10 @@
         </div>
       </div>
     </section>
+
+    <UiModal v-model="isAtelierModalOpen">
+      <AtelierModal v-if="selectedAtelier" :atelier="selectedAtelier" />
+    </UiModal>
   </div>
 </template>
 
@@ -122,6 +147,21 @@ useSeo({
   title: 'Actions culturelles',
   description: 'La Cie Sans Non conçoit des projets de médiation culturelle : ateliers théâtre, interventions scolaires, résidences en quartiers prioritaires. L\'art de la scène pour tous les publics.',
 })
+
+const { data: ateliers } = await useAsyncData('ateliers-list', () =>
+  queryCollection('ateliers').order('ordre', 'ASC').all()
+)
+
+const isAtelierModalOpen = ref(false)
+const selectedAtelier = ref<any>(null)
+
+function openAtelierModal(slug: string) {
+  const found = (ateliers.value || []).find((a: any) => a.slug === slug)
+  if (found) {
+    selectedAtelier.value = found
+    isAtelierModalOpen.value = true
+  }
+}
 
 const { target: heroTarget } = useRevealOnScroll()
 const { target: artsTarget } = useRevealOnScroll()

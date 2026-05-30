@@ -65,5 +65,23 @@ export default defineContentConfig({
       type: 'page',
       source: 'actus/*.md',
     }),
+    ateliers: defineCollection({
+      type: 'data',
+      source: 'ateliers/*.md',
+      schema: z.object({
+        titre: z.string(),
+        slug: z.string(),
+        annee: z.number(),
+        lieu: z.string(),
+        ville: z.string(),
+        date: z.string(),
+        type_entree: z.string(),
+        affiche: z.string(),
+        accroche: z.string().optional(),
+        description: z.string().optional(),
+        ordre: z.number(),
+        galerie: z.array(z.string()).optional(),
+      }),
+    }),
   },
 })
