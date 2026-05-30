@@ -4,8 +4,8 @@ slug: "venavi"
 statut: "en-tournee"
 annee: 2023
 duree: "1h"
-image_affiche: "/images/creations/venavi/affiche.jpg"
-image_hero: "/images/creations/venavi/hero.jpg"
+image_affiche: "/images/creations/venavi/affiche.webp"
+image_hero: "/images/creations/venavi/hero.webp"
 galerie:
   - "/images/creations/venavi/galerie-1.webp"
   - "/images/creations/venavi/galerie-2.webp"

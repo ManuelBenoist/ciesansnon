@@ -33,7 +33,7 @@
         <div class="order-1 lg:order-2">
           <div class="relative aspect-[4/5] overflow-hidden">
             <NuxtImg
-              src="/images/actions-culturelles.jpeg"
+              src="/images/actions-culturelles.webp"
               alt="Action culturelle — La Cie Sans Non"
               class="absolute inset-0 w-full h-full object-cover"
               loading="lazy"

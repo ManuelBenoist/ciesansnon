@@ -45,7 +45,7 @@ withDefaults(defineProps<{
   description?: string
   vignetteStrength?: number
 }>(), {
-  image: '/images/hero-homepage.jpg',
+  image: '/images/hero-homepage.webp',
   baseline: 'Compagnie de théâtre',
   description: 'pour toucher l’imaginaire et les émotions d’un public qui ne fait pas forcément du théâtre une pratique culturelle habituelle',
   vignetteStrength: 0.6,

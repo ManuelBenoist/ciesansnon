@@ -12,14 +12,14 @@ export function useSeo(options: {
     description: options.description,
     ogTitle: `${options.title} | ${siteName}`,
     ogDescription: options.description,
-    ogImage: options.image ?? `${siteUrl}/images/og/default.jpg`,
+    ogImage: options.image ?? `${siteUrl}/images/og/default.webp`,
     ogUrl: siteUrl,
     ogType: options.type ?? 'website',
     ogSiteName: siteName,
     twitterCard: 'summary_large_image',
     twitterTitle: `${options.title} | ${siteName}`,
     twitterDescription: options.description,
-    twitterImage: options.image ?? `${siteUrl}/images/og/default.jpg`,
+    twitterImage: options.image ?? `${siteUrl}/images/og/default.webp`,
   })
 
   useHead({

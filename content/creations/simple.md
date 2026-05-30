@@ -4,8 +4,8 @@ slug: "simple"
 statut: "en-creation"
 annee: 2027
 duree: "1h20"
-image_affiche: "/images/creations/simple/affiche.jpg"
-image_hero: "/images/creations/simple/hero.jpg"
+image_affiche: "/images/creations/simple/affiche.webp"
+image_hero: "/images/creations/simple/hero.webp"
 galerie:
   - "/images/creations/simple/galerie-1.webp"
   - "/images/creations/simple/galerie-2.webp"
