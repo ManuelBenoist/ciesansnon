@@ -4,10 +4,9 @@
       <div
         v-if="modelValue"
         class="fixed inset-0 z-[9999] flex items-center justify-center p-6"
-        @click.self="close"
       >
-        <div class="absolute inset-0 bg-scene-black/85 backdrop-blur-sm" />
-        <div class="relative z-10 bg-scene-surface border border-scene-border rounded-sm w-full max-w-4xl max-h-[85vh] overflow-y-auto shadow-2xl">
+        <div class="absolute inset-0 bg-scene-black/85 backdrop-blur-sm" @click="close" />
+        <div class="relative z-10 bg-scene-surface border border-scene-border rounded-sm w-full max-w-4xl max-h-[85vh] overflow-y-auto shadow-2xl" @click.stop>
           <button
             class="absolute top-4 right-4 z-20 text-scene-light/70 hover:text-scene-cream transition-colors p-3"
             @click="close"
