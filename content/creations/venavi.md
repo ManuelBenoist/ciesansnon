@@ -25,7 +25,7 @@ accroche: "Deux jumeaux, un secret trop lourd — un conte africain seul en scè
 mise_en_scene: "Marie-Hélène BENOIST, Félix BENOIST"
 auteur: "Catherine VERLAGUET (adaptation, commande du Festival Odyssées en Yvelines, du CDN de Sartrouville) d'après une œuvre de Yao NORMAN"
 casting:
-  - nom: "Olivier Sangwa"
+  - nom: "Olivier SANGWA"
     role: "Seul en scène"
   - nom: "Vivien BENOIST, Marie-Hélène BENOIST"
     role: "Accompagnement musical et vocal"

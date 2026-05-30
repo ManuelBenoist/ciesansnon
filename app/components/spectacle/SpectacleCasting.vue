@@ -11,6 +11,11 @@
             Distribution
           </h3>
 
+          <div v-if="firstCasting" class="mb-4">
+            <p class="font-body text-sm text-scene-muted uppercase tracking-wider mb-0.5">{{ firstCasting.role }}</p>
+            <p class="font-display text-lg text-scene-light">{{ firstCasting.nom }}</p>
+          </div>
+
           <div v-if="miseEnScene" class="mb-5">
             <p class="font-body text-sm text-scene-muted uppercase tracking-wider mb-0.5">
               Mise en scène
@@ -25,7 +30,7 @@
             <p class="font-display text-xl text-scene-light">{{ auteur }}</p>
           </div>
 
-          <div v-for="m in casting" :key="m.nom" class="mb-4">
+          <div v-for="m in restCasting" :key="m.nom" class="mb-4">
             <p class="font-body text-sm text-scene-muted uppercase tracking-wider mb-0.5">{{ m.role }}</p>
             <p class="font-display text-lg text-scene-light">{{ m.nom }}</p>
           </div>
@@ -66,5 +71,13 @@ const props = defineProps<{
 
 const hasData = computed(() =>
   props.miseEnScene || props.auteur || props.casting?.length || props.equipeTechnique?.length
+)
+
+const firstCasting = computed(() =>
+  props.casting?.[0] ?? null
+)
+
+const restCasting = computed(() =>
+  props.casting?.slice(1) ?? []
 )
 </script>

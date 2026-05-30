@@ -26,7 +26,7 @@
       <p class="font-body text-xs sm:text-sm uppercase tracking-[0.35em] text-scene-brick mb-6">
         {{ baseline }}
       </p>
-      <h1 class="font-serif text-display-2xl text-scene-cream leading-none mb-8">
+      <h1 class="font-display font-bold text-display-xl sm:text-display-2xl text-scene-cream mb-8">
         La Cie Sans Non
       </h1>
       <p class="font-body text-scene-light/80 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
@@ -49,7 +49,7 @@ withDefaults(defineProps<{
 }>(), {
   image: '/images/hero-homepage.webp',
   baseline: 'Compagnie de théâtre',
-  description: 'pour toucher l’imaginaire et les émotions d’un public qui ne fait pas forcément du théâtre une pratique culturelle habituelle',
+  description: 'toucher l’imaginaire et les émotions d’un public qui ne fait pas forcément du théâtre une pratique culturelle habituelle',
   vignetteStrength: 0.6,
 })
 

@@ -2,9 +2,9 @@
 titre: "Il sera toujours temps"
 slug: "il-sera-toujours-temps"
 annee: 2023
-lieu: "AFSCO Espace Matisse — Théâtre de la Sinne"
+lieu: "AFSCO Espace Matisse & Théâtre de la Sinne"
 ville: "Mulhouse"
-date: "10 — 17 juin 2023 + 3 octobre 2023"
+date: "10 au 17 juin 2023 & 3 octobre 2023"
 affiche: "/images/ateliers/affiche-il-sera-toujours-temps.webp"
 accroche: "Un spectacle musical de l'Atelier de la Cie Sans Non"
 description: |

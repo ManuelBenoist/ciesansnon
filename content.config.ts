@@ -75,7 +75,6 @@ export default defineContentConfig({
         lieu: z.string(),
         ville: z.string(),
         date: z.string(),
-        type_entree: z.string(),
         affiche: z.string(),
         accroche: z.string().optional(),
         description: z.string().optional(),

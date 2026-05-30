@@ -24,6 +24,13 @@
         </div>
 
         <div>
+          <h2 class="font-display font-semibold text-2xl text-scene-cream mb-4">Conception & développement</h2>
+          <p class="font-body text-scene-light/80 text-base leading-relaxed">
+            Ce site a été conçu et développé par <strong>Manuel BENOIST</strong>.
+          </p>
+        </div>
+
+        <div>
           <h2 class="font-display font-semibold text-2xl text-scene-cream mb-4">Propriété intellectuelle</h2>
           <p class="font-body text-scene-light/80 text-base leading-relaxed">
             L'ensemble des contenus (textes, images, vidéos) présents sur ce site est la propriété de la Compagnie Sans Non ou fait l'objet d'une autorisation d'utilisation. Toute reproduction, représentation ou diffusion, totale ou partielle, est interdite sans autorisation préalable.

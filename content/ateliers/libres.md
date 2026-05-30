@@ -2,10 +2,9 @@
 titre: "Libres"
 slug: "libres"
 annee: 2022
-lieu: "AFSCO Espace Matisse — Théâtre de la Sinne"
 ville: "Mulhouse"
-date: "1er — 4 juin 2022 + 8 novembre 2022"
-type_entree: "Entrée libre sur réservation par mail"
+lieu: "AFSCO Espace Matisse & Théâtre de la Sinne"
+date: "1er au 4 juin & 8 novembre 2022"
 affiche: "/images/ateliers/affiche-libres.webp"
 accroche: "Un spectacle musical de l'Atelier de la Cie Sans Non"
 description: |

@@ -21,7 +21,6 @@
         <p><strong class="text-scene-cream">Date :</strong> {{ atelier.date }}</p>
         <p><strong class="text-scene-cream">Lieu :</strong> {{ atelier.lieu }}</p>
         <p><strong class="text-scene-cream">Ville :</strong> {{ atelier.ville }}</p>
-        <p><strong class="text-scene-cream">Entrée :</strong> {{ atelier.type_entree }}</p>
       </div>
       <template v-if="atelier.description">
         <div class="w-12 h-px bg-[#2a2a2a]" />

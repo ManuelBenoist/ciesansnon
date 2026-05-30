@@ -2,9 +2,9 @@
 titre: "Ce qui nous lie"
 slug: "ce-qui-nous-lie"
 annee: 2024
-lieu: "Théâtre de la Sinne"
+lieu: "AFSCO & Théâtre de la Sinne"
 ville: "Mulhouse"
-date: "7 — 8 octobre 2024"
+date: "30 mai au 1er juin & 7 et 8 octobre 2024"
 affiche: "/images/ateliers/affiche-ce-qui-nous-lie.webp"
 accroche: "Un spectacle musical de l'Atelier de la Cie Sans Non"
 description: |

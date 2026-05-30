@@ -2,10 +2,9 @@
 titre: "Non"
 slug: "non"
 annee: 2025
-lieu: "AFSCO"
+lieu: "AFSCO & Théâtre de la Sinne"
+date: "5 au 7 juin & 8 et 9 octobre 2025"
 ville: "Mulhouse"
-date: "5 — 7 juin 2025"
-type_entree: "Entrée libre sur réservation par mail"
 affiche: "/images/ateliers/affiche-non.webp"
 accroche: "Un spectacle musical de l'Atelier de la Cie Sans Non"
 description: |
