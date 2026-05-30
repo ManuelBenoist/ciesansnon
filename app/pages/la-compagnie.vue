@@ -3,17 +3,27 @@
     <section class="relative pt-28 pb-16 sm:pt-40 sm:pb-24 px-6">
       <div
         ref="heroTarget"
-        :class="['reveal-fade-up reveal-visible max-w-7xl mx-auto']"
+        :class="['reveal-fade-up reveal-visible max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center']"
       >
-        <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-4">
-          La Compagnie
-        </p>
-        <h1 class="font-display font-bold text-display-xl text-scene-cream mb-8">
-          La Cie Sans Non
-        </h1>
-        <p class="font-body text-scene-light/80 text-lg leading-relaxed max-w-3xl">
-          Implantée à Mulhouse, la Compagnie Sans Non développe des spectacles de théâtre de récit qui donnent une place importante à l’engagement du corps.
-        </p>
+        <div>
+          <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-4">
+            La Compagnie
+          </p>
+          <h1 class="font-display font-bold text-display-xl text-scene-cream mb-8">
+            La Cie Sans Non
+          </h1>
+          <p class="font-body text-scene-light/80 text-lg leading-relaxed max-w-3xl">
+            Implantée à Mulhouse, la Compagnie Sans Non développe des spectacles de théâtre de récit qui donnent une place importante à l’engagement du corps.
+          </p>
+        </div>
+        <div class="flex justify-center lg:justify-end">
+          <NuxtImg
+            src="/images/logo_csn.webp"
+            alt="Logo La Cie Sans Non"
+            class="max-h-[50vh] lg:max-h-[60vh] w-auto object-contain brightness-[1.6]"
+            loading="eager"
+          />
+        </div>
       </div>
     </section>
 
