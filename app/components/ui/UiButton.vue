@@ -39,9 +39,9 @@ const props = withDefaults(defineProps<{
 })
 
 const variants: Record<string, string> = {
-  primary: 'bg-scene-brick text-white hover:bg-scene-brick/80 border-scene-brick',
-  ghost: 'text-scene-brick hover:text-scene-cream border-transparent',
-  outline: 'border-scene-brick text-scene-brick hover:bg-scene-brick/10',
+  primary: 'bg-scene-rouge text-white border-black hover:bg-scene-yellow hover:text-black',
+  ghost: 'bg-white text-black border-black hover:bg-scene-yellow',
+  outline: 'bg-white text-black border-black hover:bg-black hover:text-white',
 }
 
 const sizes: Record<string, string> = {
@@ -52,7 +52,7 @@ const sizes: Record<string, string> = {
 
 const computedClasses = computed(() =>
   [
-    'inline-flex items-center gap-2 font-body uppercase tracking-widest border rounded-sm transition-all duration-300 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed',
+    'inline-flex items-center gap-2 font-body uppercase tracking-widest border-2 transition-colors duration-200 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed',
     variants[props.variant],
     sizes[props.size],
   ].join(' '),

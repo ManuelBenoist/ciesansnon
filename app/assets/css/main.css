@@ -13,19 +13,17 @@
 @tailwind utilities;
 
 :root {
-  --grain-opacity: 0.055;
-  --vignette-strength: 0.6;
   --transition-page: 250ms ease;
 }
 
 html {
-  background-color: #0c0c0c;
-  color-scheme: dark;
+  background-color: #f5f0e8;
+  color-scheme: light;
 }
 
 body {
-  background-color: #0c0c0c;
-  color: #e8e2d9;
+  background-color: #f5f0e8;
+  color: #0c0c0c;
   font-family: 'DM Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,45 +32,11 @@ body {
 }
 
 *:focus-visible {
-  outline: 2px solid #C4573A;
+  outline: 3px solid #0c0c0c;
   outline-offset: 2px;
 }
 
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9998;
-  opacity: var(--grain-opacity);
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 200px 200px;
-}
-
 @layer components {
-  .nav-underline {
-    position: relative;
-  }
-
-  .nav-underline::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: #C4573A;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 300ms ease;
-  }
-
-  .nav-underline:hover::after,
-  .nav-underline.router-link-active::after {
-    transform: scaleX(1);
-  }
-
   .reveal-fade-up {
     transition: opacity 800ms ease-out, transform 800ms ease-out;
     will-change: opacity, transform;

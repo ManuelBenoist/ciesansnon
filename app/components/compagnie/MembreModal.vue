@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
     <template v-if="photo">
-      <div class="relative aspect-[3/4] overflow-hidden rounded-sm">
+      <div class="relative aspect-[3/4] overflow-hidden border-4 border-black">
         <NuxtImg
           :src="photo"
           :alt="`Portrait de ${nom}`"
@@ -10,27 +10,27 @@
         />
       </div>
     </template>
-    <div v-else class="aspect-[3/4] bg-scene-surface flex items-center justify-center rounded-sm">
-      <Icon name="mdi:account-outline" size="64" class="text-scene-muted/30" />
+    <div v-else class="aspect-[3/4] bg-scene-yellow flex items-center justify-center border-4 border-black">
+      <Icon name="mdi:account-outline" size="64" class="text-black/30" />
     </div>
     <div class="flex flex-col justify-center">
-      <h3 class="font-display text-3xl sm:text-4xl text-scene-cream mb-2">
+      <h3 class="font-display text-3xl sm:text-4xl text-black mb-2">
         {{ nom }}
       </h3>
-      <p class="font-body text-base text-scene-brick mb-6">
+      <p class="font-body text-base text-scene-rouge font-bold mb-6">
         {{ role }}
       </p>
-      <div class="w-12 h-px bg-[#2a2a2a] mb-6" />
-      <div class="font-body text-scene-light/80 leading-relaxed text-sm space-y-4">
+      <div class="bg-black h-0.5 w-12 mb-6" />
+      <div class="font-body text-black/80 leading-relaxed text-sm space-y-4">
         <template v-if="bio">
           <div v-for="(block, i) in parsedBio" :key="i">
-            <p v-if="block.type === 'p'" class="text-scene-light/80" v-html="block.content" />
-            <ul v-else class="list-disc list-inside space-y-1 text-scene-light/70">
+            <p v-if="block.type === 'p'" class="text-black/80" v-html="block.content" />
+            <ul v-else class="list-disc list-inside space-y-1 text-black/70">
               <li v-for="(item, j) in block.items" :key="j" v-html="item"></li>
             </ul>
           </div>
         </template>
-        <p v-else class="text-scene-muted italic">Biographie à venir.</p>
+        <p v-else class="text-black/50 italic">Biographie à venir.</p>
       </div>
     </div>
   </div>

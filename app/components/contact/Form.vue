@@ -69,12 +69,12 @@
       <p v-if="errors.message" id="error-message" class="form-error">{{ errors.message }}</p>
     </div>
 
-    <div v-if="state.status === 'success'" class="p-4 border border-scene-brick/30 bg-scene-brick/5 rounded-sm">
-      <p class="text-scene-brick text-sm font-body">{{ state.message }}</p>
+    <div v-if="state.status === 'success'" class="p-4 border-2 border-black bg-scene-yellow">
+      <p class="text-black text-sm font-body font-bold">{{ state.message }}</p>
     </div>
 
-    <div v-if="state.status === 'error'" class="p-4 border border-scene-rouge/30 bg-scene-rouge/5 rounded-sm">
-      <p class="text-scene-rouge text-sm font-body">{{ state.message }}</p>
+    <div v-if="state.status === 'error'" class="p-4 border-2 border-black bg-scene-rouge/10">
+      <p class="text-scene-rouge text-sm font-body font-bold">{{ state.message }}</p>
     </div>
 
     <UiButton
@@ -149,33 +149,33 @@ async function onSubmit() {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: #e8e2d9;
+  color: #0c0c0c;
+  font-weight: 700;
 }
 
 .form-input {
   width: 100%;
   padding: 0.75rem 1rem;
-  background: #1e1e1e;
-  border: 1px solid #2e2e2e;
-  border-radius: 2px;
-  color: #e8e2d9;
+  background: #ffffff;
+  border: 2px solid #0c0c0c;
+  color: #0c0c0c;
   font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.2s ease;
   outline: none;
 }
 
 .form-input:focus {
-  border-color: #C4573A;
+  border-color: #8b2635;
 }
 
 .form-input::placeholder {
-  color: #5a5a5a;
+  color: rgba(12, 12, 12, 0.4);
 }
 
 .form-select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%235a5a5a' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%230c0c0c' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   padding-right: 2.5rem;
@@ -190,5 +190,6 @@ async function onSubmit() {
   font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.75rem;
   color: #8b2635;
+  font-weight: 700;
 }
 </style>

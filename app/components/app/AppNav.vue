@@ -3,11 +3,12 @@
     <Transition name="nav-overlay">
       <div
         v-if="modelValue"
-        class="fixed inset-0 z-[9997] bg-scene-black flex flex-col"
+        class="fixed inset-0 z-[9997] bg-white flex flex-col"
       >
-        <div class="flex items-center justify-between p-6">
+        <div class="flex items-center justify-between p-4 sm:p-6 border-b-4 border-black">
           <NuxtLink
             to="/"
+            class="bg-black p-1 sm:p-2"
             @click="close"
           >
             <NuxtImg
@@ -18,7 +19,7 @@
             />
           </NuxtLink>
           <button
-            class="p-2 text-scene-light hover:text-scene-brick transition-colors"
+            class="border-2 border-black p-2 bg-white hover:bg-scene-yellow transition-colors"
             @click="close"
             aria-label="Fermer le menu"
           >
@@ -26,12 +27,12 @@
           </button>
         </div>
 
-        <nav class="flex-1 flex flex-col items-center justify-center gap-4">
+        <nav class="flex-1 flex flex-col items-center justify-center gap-3">
           <NuxtLink
             v-for="(link, i) in links"
             :key="link.to"
             :to="link.to"
-            class="font-display text-display-lg text-scene-light hover:text-scene-brick transition-colors py-3"
+            class="font-display font-bold text-3xl sm:text-display-lg text-black hover:bg-scene-yellow px-4 py-2 transition-colors duration-200"
             :style="{ transitionDelay: isOpen ? `${i * 80}ms` : '0ms' }"
             @click="close"
           >
@@ -39,7 +40,7 @@
           </NuxtLink>
         </nav>
 
-        <div class="p-6 flex items-center justify-center gap-6">
+        <div class="p-6 flex items-center justify-center gap-4 border-t-4 border-black">
           <a
             v-for="social in socials"
             :key="social.name"
@@ -47,7 +48,7 @@
             :aria-label="social.name"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-scene-muted hover:text-scene-brick transition-colors p-2"
+            class="border-2 border-black p-2 hover:bg-scene-yellow transition-colors"
           >
             <Icon :name="social.icon" size="22" />
           </a>

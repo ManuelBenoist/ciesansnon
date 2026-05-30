@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-    <div class="relative aspect-[2/3] overflow-hidden rounded-sm">
+    <div class="relative aspect-[2/3] overflow-hidden border-4 border-black">
       <NuxtImg
         :src="atelier.affiche"
         :alt="`Affiche : ${atelier.titre}`"
@@ -10,31 +10,31 @@
     </div>
     <div class="flex flex-col space-y-6">
       <div>
-        <h3 class="font-display text-2xl sm:text-3xl text-scene-cream mb-3">
+        <h3 class="font-display text-2xl sm:text-3xl text-black mb-3">
           {{ atelier.titre }}
         </h3>
-        <p v-if="atelier.accroche" class="font-body text-base text-scene-brick/80 italic">
+        <p v-if="atelier.accroche" class="font-body text-base text-scene-rouge font-bold italic">
           {{ atelier.accroche }}
         </p>
       </div>
-      <div class="font-body text-scene-light/80 text-sm space-y-1">
-        <p><strong class="text-scene-cream">Date :</strong> {{ atelier.date }}</p>
-        <p><strong class="text-scene-cream">Lieu :</strong> {{ atelier.lieu }}</p>
-        <p><strong class="text-scene-cream">Ville :</strong> {{ atelier.ville }}</p>
+      <div class="font-body text-black/80 text-sm space-y-1">
+        <p><strong class="text-black">Date :</strong> {{ atelier.date }}</p>
+        <p><strong class="text-black">Lieu :</strong> {{ atelier.lieu }}</p>
+        <p><strong class="text-black">Ville :</strong> {{ atelier.ville }}</p>
       </div>
       <template v-if="atelier.description">
-        <div class="w-12 h-px bg-[#2a2a2a]" />
-        <div class="font-body text-scene-light/80 leading-relaxed text-sm space-y-3">
+        <div class="bg-black h-0.5 w-12" />
+        <div class="font-body text-black/80 leading-relaxed text-sm space-y-3">
           <div v-for="(block, i) in parsedDescription" :key="i">
-            <p v-if="block.type === 'p'" class="text-scene-light/80" v-html="block.content" />
-            <ul v-else class="list-disc list-inside space-y-1 text-scene-light/70">
+            <p v-if="block.type === 'p'" class="text-black/80" v-html="block.content" />
+            <ul v-else class="list-disc list-inside space-y-1 text-black/70">
               <li v-for="(item, j) in block.items" :key="j" v-html="item"></li>
             </ul>
           </div>
         </div>
       </template>
       <template v-if="atelier.galerie && atelier.galerie.length">
-        <div class="w-12 h-px bg-[#2a2a2a]" />
+        <div class="bg-black h-0.5 w-12" />
       </template>
     </div>
   </div>
@@ -43,13 +43,13 @@
       <button
         v-for="(img, k) in atelier.galerie"
         :key="k"
-        class="relative aspect-[4/3] overflow-hidden rounded-sm"
+        class="relative aspect-[4/3] overflow-hidden border-2 border-black hover:bg-scene-yellow transition-colors"
         @click="openLightbox(k)"
       >
         <NuxtImg
           :src="img"
           alt=""
-          class="absolute inset-0 w-full h-full object-cover hover:opacity-80 transition-opacity"
+          class="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
         />
       </button>

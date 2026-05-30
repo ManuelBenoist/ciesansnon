@@ -1,16 +1,16 @@
 <template>
-  <div class="py-12 sm:py-16 bg-scene-dark border-t border-scene-border">
+  <div class="py-10 sm:py-14 bg-white border-t-4 border-black">
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex justify-between items-start gap-6">
         <NuxtLink
           v-if="prev"
           :to="`/creations/${prev.slug}`"
-          class="group flex items-center gap-3 font-body text-sm text-scene-muted hover:text-scene-brick transition-colors"
+          class="group flex items-center gap-3 font-body text-sm text-black border-2 border-black p-3 hover:bg-scene-yellow transition-colors"
         >
           <Icon name="mdi:chevron-left" size="24" class="shrink-0" />
           <span>
-            <span class="block text-xs uppercase tracking-wider text-scene-muted/60">Précédent</span>
-            <span class="block font-display text-lg text-scene-light group-hover:text-scene-brick transition-colors mt-0.5">
+            <span class="block text-xs uppercase tracking-wider text-black/60">Précédent</span>
+            <span class="block font-display text-lg text-black mt-0.5">
               {{ prev.titre }}
             </span>
           </span>
@@ -21,11 +21,11 @@
         <NuxtLink
           v-if="next"
           :to="`/creations/${next.slug}`"
-          class="group flex items-center gap-3 font-body text-sm text-scene-muted hover:text-scene-brick transition-colors text-right"
+          class="group flex items-center gap-3 font-body text-sm text-black border-2 border-black p-3 hover:bg-scene-yellow transition-colors text-right"
         >
           <span>
-            <span class="block text-xs uppercase tracking-wider text-scene-muted/60">Suivant</span>
-            <span class="block font-display text-lg text-scene-light group-hover:text-scene-brick transition-colors mt-0.5">
+            <span class="block text-xs uppercase tracking-wider text-black/60">Suivant</span>
+            <span class="block font-display text-lg text-black mt-0.5">
               {{ next.titre }}
             </span>
           </span>

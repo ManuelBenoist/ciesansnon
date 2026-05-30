@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div v-if="!creation" class="py-24 text-center bg-scene-black min-h-screen">
-      <p class="font-body text-scene-muted">Création introuvable.</p>
+    <div v-if="!creation" class="py-24 text-center bg-white min-h-screen">
+      <p class="font-body text-black/60">Création introuvable.</p>
     </div>
 
     <template v-else>

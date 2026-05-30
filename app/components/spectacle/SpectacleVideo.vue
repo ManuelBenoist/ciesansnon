@@ -1,7 +1,7 @@
 <template>
-  <div v-if="src" class="py-16 sm:py-20 bg-scene-dark">
+  <div v-if="src" class="py-16 sm:py-20 bg-white border-b-4 border-black">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="relative aspect-video overflow-hidden rounded-sm bg-scene-black">
+      <div class="relative aspect-video overflow-hidden border-4 border-black bg-black">
         <iframe
           v-if="isYoutube"
           :src="embedUrl"
@@ -18,7 +18,7 @@
           preload="metadata"
           playsinline
         >
-          <p class="font-body text-scene-muted text-sm p-4">
+          <p class="font-body text-white text-sm p-4">
             Votre navigateur ne peut pas lire cette vidéo.
           </p>
         </video>

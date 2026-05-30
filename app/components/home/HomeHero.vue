@@ -1,41 +1,37 @@
 <template>
-  <section class="relative h-screen min-h-[80svh] flex items-center justify-center overflow-hidden">
-    <div ref="heroImageRef" class="absolute inset-0">
-      <NuxtImg
-        :src="image"
-        alt="Scène de spectacle — La Cie Sans Non"
-        class="w-full h-full object-cover"
-        loading="eager"
-        width="1920"
-        height="1080"
-      />
+  <section class="border-b-4 border-black">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <!-- Bloc image -->
+      <div class="relative border-b-4 lg:border-b-0 lg:border-r-4 border-black aspect-[4/3] lg:aspect-auto lg:min-h-[60vh]">
+        <NuxtImg
+          :src="image"
+          alt="Scène de spectacle — La Cie Sans Non"
+          class="w-full h-full object-cover"
+          loading="eager"
+          width="1920"
+          height="1080"
+        />
+      </div>
+
+      <!-- Bloc rouge : titre -->
+      <div class="bg-scene-rouge flex flex-col items-center justify-center p-8 sm:p-12 lg:p-16 text-center">
+        <p class="font-body text-xs sm:text-sm font-bold uppercase tracking-[0.35em] text-white/90 mb-6">
+          {{ baseline }}
+        </p>
+        <h1 class="font-display font-bold text-display-xl sm:text-display-2xl text-white mb-6">
+          La Cie Sans Non
+        </h1>
+        <div class="w-16 h-1 bg-white" />
+      </div>
     </div>
 
-    <div class="absolute inset-0 bg-gradient-to-t from-scene-black via-scene-black/40 to-transparent" />
-
-    <div
-      class="absolute inset-0"
-      :style="{ boxShadow: `inset 0 0 150px 60px rgba(12,12,12,${vignetteStrength})` }"
-    />
-
-    <div class="absolute inset-0 pointer-events-none opacity-[0.035] mix-blend-overlay"
-      style="background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;); background-size: 200px 200px;"
-    />
-
-    <div class="relative z-10 text-center px-6 max-w-5xl">
-      <p class="font-body text-xs sm:text-sm uppercase tracking-[0.35em] text-scene-brick mb-6">
-        {{ baseline }}
-      </p>
-      <h1 class="font-display font-bold text-display-xl sm:text-display-2xl text-scene-cream mb-8">
-        La Cie Sans Non
-      </h1>
-      <p class="font-body text-scene-light/80 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-        {{ description }}
-      </p>
-    </div>
-
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
-      <div class="scroll-indicator" />
+    <!-- Bandeau jaune -->
+    <div class="bg-scene-yellow border-t-4 border-black px-6 py-8 sm:py-10">
+      <div class="max-w-5xl mx-auto text-center">
+        <p class="font-body text-base sm:text-lg font-bold text-black leading-relaxed">
+          {{ description }}
+        </p>
+      </div>
     </div>
   </section>
 </template>
@@ -45,36 +41,9 @@ withDefaults(defineProps<{
   image?: string
   baseline?: string
   description?: string
-  vignetteStrength?: number
 }>(), {
   image: '/images/hero-homepage.webp',
   baseline: 'Compagnie de théâtre',
   description: 'toucher l’imaginaire et les émotions d’un public qui ne fait pas forcément du théâtre une pratique culturelle habituelle',
-  vignetteStrength: 0.6,
-})
-
-const heroImageRef = ref<HTMLElement | null>(null)
-
-const { y } = useWindowScroll()
-const prefersReducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)')
-
-watch(y, (scrollY) => {
-  if (prefersReducedMotion.value || !heroImageRef.value) return
-  const offset = scrollY * 0.25
-  heroImageRef.value.style.transform = `translateY(${offset}px) scale(1.05)`
 })
 </script>
-
-<style scoped>
-.scroll-indicator {
-  width: 1px;
-  height: 60px;
-  background: linear-gradient(to bottom, transparent, rgba(196, 87, 58, 0.5));
-  animation: scrollPulse 2s ease-in-out infinite;
-}
-
-@keyframes scrollPulse {
-  0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
-  50% { opacity: 1; transform: scaleY(1); }
-}
-</style>

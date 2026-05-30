@@ -3,24 +3,24 @@
     <Transition name="lightbox">
       <div
         v-if="isOpen"
-        class="fixed inset-0 z-[9998] bg-scene-black flex flex-col items-center justify-center"
+        class="fixed inset-0 z-[9998] bg-white/95 flex flex-col items-center justify-center"
         @click.self="close"
       >
         <button
-          class="absolute top-6 right-6 z-20 text-scene-muted hover:text-scene-cream transition-colors p-3"
+          class="absolute top-6 right-6 z-20 border-2 border-black bg-white hover:bg-scene-yellow transition-colors p-2"
           @click="close"
           aria-label="Fermer"
         >
           <Icon name="mdi:close" size="24" />
         </button>
 
-        <div class="absolute top-6 left-6 z-20 text-scene-muted text-sm font-body">
+        <div class="absolute top-6 left-6 z-20 text-black text-sm font-body font-bold">
           {{ current + 1 }} / {{ images.length }}
         </div>
 
         <button
           v-if="images.length > 1"
-          class="absolute left-6 top-1/2 -translate-y-1/2 z-20 text-scene-muted hover:text-scene-cream transition-colors p-4"
+          class="absolute left-6 top-1/2 -translate-y-1/2 z-20 border-2 border-black bg-white hover:bg-scene-yellow transition-colors p-2"
           @click="prev"
           aria-label="Image précédente"
         >
@@ -29,7 +29,7 @@
 
         <button
           v-if="images.length > 1"
-          class="absolute right-6 top-1/2 -translate-y-1/2 z-20 text-scene-muted hover:text-scene-cream transition-colors p-4"
+          class="absolute right-6 top-1/2 -translate-y-1/2 z-20 border-2 border-black bg-white hover:bg-scene-yellow transition-colors p-2"
           @click="next"
           aria-label="Image suivante"
         >
@@ -46,7 +46,7 @@
             :key="images[current]"
             :src="images[current]"
             :alt="'Image ' + (current + 1)"
-            class="max-w-full max-h-full object-contain animate-fade-in select-none"
+            class="max-w-full max-h-full object-contain select-none"
             draggable="false"
           />
         </div>

@@ -1,17 +1,20 @@
 <template>
-    <section class="pt-20 sm:pt-28 pb-24 sm:pb-32 bg-scene-black min-h-screen px-6">
+  <section class="pt-28 pb-20 sm:pt-36 sm:pb-28 bg-white min-h-screen px-6">
     <div class="max-w-7xl mx-auto">
-      <div ref="headerTarget" class="reveal-fade-up reveal-visible mb-12 sm:mb-16">
-        <h1 class="font-display font-bold text-display-xl text-scene-cream">
+      <div ref="headerTarget" :class="['reveal-fade-up reveal-visible mb-12 sm:mb-16']">
+        <span class="inline-block font-body text-xs font-bold uppercase tracking-[0.3em] text-white bg-black px-3 py-1 mb-4">
+          Spectacles
+        </span>
+        <h1 class="font-display font-bold text-display-xl text-black">
           Créations
         </h1>
       </div>
 
       <div v-if="!creations?.length" class="text-center py-20">
-        <p class="font-body text-scene-muted">Aucune création pour le moment.</p>
+        <p class="font-body text-black/60">Aucune création pour le moment.</p>
       </div>
 
-      <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
         <div
           v-for="(c, index) in creations"
           :key="c.slug"

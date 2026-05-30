@@ -1,21 +1,21 @@
 <template>
-  <section class="py-24 sm:py-32 bg-scene-dark">
+  <section class="py-20 sm:py-28 bg-white border-b-4 border-black">
     <div class="max-w-7xl mx-auto px-6">
       <div
         ref="headerTarget"
-        :class="['reveal-fade-up reveal-visible flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12']"
+        :class="['reveal-fade-up reveal-visible flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14']"
       >
         <div>
-          <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-3">
+          <span class="inline-block font-body text-xs font-bold uppercase tracking-[0.3em] text-black bg-scene-yellow border-2 border-black px-3 py-1 mb-4">
             Nos créations
-          </p>
-          <h2 class="font-display font-semibold text-display-lg text-scene-cream">
+          </span>
+          <h2 class="font-display font-bold text-display-lg text-black">
             À l'affiche
           </h2>
         </div>
         <UiButton
           label="Toutes les créations"
-          variant="ghost"
+          variant="outline"
           size="sm"
           to="/creations"
         >
@@ -26,10 +26,10 @@
       </div>
 
       <div v-if="!creations?.length" class="text-center py-10">
-        <p class="font-body text-scene-muted text-sm">Aucune création pour le moment.</p>
+        <p class="font-body text-black/60 text-sm">Aucune création pour le moment.</p>
       </div>
 
-      <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
         <div
           v-for="(creation, index) in creations"
           :key="creation.slug"

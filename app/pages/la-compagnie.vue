@@ -1,61 +1,63 @@
 <template>
   <div>
-    <section class="relative pt-28 pb-16 sm:pt-40 sm:pb-24 px-6">
+    <section class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 px-6 border-b-4 border-black">
       <div
         ref="heroTarget"
         :class="['reveal-fade-up reveal-visible max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center']"
       >
         <div>
-          <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-4">
+          <span class="inline-block font-body text-xs font-bold uppercase tracking-[0.3em] text-white bg-black px-3 py-1 mb-4">
             La Compagnie
-          </p>
-          <h1 class="font-display font-bold text-display-xl text-scene-cream mb-8">
+          </span>
+          <h1 class="font-display font-bold text-display-xl text-black mb-8">
             La Cie Sans Non
           </h1>
-          <p class="font-body text-scene-light/80 text-lg leading-relaxed max-w-3xl">
-            Implantée à Mulhouse, la Compagnie Sans Non développe des spectacles de théâtre de récit qui donnent une place importante à l’engagement du corps.
+          <p class="font-body text-black/80 text-lg leading-relaxed max-w-3xl">
+            Implantée à Mulhouse, la Compagnie Sans Non développe des spectacles de théâtre de récit qui donnent une place importante à l'engagement du corps.
           </p>
         </div>
         <div class="flex justify-center lg:justify-end">
-          <NuxtImg
-            src="/images/logo_csn.webp"
-            alt="Logo La Cie Sans Non"
-            class="max-h-[50vh] lg:max-h-[60vh] w-auto object-contain brightness-[1.6]"
-            loading="eager"
-          />
+          <div class="bg-black p-4 border-4 border-black">
+            <NuxtImg
+              src="/images/logo_csn.webp"
+              alt="Logo La Cie Sans Non"
+              class="max-h-[50vh] lg:max-h-[60vh] w-auto object-contain brightness-[1.6]"
+              loading="eager"
+            />
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="py-16 sm:py-24 bg-scene-dark px-6">
+    <section class="py-16 sm:py-24 bg-scene-yellow border-b-4 border-black px-6">
       <div
         ref="presentationTarget"
         :class="['reveal-fade-up reveal-visible max-w-7xl mx-auto']"
       >
-        <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-8">
+        <h2 class="font-display font-bold text-display-lg text-black mb-8 inline-block bg-white border-2 border-black px-3 py-1">
           Notre histoire
         </h2>
-        <div class="font-body text-scene-light/80 text-base leading-relaxed space-y-4 max-w-3xl">
+        <div class="font-body text-black/80 text-base leading-relaxed space-y-4 max-w-3xl">
           <p>
-            La Compagnie Sans Non est fondée alors qu’Olivier Sangwa entame la formation de comédien qui va le mener au Conservatoire national supérieur d’Art Dramatique. Avec Marie-Hélène Benoist et Félix Benoist, il monte un seul en scène d’une heure qui installe les fondements de son jeu physique, engagé, généreux et pose les bases du style de la compagnie : l’imaginaire du spectateur y est constamment sollicité par un narrateur - qui est aussi le personnage central - pour que l’espace, les personnages, la temporalité de la fiction naissent d’un geste, d’une voix ou d’une lumière qui change.
+            La Compagnie Sans Non est fondée alors qu'Olivier Sangwa entame la formation de comédien qui va le mener au Conservatoire national supérieur d'Art Dramatique. Avec Marie-Hélène Benoist et Félix Benoist, il monte un seul en scène d'une heure qui installe les fondements de son jeu physique, engagé, généreux et pose les bases du style de la compagnie : l'imaginaire du spectateur y est constamment sollicité par un narrateur - qui est aussi le personnage central - pour que l'espace, les personnages, la temporalité de la fiction naissent d'un geste, d'une voix ou d'une lumière qui change.
           </p>
           <p>
-            Sa formation achevée, et parallèlement aux projets pour lesquels il est employé comme comédien, Olivier relance un nouveau projet pour la compagnie avec Félix et Marie-Hélène, mais aussi avec les jeunes artistes qu’il a rencontrés au CNSAD : comédienne, régisseur, costumière…
+            Sa formation achevée, et parallèlement aux projets pour lesquels il est employé comme comédien, Olivier relance un nouveau projet pour la compagnie avec Félix et Marie-Hélène, mais aussi avec les jeunes artistes qu'il a rencontrés au CNSAD : comédienne, régisseur, costumière…
           </p>
         </div>
       </div>
     </section>
 
-    <section class="py-16 sm:py-24 bg-scene-black px-6">
+    <section class="py-16 sm:py-24 bg-white px-6">
       <div class="max-w-7xl mx-auto">
         <div
           ref="equipeTarget"
           :class="['reveal-fade-up reveal-visible mb-16']"
         >
-          <p class="font-body text-xs uppercase tracking-[0.3em] text-scene-brick mb-4">
+          <span class="inline-block font-body text-xs font-bold uppercase tracking-[0.3em] text-white bg-scene-rouge px-3 py-1 mb-4">
             Celles et ceux qui font la compagnie
-          </p>
-          <h2 class="font-display font-semibold text-display-lg text-scene-cream">
+          </span>
+          <h2 class="font-display font-bold text-display-lg text-black">
             L'équipe
           </h2>
         </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-    <div class="relative aspect-[16/9] overflow-hidden rounded-sm bg-scene-surface">
+    <div class="relative aspect-[16/9] overflow-hidden border-4 border-black bg-white flex items-center justify-center">
       <NuxtImg
         v-if="atelier.image"
         :src="atelier.image"
@@ -9,19 +9,19 @@
         loading="lazy"
       />
       <div v-else class="flex items-center justify-center h-full">
-        <Icon name="mdi:image-outline" class="text-scene-muted" size="48" />
+        <Icon name="mdi:image-outline" class="text-black/30" size="48" />
       </div>
     </div>
     <div class="flex flex-col space-y-6">
-      <h3 class="font-display text-2xl sm:text-3xl text-scene-cream">
+      <h3 class="font-display text-2xl sm:text-3xl text-black">
         {{ atelier.titre }}
       </h3>
       <template v-if="atelier.description">
-        <div class="w-12 h-px bg-[#2a2a2a]" />
-        <div class="font-body text-scene-light/80 leading-relaxed text-sm space-y-3">
+        <div class="bg-black h-0.5 w-12" />
+        <div class="font-body text-black/80 leading-relaxed text-sm space-y-3">
           <div v-for="(block, i) in parsedDescription" :key="i">
-            <p v-if="block.type === 'p'" class="text-scene-light/80" v-html="block.content" />
-            <ul v-else class="list-disc list-inside space-y-1 text-scene-light/70">
+            <p v-if="block.type === 'p'" class="text-black/80" v-html="block.content" />
+            <ul v-else class="list-disc list-inside space-y-1 text-black/70">
               <li v-for="(item, j) in block.items" :key="j" v-html="item"></li>
             </ul>
           </div>
@@ -34,7 +34,7 @@
       <div
         v-for="(img, k) in atelier.galerie"
         :key="k"
-        class="relative aspect-[16/9] overflow-hidden rounded-sm bg-scene-surface"
+        class="relative aspect-[16/9] overflow-hidden border-2 border-black bg-white"
       >
         <NuxtImg
           :src="img"

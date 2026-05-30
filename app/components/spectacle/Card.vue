@@ -1,26 +1,25 @@
 <template>
   <NuxtLink
     :to="`/creations/${slug}`"
-    class="group relative block aspect-[3/4] overflow-hidden bg-[#1a1a1a] border border-[#2a2a2a] rounded-sm transition-colors duration-500 hover:border-scene-brick"
+    class="group block bg-white border-4 border-black hover:bg-scene-yellow transition-colors duration-200"
   >
-    <NuxtImg
-      :src="image"
-      :alt="`Affiche du spectacle ${titre}`"
-      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-80"
-      loading="lazy"
-    />
-
-    <div class="absolute inset-0 bg-gradient-to-t from-scene-black via-scene-black/20 to-transparent" />
-
-    <div class="absolute top-4 left-4 z-10">
-      <UiTag :label="statusLabel" :color="statusColor" />
+    <div class="relative border-b-4 border-black overflow-hidden aspect-[4/3]">
+      <NuxtImg
+        :src="image"
+        :alt="`Affiche du spectacle ${titre}`"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div class="absolute top-3 right-3">
+        <UiTag :label="statusLabel" :color="statusColor" />
+      </div>
     </div>
 
-    <div class="absolute bottom-0 left-0 right-0 p-5 z-10">
-      <h3 class="font-display text-2xl sm:text-3xl text-scene-cream mb-1">
+    <div class="p-4 sm:p-5">
+      <h3 class="font-display font-bold text-xl sm:text-2xl text-black mb-2">
         {{ titre }}
       </h3>
-      <p class="font-body text-base text-scene-light/70 line-clamp-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+      <p class="font-body text-sm text-black/80 line-clamp-2">
         {{ accroche }}
       </p>
     </div>
@@ -38,10 +37,10 @@ const props = withDefaults(defineProps<{
   accroche: '',
 })
 
-const statusMap: Record<string, { label: string; color: 'brick' | 'navy' | 'muted' }> = {
-  'en-creation': { label: 'En création', color: 'brick' },
-  'en-tournee': { label: 'En tournée', color: 'navy' },
-  'archive': { label: 'Archive', color: 'muted' },
+const statusMap: Record<string, { label: string; color: 'brick' | 'navy' | 'muted' | 'yellow' }> = {
+  'en-creation': { label: 'En création', color: 'yellow' },
+  'en-tournee': { label: 'En tournée', color: 'brick' },
+  'archive': { label: 'Archive', color: 'navy' },
 }
 
 const statusLabel = computed(() => statusMap[props.statut]?.label ?? props.statut)

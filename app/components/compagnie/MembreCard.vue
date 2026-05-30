@@ -3,22 +3,21 @@
     class="group block w-full text-left"
     @click="$emit('select', slug)"
   >
-    <div v-if="photo" class="relative aspect-[3/4] overflow-hidden mb-4">
+    <div v-if="photo" class="relative aspect-[3/4] overflow-hidden mb-3 border-4 border-black">
       <NuxtImg
         :src="photo"
         :alt="`Portrait de ${nom}`"
-        class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+        class="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-scene-black via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
     </div>
-    <div v-else class="relative aspect-[3/4] overflow-hidden mb-4 bg-scene-surface flex items-center justify-center rounded-sm group-hover:bg-scene-border transition-colors duration-500">
-      <Icon name="mdi:account-outline" size="48" class="text-scene-muted/30 group-hover:text-scene-muted/50 transition-colors duration-500" />
+    <div v-else class="relative aspect-[3/4] overflow-hidden mb-3 border-4 border-black bg-scene-yellow flex items-center justify-center">
+      <Icon name="mdi:account-outline" size="48" class="text-black/30" />
     </div>
-    <h3 class="font-display text-xl text-scene-cream group-hover:text-scene-brick transition-colors">
+    <h3 class="font-display text-xl text-black group-hover:bg-scene-yellow inline-block transition-colors px-1 -mx-1">
       {{ nom }}
     </h3>
-    <p class="font-body text-xs uppercase tracking-widest text-scene-brick/70 mt-1.5">
+    <p class="font-body text-xs font-bold uppercase tracking-widest text-scene-rouge mt-1">
       {{ roleCourt }}
     </p>
   </button>

@@ -1,7 +1,7 @@
 <template>
-  <div v-if="images?.length" class="py-16 sm:py-20 bg-scene-dark">
+  <div v-if="images?.length" class="py-16 sm:py-20 bg-white border-b-4 border-black">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-10">
+      <h2 class="font-display font-bold text-display-lg text-black mb-10 inline-block bg-black text-white px-3 py-1">
         Galerie
       </h2>
 
@@ -9,7 +9,7 @@
         <button
           v-for="(img, i) in images"
           :key="i"
-          class="relative aspect-[4/3] rounded-sm overflow-hidden hover:opacity-85 transition-opacity"
+          class="relative aspect-[4/3] border-2 border-black overflow-hidden hover:bg-scene-yellow transition-colors"
           @click="openGallery(i)"
           :aria-label="`Photo ${i + 1}`"
         >

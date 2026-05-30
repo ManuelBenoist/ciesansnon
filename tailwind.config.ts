@@ -19,6 +19,7 @@ export default <Config>{
           brick: '#C4573A',
           navy: '#3A6B8A',
           rouge: '#8b2635',
+          yellow: '#F2C94C',
         },
       },
       fontFamily: {

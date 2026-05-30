@@ -1,14 +1,7 @@
 <template>
-  <header
-    class="fixed top-0 left-0 right-0 z-50 transition-all duration-400 border-b"
-    :class="[
-      isScrolled
-        ? 'bg-scene-dark/95 backdrop-blur-sm border-scene-border'
-        : 'bg-transparent border-transparent'
-    ]"
-  >
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <NuxtLink to="/" class="block relative z-20 shrink-0">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b-4 border-black">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 sm:h-20">
+      <NuxtLink to="/" class="block shrink-0 bg-black p-1 sm:p-2">
         <NuxtImg
           src="/images/logo_csn.webp"
           alt="La Cie Sans Non — Accueil"
@@ -17,11 +10,12 @@
         />
       </NuxtLink>
 
-      <ul class="hidden lg:flex items-center gap-8">
+      <ul class="hidden lg:flex items-center gap-2">
         <li v-for="link in links" :key="link.to">
           <NuxtLink
             :to="link.to"
-            class="nav-underline font-body text-sm uppercase tracking-widest text-scene-light hover:text-scene-brick transition-colors"
+            class="font-body text-sm font-bold uppercase tracking-wider border-2 border-black px-4 py-2 bg-white hover:bg-scene-yellow transition-colors duration-200"
+            active-class="bg-black text-white hover:bg-black"
           >
             {{ link.label }}
           </NuxtLink>
@@ -29,7 +23,7 @@
       </ul>
 
       <button
-        class="lg:hidden relative z-20 p-2 text-scene-light hover:text-scene-brick transition-colors"
+        class="lg:hidden border-2 border-black p-2 bg-white hover:bg-scene-yellow transition-colors"
         @click="isMenuOpen = true"
         aria-label="Menu"
       >
@@ -43,8 +37,6 @@
 
 <script setup lang="ts">
 const route = useRoute()
-const { y } = useScroll(window)
-const isScrolled = computed(() => y.value > 60)
 const isMenuOpen = ref(false)
 
 const links = [
