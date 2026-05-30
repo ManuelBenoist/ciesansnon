@@ -109,6 +109,29 @@
             </div>
           </div>
         </div>
+
+        <div class="mt-20">
+          <h3 class="font-display font-semibold text-2xl text-scene-cream mb-6 text-center">
+            Les ateliers en lien avec la création de SIMPLE
+          </h3>
+          <div class="relative">
+            <div class="flex gap-4 overflow-x-auto pb-4 snap-x hide-scrollbar md:justify-center md:flex-wrap md:overflow-visible md:snap-none pr-8">
+              <div
+                v-for="a in ateliersCreation"
+                :key="a.slug"
+                class="flex-shrink-0 w-48 md:w-64 snap-start"
+              >
+                <AtelierSimpleCard
+                  :titre="a.titre"
+                  :slug="a.slug"
+                  :affiche="a.image || ''"
+                  @select="openAtelierSimpleModal"
+                />
+              </div>
+            </div>
+            <div class="absolute right-0 top-0 bottom-4 w-16 bg-gradient-to-l from-scene-black via-scene-black/80 to-transparent pointer-events-none md:hidden" />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -146,6 +169,10 @@
     <UiModal v-model="isAtelierModalOpen">
       <AtelierModal v-if="selectedAtelier" :atelier="selectedAtelier" />
     </UiModal>
+
+    <UiModal v-model="isAtelierSimpleModalOpen">
+      <AtelierSimpleModal v-if="selectedAtelierSimple" :atelier="selectedAtelierSimple" />
+    </UiModal>
   </div>
 </template>
 
@@ -159,18 +186,37 @@ const { data: rawAteliers } = await useAsyncData('ateliers-list', () =>
   queryCollection('ateliers').order('ordre', 'ASC').all()
 )
 
+const { data: rawAteliersCreation } = await useAsyncData('ateliers-creation-list', () =>
+  queryCollection('ateliers_creation').order('ordre', 'ASC').all()
+)
+
 const ateliers = computed(() =>
   (rawAteliers.value || []).filter((a: any) => a.slug && a.titre)
 )
 
+const ateliersCreation = computed(() =>
+  (rawAteliersCreation.value || []).filter((a: any) => a.slug && a.titre)
+)
+
 const isAtelierModalOpen = ref(false)
 const selectedAtelier = ref<any>(null)
+
+const isAtelierSimpleModalOpen = ref(false)
+const selectedAtelierSimple = ref<any>(null)
 
 function openAtelierModal(slug: string) {
   const found = (ateliers.value || []).find((a: any) => a.slug === slug)
   if (found) {
     selectedAtelier.value = found
     isAtelierModalOpen.value = true
+  }
+}
+
+function openAtelierSimpleModal(slug: string) {
+  const found = (ateliersCreation.value || []).find((a: any) => a.slug === slug)
+  if (found) {
+    selectedAtelierSimple.value = found
+    isAtelierSimpleModalOpen.value = true
   }
 }
 
