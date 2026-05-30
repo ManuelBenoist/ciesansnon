@@ -10,43 +10,65 @@ npm run build      # build (not needed for SSG)
 npm run preview    # preview production build locally
 ```
 
-## Project structure (deviations from plan.md)
-- `components/contact/Form.vue` (plan: `ContactForm.vue`)
-- `components/spectacle/Card.vue` (plan: `CardSpectacle.vue`)
-- `plugins/motion.client.ts` (plan: `scroll-reveal.client.ts`)
-- `<NuxtImg>` migration done — all images use `<NuxtImg>` with `data-nuxt-img`, no more CSS `background-image`
-- Logo (`logo_csn.webp`) has dark colors on dark background → uses `brightness-[1.6]` filter in header/footer/nav. If a new logo is provided, remove the `brightness-[1.6]` class from `AppHeader`, `AppFooter`, `AppNav`.
-- `content.config.ts` is required for Nuxt Content v3 collections (without it, `queryCollection` can't `where`/`order` on custom fields)
-- Content collections use `type: 'page'` + `zod` schema so custom YAML fields become queryable SQL columns
-
-## Phases status (plan.md reference)
-- Phase 1 (foundations): 100% — complete
-- Phase 2 (UI components): 90% — all exist, naming differs slightly
-- Phase 3 (static pages): 85% — HomeActus & OrganigrammeSection missing
-- Phase 4 (dynamic creations): 70% — index.vue + [slug].vue done, all 5 spectacle components built, VENAVI content complete with photos, Simple has placeholder content
-- Phase 5 (finish/deploy): ~70% — robots.txt + OG image done, a11y audit + fixes applied, NuxtImg migration done, Formspree + responsive tested
-
 ## Key architectural facts
-- Nuxt 4 with `future: { compatibilityVersion: 4 }` — app/ directory as app root
+- Nuxt 4 with `future: { compatibilityVersion: 4 }` — `app/` directory as app root
 - SSG mode: `nitro.preset: 'static'` — no server routes
 - Dark theme: `scene-black (#0c0c0c)` background, `scene-light (#e8e2d9)` text
-- Custom colors via `scene-*` Tailwind palette (gold accent, rouge badges)
+- Custom colors via `scene-*` Tailwind palette (`scene-brick` gold accent, `scene-rouge` badges)
 - Fonts auto-hosted via @fontsource (no Google Fonts calls)
-- Content: Nuxt Content v3, Markdown with YAML frontmatter in `content/`
-- Animations: CSS transitions + motion-v (NOT Framer Motion)
-- Icons: @nuxt/icon (Iconify) — use e.g. `<Icon name="mdi:instagram" />`
-- Form: Formspree AJAX via `useFormspree` composable (runtimeConfig `formspreeId`)
+- Animations: CSS transitions + motion-v (plugin at `app/plugins/motion.client.ts`)
+- Icons: @nuxt/icon (Iconify) — use `<Icon name="mdi:instagram" />`
+- Form: Formspree AJAX via `useFormspree` composable (set `NUXT_PUBLIC_FORMSPREE_ID` in `.env`)
 - SEO: `useSeo()` composable wraps useSeoMeta + useHead (french lang, OG, Twitter card)
+- Logo (`logo_csn.webp`) is dark on dark bg → `brightness-[1.6]` in AppHeader/AppFooter/AppNav. Remove filter if logo is replaced.
 
-## Current gaps
-1. Fill `content/creations/simple.md` body content (synopsis, notes) — VENAVI is already complete
-2. Fill `content/membres/*.md` body content (biographies)
-3. Add photos to `public/images/membres/` — VENAVI photos already in place
-4. Create `.github/workflows/deploy.yml` for OVH FTP deployment
-5. Lighthouse Performance score can be improved (try: preload hero image, reduce SQLite WASM from bundle, inline critical CSS)
+## Content collections (`content.config.ts`)
+- This file is **mandatory** for `queryCollection` `where()`/`order()` on custom fields
+- `creations` has a full zod schema → all YAML fields are queryable SQL columns
+- `membres` and `actus` have **NO schema** (`type: 'page'` only). Add a zod schema before using `where()`/`order()` on custom fields
+- Use `type: 'data'` for non-page content (no auto `path` field generated)
+- Always `await useAsyncData('key', () => queryCollection(...).all())` inside page `<script setup>`
 
-## Nuxt Content v3 querying rules
-- `content.config.ts` with `type: 'page'` + `zod` schema is required for `queryCollection` to support `where()`/`order()` on custom YAML fields
-- Without schema, custom fields go into `meta` JSON column and are NOT queryable via `where`/`order`
-- Always await inside `useAsyncData` for SSR: `await useAsyncData('key', () => queryCollection(...).all())`
-- Use `type: 'data'` for non-page structured content (no auto `path` field generated)
+## Navigation gotchas (CRITICAL)
+
+### 1. Single root node for page transitions
+**Every page under `<NuxtPage>` must render a single DOM element as its root.**
+- Nuxt uses `pageTransition: { name: 'page', mode: 'out-in' }` by default.
+- Vue `<Transition mode="out-in">` requires exactly one element root to animate. Multiple roots, conditional roots (`v-if`/`v-else` on elements at the top level), or `<template>` fragments break the transition.
+- **Symptom**: leaving a dynamic page (`/creations/[slug]`) shows only header/footer; console warnings:
+  - `[Vue warn]: Component inside <Transition> renders non-element root node that cannot be animated.`
+  - `[nuxt] ... does not have a single root node and will cause errors when navigating between routes.`
+- **Fix**: wrap the entire page template in one `<div>`, even when using `v-if`/`v-else` internally:
+  ```vue
+  <template>
+    <div>
+      <div v-if="!data">Loading...</div>
+      <template v-else>
+        ...
+      </template>
+    </div>
+  </template>
+  ```
+
+### 2. Never use `definePageMeta({ key: route => route.fullPath })` on dynamic pages
+- This breaks client-side navigation when combined with `pageTransition: { mode: 'out-in' }`.
+- Root cause: `definePageMeta` macro + a functional `key` conflicts with Vue’s out-in transition, preventing the incoming page component from mounting.
+- **Fix**: remove `definePageMeta({ key: ... })`. For dynamic data, make `useAsyncData` reactive by passing a **function** as the key:
+  ```ts
+  const { data: creation } = await useAsyncData(
+    () => `creation-${route.params.slug}`,
+    () => queryCollection('creations').where('slug', '==', route.params.slug).first()
+  )
+  ```
+  This forces a re-fetch when the slug changes without destroying the page transition.
+
+## Conventions
+- YAML frontmatter: `snake_case` (e.g. `role_compagnie`, `role_court`). Vue props: `camelCase` (e.g. `roleCourt`)
+- All images use `<NuxtImg>` (no CSS `background-image`). Place photos in `public/images/`
+- Component naming: directory-prefixed multi-word, e.g. `compagnie/MembreCard.vue`, `spectacle/Card.vue`
+- No lint or test commands configured. Verify with `npm run generate`.
+
+## Current gaps & next steps
+1. `content/membres/*.md` files exist but need `bio:` body content and `photo:` paths filled
+2. `.github/workflows/deploy.yml` not created yet (OVH FTP deploy)
+3. `content/creations/simple.md` body content (synopsis) is placeholder — VENAVI is complete

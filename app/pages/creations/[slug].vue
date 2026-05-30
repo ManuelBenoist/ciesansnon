@@ -1,59 +1,61 @@
 <template>
-  <div v-if="!creation" class="py-24 text-center bg-scene-black min-h-screen">
-    <p class="font-body text-scene-muted">Création introuvable.</p>
+  <div>
+    <div v-if="!creation" class="py-24 text-center bg-scene-black min-h-screen">
+      <p class="font-body text-scene-muted">Création introuvable.</p>
+    </div>
+
+    <template v-else>
+      <SpectacleHero
+        :titre="creation.titre"
+        :image="creation.image_hero || `https://picsum.photos/seed/${creation.slug}/1600/900`"
+        :annee="creation.annee"
+        :duree="creation.duree"
+        :alt="creation.alt_hero"
+      />
+
+      <section class="py-16 sm:py-20 bg-scene-black">
+        <div class="max-w-7xl mx-auto px-6">
+          <ContentRenderer :value="creation">
+            <template #empty>
+              <p class="font-body text-scene-muted italic leading-relaxed">
+                Note d'intention à venir.
+              </p>
+            </template>
+          </ContentRenderer>
+        </div>
+      </section>
+
+      <SpectacleCarousel
+        :images="creation.galerie || []"
+      />
+
+      <SpectacleCasting
+        :mise-en-scene="creation.mise_en_scene"
+        :auteur="creation.auteur"
+        :casting="creation.casting"
+        :equipe-technique="creation.equipe_technique"
+      />
+
+      <SpectacleVideo :src="creation.video_url" />
+
+      <SpectacleDates
+        :dates="creation.dates || []"
+      />
+
+      <SpectacleNav
+        :prev="prev"
+        :next="next"
+      />
+    </template>
   </div>
-
-  <template v-else>
-    <SpectacleHero
-      :titre="creation.titre"
-      :image="creation.image_hero || `https://picsum.photos/seed/${creation.slug}/1600/900`"
-      :annee="creation.annee"
-      :duree="creation.duree"
-      :alt="creation.alt_hero"
-    />
-
-    <section class="py-16 sm:py-20 bg-scene-black">
-      <div class="max-w-7xl mx-auto px-6">
-        <ContentRenderer :value="creation">
-          <template #empty>
-            <p class="font-body text-scene-muted italic leading-relaxed">
-              Note d'intention à venir.
-            </p>
-          </template>
-        </ContentRenderer>
-      </div>
-    </section>
-
-    <SpectacleCarousel
-      :images="creation.galerie || []"
-    />
-
-    <SpectacleCasting
-      :mise-en-scene="creation.mise_en_scene"
-      :auteur="creation.auteur"
-      :casting="creation.casting"
-      :equipe-technique="creation.equipe_technique"
-    />
-
-    <SpectacleVideo :src="creation.video_url" />
-
-    <SpectacleDates
-      :dates="creation.dates || []"
-    />
-
-    <SpectacleNav
-      :prev="prev"
-      :next="next"
-    />
-  </template>
 </template>
 
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: creation } = await useAsyncData('creation-' + route.params.slug, () =>
+const { data: creation } = await useAsyncData(() => 'creation-' + route.params.slug, () =>
   queryCollection('creations').where('slug', '==', route.params.slug).first()
-, { watch: [() => route.params.slug] })
+)
 
 const { data: allCreations } = await useAsyncData('creations-all', () =>
   queryCollection('creations').order('ordre', 'ASC').all()
