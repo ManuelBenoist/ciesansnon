@@ -10,8 +10,7 @@ bio: |
 
   **Récemment,** elle a travaillé auprès d'Agathe Mazouin pour **le Conte d'Hiver,** de Clémence Coullon pour **Le Roi, la Reine et le Bouffon,** de Prune Bonan pour **Blue Room,** de Neil-Adam Mohammedi pour **Feu sacré.**
 
-  **Elle travaille également** avec plusieurs compagnies de théâtre, de danse et dans le cinéma : **Pipo, Birgit Ensemble, Animaux en Paradis, Quand il fera nuit** et **La Grande T.**
-photo:
+  **Elle travaille également** avec plusieurs compagnies de théâtre, de danse et dans le cinéma :   **Pipo, Birgit Ensemble, Animaux en Paradis, Quand il fera nuit** et **La Grande T.**
 ordre: 6
 dans_organigramme: true
 ---

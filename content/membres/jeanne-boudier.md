@@ -25,7 +25,7 @@ bio: |
   **2019 :** Court-métrage Lovers Alexandre Brisa / Nikon Film Festival
   **2017 :** Long-métrage Deslembro Flavia Castro
   **2001 :** Naissance à Rio de Janeiro
-photo: 
+photo: "/images/membres/photo-jeanne.webp"
 ordre: 2
 dans_organigramme: true
 ---

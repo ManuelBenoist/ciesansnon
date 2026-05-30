@@ -32,6 +32,8 @@ equipe_technique:
     nom: "Lionel LINGELSER"
   - poste: "Regard circassien et scénographique"
     nom: "Vasil TASEVSKI"
+  - poste: "Création lumières"
+    nom: "Loïc WARIDEL"
   - poste: "Création costumes"
     nom: "Lucie DURANTEAU"
   - poste: "Photographe plateau"

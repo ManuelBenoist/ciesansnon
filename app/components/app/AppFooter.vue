@@ -73,6 +73,5 @@ const links = [
 const socials = [
   { name: 'Instagram', icon: 'mdi:instagram', url: 'https://www.instagram.com/cie_sans_non' },
   { name: 'Facebook', icon: 'mdi:facebook', url: 'https://www.facebook.com/Ciesansnon' },
-  { name: 'YouTube', icon: 'mdi:youtube', url: '#' },
 ]
 </script>

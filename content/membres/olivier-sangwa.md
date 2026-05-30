@@ -28,7 +28,7 @@ bio: |
   **2014-2021 :** Formation initiale au jeu et à l'interprétation dans les ateliers Arts de la scène dirigés par Félix et Marie-Hélène Benoist. Dans ce cadre, initiation aux arts du cirque avec Vasil Tasevski (Collectif Porte 27), au masque avec Lionel Lingelser (Munstrum Théâtre), au chant avec Constance Taillard (Conservatoire de Genève)
 
   **2002 :** Naissance à Mulhouse.
-photo: 
+photo: "/images/membres/photo-olivier.webp"
 ordre: 1
 dans_organigramme: true
 ---

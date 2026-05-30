@@ -11,7 +11,6 @@ bio: |
   **En 2019,** il créé **I woke up in motion,** aboutissement de plusieurs années de recherche sur différentes techniques dans les disciplines artistiques qui lui tiennent à cœur : la photographie, l'installation vidéo, la performance et les arts du cirque. Parallèlement à sa collaboration au long cours avec Etienne Saglio pour **Vers les Métamorphoses (2025), Le Bruit des Loups (2019-2024), Les Limbes (2014-2023),** il crée **en 2023, Villes endormies** et reprend **en 2025,** la pièce cirque et jazz **Mingus Mingus Mingus Mingus Mingus.**
 
   **Il a travaillé** également auprès d'Árpád Shilling, Guy Alloucherie, Elise Vigneron et Julie Berrès.
-photo:
 ordre: 7
 dans_organigramme: true
 ---

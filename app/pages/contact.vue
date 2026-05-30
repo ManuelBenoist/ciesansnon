@@ -65,10 +65,6 @@
                     class="text-scene-muted hover:text-scene-brick transition-colors p-2">
                     <Icon name="mdi:facebook" size="22" />
                   </a>
-                  <a href="#" aria-label="YouTube" target="_blank" rel="noopener noreferrer"
-                    class="text-scene-muted hover:text-scene-brick transition-colors p-2">
-                    <Icon name="mdi:youtube" size="22" />
-                  </a>
                 </div>
               </div>
 

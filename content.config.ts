@@ -55,10 +55,10 @@ export default defineContentConfig({
         slug: z.string(),
         role_compagnie: z.string(),
         role_court: z.string(),
-        photo: z.string().optional(),
-        bio: z.string().optional(),
+        photo: z.string().nullable().optional(),
+        bio: z.string().nullable().optional(),
         ordre: z.number().optional(),
-        dans_organigramme: z.boolean().optional(),
+        dans_organigramme: z.boolean().nullable().optional(),
       }),
     }),
     actus: defineCollection({

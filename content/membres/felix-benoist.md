@@ -11,7 +11,7 @@ bio: |
   **Il intervient en classe d'Art dramatique au Conservatoire de Mulhouse.**
 
   **Il s'est formé** à la mise en scène auprès de Dominique Féret (adaptation de nouvelles de Tchékhov) ; à la régie lumières auprès de Christian Peuckert ; à l'écriture théâtrale auprès de Luc Tartar, Antoinette Rychner, Alexandra Badéa entre autres ; il s'est initié à la manipulation d'objets avec Stanka Pavlova, au masque avec Lionel Lingelser, au jeu avec David Lescot et Sacha Vilmar entre autres.
-photo:
+photo: "/images/membres/photo-felix.webp"
 ordre: 3
 dans_organigramme: true
 ---
