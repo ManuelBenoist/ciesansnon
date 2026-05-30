@@ -135,30 +135,30 @@
       </div>
     </section>
 
-    <section class="py-20 sm:py-28 bg-scene-dark px-6">
+    <section class="py-4 sm:py-10 bg-white px-6">
       <div
         ref="partenairesTarget"
         :class="['reveal-fade-up reveal-visible max-w-7xl mx-auto text-center']"
       >
-        <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-12">
+        <h2 class="font-display font-semibold text-display-lg text-scene-black mb-6">
           Partenaires & soutiens
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           <NuxtImg
             src="/images/soutiens/logo-cite-etudcative-mulhouse.webp"
             alt="Logo de la Cité Éducative de Mulhouse"
-            class="h-20 w-auto object-contain mx-auto"
-            loading="lazy"
-          />
-          <NuxtImg
-            src="/images/soutiens/logo-fdva.webp"
-            alt="Logo du FDVA — Fonds pour le Développement de la Vie Associative"
-            class="h-20 w-auto object-contain mx-auto"
+            class="h-24 w-auto object-contain mx-auto"
             loading="lazy"
           />
           <NuxtImg
             src="/images/soutiens/logo-ville-de-mulhouse.webp"
             alt="Logo de la Ville de Mulhouse"
+            class="h-24 w-auto object-contain mx-auto"
+            loading="lazy"
+          />
+          <NuxtImg
+            src="/images/soutiens/logo-fdva.webp"
+            alt="Logo du FDVA — Fonds pour le Développement de la Vie Associative"
             class="h-20 w-auto object-contain mx-auto"
             loading="lazy"
           />
