@@ -19,7 +19,6 @@ export default defineNuxtConfig({
   },
 
   app: {
-    baseURL: '/ciesansnon/',
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       htmlAttrs: {
@@ -34,8 +33,8 @@ export default defineNuxtConfig({
         { name: 'color-scheme', content: 'dark' },
       ],
       link: [
-        { rel: 'icon', type: 'image/webp', href: '/ciesansnon/images/logo_csn.webp' },
-        { rel: 'apple-touch-icon', href: '/ciesansnon/apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/webp', href: '/images/logo_csn.webp' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       ],
     },
   },

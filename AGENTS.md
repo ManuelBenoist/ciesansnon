@@ -76,19 +76,14 @@ The site is deployed via GitHub Actions to GitHub Pages. The workflow at `.githu
 5. Uploads the artifact
 6. Deploys to GitHub Pages
 
-### Current config (temporary — no custom domain yet)
+### Current config (custom domain active)
 - `nitro.preset: 'github-pages'` — optimised for GH Pages (SPA fallback, 404 handling)
-- `app.baseURL: '/ciesansnon/'` — required because the repo lives under a user/org path (`manuelbenoist.github.io/ciesansnon/`)
-- `site.url: 'https://ciesansnon.com'` — kept so OG tags, canonical links and JSON-LD are already correct for the future domain
+- **No `app.baseURL`** — site served at root of custom domain (`ciesansnon.com`)
+- `site.url: 'https://ciesansnon.com'` — OG tags, canonical links and JSON-LD
 
-**Temporary URL**: `https://manuelbenoist.github.io/ciesansnon/`
+**Production URL**: `https://ciesansnon.com`
 
 The `public/.nojekyll` file prevents GitHub Pages from processing the site with Jekyll.
-
-### Post-migration (once `ciesansnon.com` points to GH Pages)
-1. Remove `app.baseURL` entirely from `nuxt.config.ts`
-2. Optionally switch `nitro.preset` back to `'static'` (github-pages preset still works on a custom domain, but static is cleaner)
-3. Regenerate and redeploy — no other changes needed
 
 ## Pre-deployment checklist (SEO & integrity)
 Before merging to `main` or deploying, run these checks:
