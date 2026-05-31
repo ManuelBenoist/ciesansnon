@@ -16,6 +16,66 @@
 
     <section class="py-20 sm:py-28 bg-scene-dark px-6">
       <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div
+            ref="publicsImgTarget"
+            :class="['reveal-fade-up reveal-visible']"
+          >
+            <div class="relative aspect-[4/3] overflow-hidden rounded-sm">
+              <NuxtImg
+                src="/images/actions-culturelles/illu-actions-culturelles.webp"
+                alt="Groupe de participants lors d'un atelier de médiation culturelle"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-scene-dark/40 to-transparent" />
+            </div>
+          </div>
+          <div
+            ref="publicsTarget"
+            :class="['reveal-fade-up reveal-visible']"
+          >
+            <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-6">
+              Une création de spectacles qui s'appuie sur des ateliers de sensibilisation
+            </h2>
+            <div class="font-body text-scene-light/80 text-base leading-relaxed space-y-4">
+              <p>
+                Pendant la période de création du spectacle, des ateliers sont proposés aux usagers des lieux culturels ainsi qu'aux écoles primaires et aux collèges. En plus d'offrir une sensibilisation à la présence scénique (respiration, conscience du corps, de soi et des autres, communication non verbale entre autres), ceux-ci sont centrés sur une initiation au jeu sur le thème de l'interdépendance : en quoi avons-nous besoin des autres ? Il y a donc un travail sur le regard et le toucher, et comment le jugement sur autrui se manifeste sans un mot.
+              </p>
+              <p>
+                Nous proposons aux participants un questionnaire sur leur vécu quant à se sentir jugé par les autres ou être dans une attitude de rejet de l'autre : à quelle occasion cela leur est-il arrivé ? Dans quelle situation précise ? Est-ce que cela a évolué avec l'âge ? A partir des réponses des participants, nous proposons de réaliser des scènes improvisées, si possible sans paroles.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-20">
+          <h3 class="font-display font-semibold text-2xl text-scene-cream mb-6 text-center">
+            Les ateliers en lien avec la création de SIMPLE
+          </h3>
+          <div class="relative">
+            <div class="flex gap-4 overflow-x-auto pb-4 snap-x hide-scrollbar md:justify-center md:flex-wrap md:overflow-visible md:snap-none pr-8">
+              <div
+                v-for="a in ateliersCreation"
+                :key="a.slug"
+                class="flex-shrink-0 w-48 md:w-64 snap-start"
+              >
+                <AtelierSimpleCard
+                  :titre="a.titre"
+                  :slug="a.slug"
+                  :affiche="a.image || ''"
+                  @select="openAtelierSimpleModal"
+                />
+              </div>
+            </div>
+            <div class="absolute right-0 top-0 bottom-4 w-16 bg-gradient-to-l from-scene-dark via-scene-dark/80 to-transparent pointer-events-none md:hidden" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 sm:py-28 bg-scene-black px-6">
+      <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
           <div
             ref="artsTarget"
@@ -66,66 +126,6 @@
                   :slug="atelier.slug"
                   :affiche="atelier.affiche"
                   @select="openAtelierModal"
-                />
-              </div>
-            </div>
-            <div class="absolute right-0 top-0 bottom-4 w-16 bg-gradient-to-l from-scene-dark via-scene-dark/80 to-transparent pointer-events-none md:hidden" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-20 sm:py-28 bg-scene-black px-6">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div
-            ref="publicsImgTarget"
-            :class="['reveal-fade-up reveal-visible']"
-          >
-            <div class="relative aspect-[4/3] overflow-hidden rounded-sm">
-              <NuxtImg
-                src="/images/actions-culturelles/illu-actions-culturelles.webp"
-                alt="Groupe de participants lors d'un atelier de médiation culturelle"
-                class="absolute inset-0 w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-scene-dark/40 to-transparent" />
-            </div>
-          </div>
-          <div
-            ref="publicsTarget"
-            :class="['reveal-fade-up reveal-visible']"
-          >
-            <h2 class="font-display font-semibold text-display-lg text-scene-cream mb-6">
-              Une création de spectacles qui s'appuie sur des ateliers de sensibilisation
-            </h2>
-            <div class="font-body text-scene-light/80 text-base leading-relaxed space-y-4">
-              <p>
-                Pendant la période de création du spectacle, des ateliers sont proposés aux usagers des lieux culturels ainsi qu'aux écoles primaires et aux collèges. En plus d'offrir une sensibilisation à la présence scénique (respiration, conscience du corps, de soi et des autres, communication non verbale entre autres), ceux-ci sont centrés sur une initiation au jeu sur le thème de l'interdépendance : en quoi avons-nous besoin des autres ? Il y a donc un travail sur le regard et le toucher, et comment le jugement sur autrui se manifeste sans un mot.
-              </p>
-              <p>
-                Nous proposons aux participants un questionnaire sur leur vécu quant à se sentir jugé par les autres ou être dans une attitude de rejet de l'autre : à quelle occasion cela leur est-il arrivé ? Dans quelle situation précise ? Est-ce que cela a évolué avec l'âge ? A partir des réponses des participants, nous proposons de réaliser des scènes improvisées, si possible sans paroles.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-20">
-          <h3 class="font-display font-semibold text-2xl text-scene-cream mb-6 text-center">
-            Les ateliers en lien avec la création de SIMPLE
-          </h3>
-          <div class="relative">
-            <div class="flex gap-4 overflow-x-auto pb-4 snap-x hide-scrollbar md:justify-center md:flex-wrap md:overflow-visible md:snap-none pr-8">
-              <div
-                v-for="a in ateliersCreation"
-                :key="a.slug"
-                class="flex-shrink-0 w-48 md:w-64 snap-start"
-              >
-                <AtelierSimpleCard
-                  :titre="a.titre"
-                  :slug="a.slug"
-                  :affiche="a.image || ''"
-                  @select="openAtelierSimpleModal"
                 />
               </div>
             </div>
