@@ -12,28 +12,14 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'static',
+    preset: 'github-pages',
     prerender: {
       failOnError: false,
     },
   },
 
-  modules: [
-    '@nuxt/content',
-    '@nuxtjs/tailwindcss',
-    '@nuxt/image',
-    '@vueuse/nuxt',
-    '@nuxt/icon',
-    '@nuxtjs/sitemap',
-  ],
-
-  content: { highlight: false },
-
-  image: { quality: 85, format: ['webp', 'jpg'] },
-
-  css: ['~/assets/css/main.css'],
-
   app: {
+    baseURL: '/ciesansnon/',
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       htmlAttrs: {
@@ -53,6 +39,21 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/tailwindcss',
+    '@nuxt/image',
+    '@vueuse/nuxt',
+    '@nuxt/icon',
+    '@nuxtjs/sitemap',
+  ],
+
+  content: { highlight: false },
+
+  image: { quality: 85, format: ['webp', 'jpg'] },
+
+  css: ['~/assets/css/main.css'],
 
   runtimeConfig: {
     public: {
