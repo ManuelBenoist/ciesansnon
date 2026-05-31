@@ -7,7 +7,7 @@
             <NuxtImg
               src="/images/logo_csn.webp"
               alt="La Cie Sans Non — Accueil"
-              class="h-10 w-auto brightness-[1.6]"
+              class="h-12 w-auto brightness-[1.6]"
               loading="lazy"
             />
           </NuxtLink>
@@ -46,7 +46,7 @@
               rel="noopener noreferrer"
               class="text-scene-muted hover:text-scene-brick transition-colors"
             >
-              <Icon :name="social.icon" size="20" />
+              <Icon :name="social.icon" size="24" />
             </a>
           </div>
         </div>

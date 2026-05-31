@@ -59,11 +59,11 @@
                 <div class="flex items-center gap-4">
                   <a href="https://www.instagram.com/cie_sans_non" aria-label="Instagram" target="_blank" rel="noopener noreferrer"
                     class="text-scene-muted hover:text-scene-brick transition-colors p-2">
-                    <Icon name="mdi:instagram" size="22" />
+                    <Icon name="mdi:instagram" size="24" />
                   </a>
                   <a href="https://www.facebook.com/Ciesansnon" aria-label="Facebook" target="_blank" rel="noopener noreferrer"
                     class="text-scene-muted hover:text-scene-brick transition-colors p-2">
-                    <Icon name="mdi:facebook" size="22" />
+                    <Icon name="mdi:facebook" size="24" />
                   </a>
                 </div>
               </div>
