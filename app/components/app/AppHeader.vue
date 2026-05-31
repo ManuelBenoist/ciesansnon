@@ -12,7 +12,7 @@
         <NuxtImg
           src="/images/logo_csn.webp"
           alt="La Cie Sans Non — Accueil"
-          class="h-8 w-auto brightness-[1.6]"
+          class="h-10 w-auto brightness-[1.6]"
           loading="eager"
         />
       </NuxtLink>

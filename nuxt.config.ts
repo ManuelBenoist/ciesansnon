@@ -33,7 +33,7 @@ export default defineNuxtConfig({
         { name: 'color-scheme', content: 'dark' },
       ],
       link: [
-        { rel: 'icon', type: 'image/webp', href: '/images/logo_csn.webp' },
+        { rel: 'icon', type: 'image/webp', href: '/images/logo_csn_bg.webp' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       ],
     },
