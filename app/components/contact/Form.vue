@@ -166,7 +166,7 @@ async function onSubmit() {
 }
 
 .form-input:focus {
-  border-color: #C4573A;
+  border-color: #f46ed9;
 }
 
 .form-input::placeholder {

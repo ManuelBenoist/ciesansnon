@@ -16,7 +16,7 @@ export default <Config>{
           muted: '#5a5a5a',
           light: '#e8e2d9',
           cream: '#f5f0e8',
-          brick: '#C4573A',
+           brick: '#f46ed9',
           navy: '#3A6B8A',
           rouge: '#8b2635',
         },

@@ -13,7 +13,7 @@ npm run preview    # preview production build locally
 - Nuxt 4 with `future: { compatibilityVersion: 4 }` — `app/` directory as app root
 - SSG mode: `nitro.preset: 'github-pages'` — no server routes, optimised for GitHub Pages
 - Dark theme: `scene-black (#0c0c0c)` background, `scene-light (#e8e2d9)` text
-- Custom colors via `scene-*` Tailwind palette (`scene-brick` gold accent, `scene-rouge` badges)
+- Custom colors via `scene-*` Tailwind palette (`scene-brick` pink accent `#f46ed9`, `scene-rouge` badges)
 - Fonts auto-hosted via @fontsource (no Google Fonts calls)
 - Animations: CSS transitions + motion-v (plugin at `app/plugins/motion.client.ts`)
 - Icons: @nuxt/icon (Iconify) — use `<Icon name="mdi:instagram" />`
