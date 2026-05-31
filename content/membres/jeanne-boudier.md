@@ -3,9 +3,8 @@ nom: "Jeanne Boudier"
 slug: "jeanne-boudier"
 role_compagnie: "Comédienne"
 role_court: "comédienne"
+formation: "Promotion 2025 du CNSAD"
 bio: |
-  **Promotion 2025 du CNSAD (Conservatoire National Supérieur d'Art Dramatique)**
-
   **Cours d'interprétation** avec Sandy Ouvrier (2022/2023) puis Claire Lasne Darcueil (2023/2024) qui donne lieu au spectacle « Je me souviendrai peut-être de cela » d'après Jean-Luc Lagarce (juin 2024)
 
   - **Master class** avec Sylvain Creuzevault et Julien Gosselin ; avec Christophe Patty et Audrey Jean-Baptiste sur le cinémasque pour Quelques mots d'amour (décembre 2024).

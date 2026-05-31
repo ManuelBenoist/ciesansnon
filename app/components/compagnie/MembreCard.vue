@@ -19,7 +19,10 @@
       {{ nom }}
     </h3>
     <p class="font-body text-xs uppercase tracking-widest text-scene-brick/70 mt-1.5">
-      {{ roleCourt }}
+      {{ roleCourt.replace(/-/g, ' ') }}
+    </p>
+    <p v-if="formation" class="font-body text-[11px] text-scene-brick/80 mt-1 leading-snug">
+      {{ formation }}
     </p>
   </button>
 </template>
@@ -30,6 +33,7 @@ defineProps<{
   roleCourt: string
   photo: string
   slug: string
+  formation?: string
 }>()
 
 defineEmits<{

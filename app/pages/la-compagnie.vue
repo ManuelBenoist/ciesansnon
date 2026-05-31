@@ -73,6 +73,7 @@
               :role-court="membre.roleCourt"
               :photo="membre.photo"
               :slug="membre.slug"
+              :formation="membre.formation"
               @select="openMemberModal"
             />
           </div>
@@ -87,6 +88,7 @@
         :role="selectedMembre.role"
         :photo="selectedMembre.photo"
         :bio="selectedMembre.bio"
+        :formation="selectedMembre.formation"
       />
     </UiModal>
   </div>
@@ -127,6 +129,7 @@ const membres = computed(() =>
     role: m.role_compagnie,
     photo: m.photo || '',
     bio: m.bio || undefined,
+    formation: m.formation || undefined,
   }))
 )
 
@@ -136,6 +139,7 @@ const selectedMembre = ref<{
   role: string
   photo: string
   bio?: string
+  formation?: string
 } | null>(null)
 
 function openMemberModal(slug: string) {
@@ -146,6 +150,7 @@ function openMemberModal(slug: string) {
       role: membre.role,
       photo: membre.photo,
       bio: membre.bio,
+      formation: membre.formation,
     }
     isModalOpen.value = true
   }

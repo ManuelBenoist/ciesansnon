@@ -57,6 +57,7 @@ export default defineContentConfig({
         role_court: z.string(),
         photo: z.string().nullable().optional(),
         bio: z.string().nullable().optional(),
+        formation: z.string().nullable().optional(),
         ordre: z.number().optional(),
         dans_organigramme: z.boolean().nullable().optional(),
       }),

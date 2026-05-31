@@ -3,9 +3,8 @@ nom: "Olivier Sangwa"
 slug: "olivier-sangwa"
 role_compagnie: "Comédien"
 role_court: "comédien"
+formation: "Promotion 2025 du CNSAD"
 bio: |
-  **Promotion 2025 du CNSAD (Conservatoire National Supérieur d'Art Dramatique)**
-
   **Cours d'interprétation** avec Gilles David (2022/2023) puis avec Nada Strancar (2023/2024) qui donne lieu au spectacle « Quelle simplicité à l'homme de désirer la chair » d'après Peines d'amour perdues de William Shakespeare et Les Femmes Savantes de Molière (juin 2024)
 
   - **Master class** avec Sylvain Creuzevault qui présente Etudes Pasoliniennes (octobre 2024) ; avec Christophe Patty et Audrey Jean-Baptiste sur le cinémasque pour Quelques mots d'amour (décembre 2024).

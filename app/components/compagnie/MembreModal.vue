@@ -17,9 +17,13 @@
       <h3 class="font-display text-3xl sm:text-4xl text-scene-cream mb-2">
         {{ nom }}
       </h3>
-      <p class="font-body text-base text-scene-brick mb-6">
+      <p class="font-body text-base text-scene-brick mb-2">
         {{ role }}
       </p>
+      <p v-if="formation" class="font-body text-sm text-scene-brick mb-6">
+        {{ formation }}
+      </p>
+      <div v-else class="mb-6" />
       <div class="w-12 h-px bg-[#2a2a2a] mb-6" />
       <div class="font-body text-scene-light/80 leading-relaxed text-sm space-y-4">
         <template v-if="bio">
@@ -42,6 +46,7 @@ const props = defineProps<{
   role: string
   photo: string
   bio?: string
+  formation?: string
 }>()
 
 function escapeHtml(text: string): string {
