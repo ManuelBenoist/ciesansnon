@@ -2,8 +2,8 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
     <template v-if="photo">
       <div class="relative aspect-[3/4] overflow-hidden rounded-sm">
-        <NuxtImg
-          :src="photo"
+        <img
+          :src="imgSrc(photo)"
           :alt="`Portrait de ${nom}`"
           class="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
@@ -48,6 +48,12 @@ const props = defineProps<{
   bio?: string
   formation?: string
 }>()
+
+const baseURL = useRuntimeConfig().app.baseURL
+
+function imgSrc(path: string): string {
+  return baseURL + path.replace(/^\//, '')
+}
 
 function escapeHtml(text: string): string {
   return text

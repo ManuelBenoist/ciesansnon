@@ -1,8 +1,8 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
     <div class="relative aspect-[2/3] overflow-hidden rounded-sm">
-      <NuxtImg
-        :src="atelier.affiche"
+      <img
+        :src="imgSrc(atelier.affiche)"
         :alt="`Affiche : ${atelier.titre}`"
         class="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
@@ -46,8 +46,8 @@
         class="relative aspect-[4/3] overflow-hidden rounded-sm"
         @click="openLightbox(img)"
       >
-        <NuxtImg
-          :src="img"
+        <img
+          :src="imgSrc(img)"
           alt=""
           class="absolute inset-0 w-full h-full object-cover hover:opacity-80 transition-opacity"
           loading="lazy"
@@ -101,8 +101,14 @@ const props = defineProps<{
 
 const lightboxImage = ref<string | null>(null)
 
+const baseURL = useRuntimeConfig().app.baseURL
+
+function imgSrc(path: string): string {
+  return baseURL + path.replace(/^\//, '')
+}
+
 function openLightbox(img: string) {
-  lightboxImage.value = img
+  lightboxImage.value = imgSrc(img)
 }
 
 function escapeHtml(text: string): string {

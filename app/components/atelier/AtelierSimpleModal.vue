@@ -1,9 +1,9 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
     <div class="relative aspect-[16/9] overflow-hidden rounded-sm bg-scene-surface">
-      <NuxtImg
+      <img
         v-if="atelier.image"
-        :src="atelier.image"
+        :src="imgSrc(atelier.image)"
         :alt="atelier.titre"
         class="absolute inset-0 w-full h-full object-contain"
         loading="lazy"
@@ -37,8 +37,8 @@
         class="relative aspect-[16/9] overflow-hidden rounded-sm bg-scene-surface"
         @click="openLightbox(img)"
       >
-        <NuxtImg
-          :src="img"
+        <img
+          :src="imgSrc(img)"
           alt=""
           class="absolute inset-0 w-full h-full object-contain hover:opacity-80 transition-opacity"
           loading="lazy"
@@ -85,8 +85,14 @@ const props = defineProps<{
 
 const lightboxImage = ref<string | null>(null)
 
+const baseURL = useRuntimeConfig().app.baseURL
+
+function imgSrc(path: string): string {
+  return baseURL + path.replace(/^\//, '')
+}
+
 function openLightbox(img: string) {
-  lightboxImage.value = img
+  lightboxImage.value = imgSrc(img)
 }
 
 function onKeydown(e: KeyboardEvent) {
