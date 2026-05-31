@@ -85,6 +85,7 @@ export default defineContentConfig({
         ville: z.string(),
         date: z.string(),
         affiche: z.string(),
+        affiche_par: z.string().optional(),
         accroche: z.string().optional(),
         description: z.string().optional(),
         ordre: z.number(),

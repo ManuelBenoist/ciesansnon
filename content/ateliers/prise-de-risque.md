@@ -6,6 +6,7 @@ lieu: "AFSCO & Théâtre de la Sinne "
 ville: "Mulhouse"
 date: "4 au 6 juin & 7 et 8 octobre 2026"
 affiche: "/images/ateliers/affiche-prise-de-risque.webp"
+affiche_par: "Léonore Gutleben, Vivien Benoist"
 accroche: "Un spectacle musical de l'Atelier de la Cie Sans Non"
 description: |
   Certains n'osent pas prendre la parole, regarder l'autre dans les yeux, porter les vêtements qu'ils aiment, avouer leurs sentiments. Ne risquent-ils pas de passer à côté de leur vie ?

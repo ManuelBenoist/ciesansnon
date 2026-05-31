@@ -6,6 +6,7 @@ lieu: "AFSCO & Théâtre de la Sinne"
 ville: "Mulhouse"
 date: "30 mai au 1er juin & 7 et 8 octobre 2024"
 affiche: "/images/ateliers/affiche-ce-qui-nous-lie.webp"
+affiche_par: "Vasil Tasevski, Félix Benoist"
 accroche: "Un spectacle musical de l'Atelier de la Cie Sans Non"
 description: |
   Si pour certains « l'enfer, c'est les autres », personne ne veut vivre replié sur soi, sans autre compagnie que soi-même. **Les relations que nous tissons avec les autres nous constituent,** donnent sens à nos vies, forgent ce que nous sommes. Entre parents et enfants, entre frère et sœur, entre grands-parents et petits-enfants, le nœud est premier ; pourtant, il y a mille façons de vivre ces relations fondatrices. De même, pour l'amitié et l'amour : comment naissent-elles ? Est-ce la ressemblance qui nous attire chez les autres ou, au contraire, l'attrait de la différence ? Le spectacle explore **CE QUI NOUS LIE** sous forme de tableaux drôles ou émouvants, parfois les deux en même temps.

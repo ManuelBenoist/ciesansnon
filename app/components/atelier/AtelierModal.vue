@@ -1,12 +1,20 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-    <div class="relative aspect-[2/3] overflow-hidden rounded-sm">
-      <img
-        :src="imgSrc(atelier.affiche)"
-        :alt="`Affiche : ${atelier.titre}`"
-        class="absolute inset-0 w-full h-full object-cover"
-        loading="lazy"
-      />
+    <div>
+      <div class="relative aspect-[2/3] overflow-hidden rounded-sm">
+        <img
+          :src="imgSrc(atelier.affiche)"
+          :alt="`Affiche : ${atelier.titre}`"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <p
+        v-if="atelier.affiche_par"
+        class="mt-3 text-center font-body text-xs text-scene-muted uppercase tracking-wider"
+      >
+        Affiche : <span class="text-scene-light normal-case">{{ atelier.affiche_par }}</span>
+      </p>
     </div>
     <div class="flex flex-col space-y-6">
       <div>
@@ -92,6 +100,7 @@ const props = defineProps<{
     date: string
     type_entree: string
     affiche: string
+    affiche_par?: string
     accroche?: string
     description?: string
     ordre: number

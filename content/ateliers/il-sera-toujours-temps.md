@@ -6,6 +6,7 @@ lieu: "AFSCO Espace Matisse & Théâtre de la Sinne"
 ville: "Mulhouse"
 date: "10 au 17 juin 2023 & 3 octobre 2023"
 affiche: "/images/ateliers/affiche-il-sera-toujours-temps.webp"
+affiche_par: "Leïla Thiriet"
 accroche: "Un spectacle musical de l'Atelier de la Cie Sans Non"
 description: |
   Il y a ceux qui sont toujours pressés, ceux qui repoussent toujours au lendemain ce qu'ils pourraient faire le jour même, ceux qui se demandent de quoi demain sera fait et ceux qui ont la nostalgie de leur enfance. Il y a ceux qui vivent l'instant présent comme s'il devait durer toujours et ceux qui rêvent d'avoir ne serait-ce qu'une minute à eux. Il y a ceux qui attendent tranquilles pendant des heures et ceux qui s'impatientent tout de suite. Il y a ceux qui ne voient pas les saisons passer et ceux qui vivent au rythme de la nature. Il y a mille façons d'habiter le **TEMPS**. Celles-ci, présentées sous forme de tableaux qui mêlent jeu, danse, chant, slam, cirque, donnent lieu à des scènes drôles ou émouvantes, parfois les deux en même temps.

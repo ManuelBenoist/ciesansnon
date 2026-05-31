@@ -6,6 +6,7 @@ lieu: "AFSCO & Théâtre de la Sinne"
 date: "5 au 7 juin & 8 et 9 octobre 2025"
 ville: "Mulhouse"
 affiche: "/images/ateliers/affiche-non.webp"
+affiche_par: "Vivien Benoist"
 accroche: "Un spectacle musical de l'Atelier de la Cie Sans Non"
 description: |
   **Pour grandir, il faut savoir dire non…** et apprendre à s'entendre dire non.

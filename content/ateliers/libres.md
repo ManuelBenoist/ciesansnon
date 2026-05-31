@@ -6,6 +6,7 @@ ville: "Mulhouse"
 lieu: "AFSCO Espace Matisse & Théâtre de la Sinne"
 date: "1er au 4 juin & 8 novembre 2022"
 affiche: "/images/ateliers/affiche-libres.webp"
+affiche_par: "Leïla Thiriet"
 accroche: "Un spectacle musical de l'Atelier de la Cie Sans Non"
 description: |
   Le spectacle créé par l'Atelier de la Cie Sans Non explore le thème de la **liberté** vu à hauteur des jeunes de 15 à 25 ans. Quelles sont les contraintes qu'on vit à 14 ans ? et à 20 ans ?

@@ -6,6 +6,7 @@ lieu: "AFSCO - Espace Matisse, Salle de l'ancienne Gare (Lautenbach), Théâtre 
 ville: "Mulhouse"
 date: "12 juin & 22 octobre & 8 novembre 2021"
 affiche: "/images/ateliers/affiche-j-ai-trop-peur.webp"
+affiche_par: "Lucia Diguat-Mateus"
 accroche: "Un spectacle de théâtre de la Cie Sans Non"
 description: |
   Pour son premier spectacle théâtral, l'atelier de la Cie Sans Non a décidé de mettre en scène une pièce de l'auteur-metteur en scène **David Lescot**.

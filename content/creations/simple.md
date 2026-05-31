@@ -28,14 +28,14 @@ casting:
   - nom: "Olivier SANGWA, Jeanne BOUDIER"
     role: "Jeu"
 equipe_technique:
-  - poste: "Regard artistique"
-    nom: "Lionel LINGELSER"
-  - poste: "Regard circassien et scénographique"
-    nom: "Vasil TASEVSKI"
   - poste: "Création lumières"
     nom: "Loïc WARIDEL"
   - poste: "Création costumes"
     nom: "Lucie DURANTEAU"
+  - poste: "Regard artistique"
+    nom: "Lionel LINGELSER"
+  - poste: "Regard circassien et scénographique"
+    nom: "Vasil TASEVSKI"
   - poste: "Photographe plateau"
     nom: "Laure BAUER-TRAUNECKER"
 dates: []
