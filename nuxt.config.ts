@@ -34,8 +34,8 @@ export default defineNuxtConfig({
         { name: 'color-scheme', content: 'dark' },
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/webp', href: '/ciesansnon/images/logo_csn.webp' },
+        { rel: 'apple-touch-icon', href: '/ciesansnon/apple-touch-icon.png' },
       ],
     },
   },

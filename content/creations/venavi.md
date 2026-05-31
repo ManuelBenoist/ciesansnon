@@ -38,7 +38,7 @@ equipe_technique:
     nom: "Félix BENOIST"
   - poste: "Photographe plateau"
     nom: "Laure BAUER-TRAUNECKER"
-video_url: "/videos/venavi-teaser.mp4"
+video_url: "https://youtu.be/Jnad0I9XWtc"
 dates: []
 seo_title: "VENAVI — Création théâtrale | La Cie Sans Non"
 seo_description: "VENAVI, un conte africain adapté par Catherine Verlaguet, mis en scène par Marie-Hélène et Félix Benoist. Un seul en scène par Olivier Sangwa."

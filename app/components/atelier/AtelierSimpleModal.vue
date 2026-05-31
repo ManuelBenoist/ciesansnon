@@ -31,20 +31,45 @@
   </div>
   <template v-if="atelier.galerie && atelier.galerie.length">
     <div class="mt-8 grid grid-cols-2 gap-4">
-      <div
+      <button
         v-for="(img, k) in atelier.galerie"
         :key="k"
         class="relative aspect-[16/9] overflow-hidden rounded-sm bg-scene-surface"
+        @click="openLightbox(img)"
       >
         <NuxtImg
           :src="img"
           alt=""
-          class="absolute inset-0 w-full h-full object-contain"
+          class="absolute inset-0 w-full h-full object-contain hover:opacity-80 transition-opacity"
           loading="lazy"
         />
-      </div>
+      </button>
     </div>
   </template>
+
+  <Teleport to="body">
+    <Transition name="lightbox">
+      <div
+        v-if="lightboxImage"
+        class="fixed inset-0 z-[99999] flex items-center justify-center p-4 sm:p-8"
+        @click.self="lightboxImage = null"
+      >
+        <div class="absolute inset-0 bg-scene-black/90" />
+        <button
+          class="absolute top-6 right-6 z-10 text-scene-muted hover:text-scene-cream transition-colors p-3"
+          @click="lightboxImage = null"
+          aria-label="Fermer"
+        >
+          <Icon name="mdi:close" size="28" />
+        </button>
+        <img
+          :src="lightboxImage"
+          class="relative z-10 max-w-full max-h-full object-contain select-none"
+          alt=""
+        />
+      </div>
+    </Transition>
+  </Teleport>
 </template>
 
 <script setup lang="ts">
@@ -57,6 +82,26 @@ const props = defineProps<{
     galerie?: string[]
   }
 }>()
+
+const lightboxImage = ref<string | null>(null)
+
+function openLightbox(img: string) {
+  lightboxImage.value = img
+}
+
+function onKeydown(e: KeyboardEvent) {
+  if (e.key === 'Escape' && lightboxImage.value) {
+    lightboxImage.value = null
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', onKeydown)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('keydown', onKeydown)
+})
 
 function escapeHtml(text: string): string {
   return text
@@ -88,3 +133,15 @@ const parsedDescription = computed(() => {
   return blocks
 })
 </script>
+
+<style scoped>
+.lightbox-enter-active,
+.lightbox-leave-active {
+  transition: opacity 250ms ease;
+}
+
+.lightbox-enter-from,
+.lightbox-leave-to {
+  opacity: 0;
+}
+</style>

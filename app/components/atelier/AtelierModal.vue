@@ -44,7 +44,7 @@
         v-for="(img, k) in atelier.galerie"
         :key="k"
         class="relative aspect-[4/3] overflow-hidden rounded-sm"
-        @click="openLightbox(k)"
+        @click="openLightbox(img)"
       >
         <NuxtImg
           :src="img"
@@ -55,6 +55,30 @@
       </button>
     </div>
   </template>
+
+  <Teleport to="body">
+    <Transition name="lightbox">
+      <div
+        v-if="lightboxImage"
+        class="fixed inset-0 z-[99999] flex items-center justify-center p-4 sm:p-8"
+        @click.self="lightboxImage = null"
+      >
+        <div class="absolute inset-0 bg-scene-black/90" />
+        <button
+          class="absolute top-6 right-6 z-10 text-scene-muted hover:text-scene-cream transition-colors p-3"
+          @click="lightboxImage = null"
+          aria-label="Fermer"
+        >
+          <Icon name="mdi:close" size="28" />
+        </button>
+        <img
+          :src="lightboxImage"
+          class="relative z-10 max-w-full max-h-full object-contain select-none"
+          alt=""
+        />
+      </div>
+    </Transition>
+  </Teleport>
 </template>
 
 <script setup lang="ts">
@@ -75,12 +99,10 @@ const props = defineProps<{
   }
 }>()
 
-const lightboxImages = ref<string[]>([])
-const lightboxIndex = ref(0)
+const lightboxImage = ref<string | null>(null)
 
-function openLightbox(index: number) {
-  lightboxImages.value = props.atelier.galerie || []
-  lightboxIndex.value = index
+function openLightbox(img: string) {
+  lightboxImage.value = img
 }
 
 function escapeHtml(text: string): string {
@@ -95,6 +117,20 @@ function escapeHtml(text: string): string {
 function formatInline(text: string): string {
   return escapeHtml(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
 }
+
+function onKeydown(e: KeyboardEvent) {
+  if (e.key === 'Escape' && lightboxImage.value) {
+    lightboxImage.value = null
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', onKeydown)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('keydown', onKeydown)
+})
 
 const parsedDescription = computed(() => {
   if (!props.atelier.description) return []
@@ -113,3 +149,15 @@ const parsedDescription = computed(() => {
   return blocks
 })
 </script>
+
+<style scoped>
+.lightbox-enter-active,
+.lightbox-leave-active {
+  transition: opacity 250ms ease;
+}
+
+.lightbox-enter-from,
+.lightbox-leave-to {
+  opacity: 0;
+}
+</style>

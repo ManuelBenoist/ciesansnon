@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 useSeo({
-  title: 'Théâtre vivant',
+  title: 'La Cie Sans Non',
   description: 'Compagnie de théâtre : créations, actions culturelles et médiation. Des mots, des corps, des silences — un théâtre qui ne dit jamais non à la vie.',
   type: 'website',
 })
