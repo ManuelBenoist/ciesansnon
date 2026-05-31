@@ -62,10 +62,6 @@ export default defineContentConfig({
         dans_organigramme: z.boolean().nullable().optional(),
       }),
     }),
-    actus: defineCollection({
-      type: 'page',
-      source: 'actus/*.md',
-    }),
     ateliers_creation: defineCollection({
       type: 'data',
       source: 'ateliers-creation/*.md',

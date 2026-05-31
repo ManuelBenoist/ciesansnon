@@ -107,10 +107,6 @@ useSeo({
   description: 'Contactez la Compagnie Sans Non : diffusion, résidences, actions culturelles. Formulaire de contact, email et réseaux sociaux.',
 })
 
-function safeJsonLd(obj: any) {
-  return JSON.stringify(obj).replace(/</g, '\\u003c')
-}
-
 useHead({
   script: [{
     type: 'application/ld+json',

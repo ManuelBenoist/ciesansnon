@@ -126,10 +126,6 @@ const breadcrumbLd = computed(() => {
   }
 })
 
-function safeJsonLd(obj: any) {
-  return JSON.stringify(obj).replace(/</g, '\\u003c')
-}
-
 useHead(() => ({
   script: [
     ...(jsonLd.value ? [{ type: 'application/ld+json', innerHTML: safeJsonLd(jsonLd.value) }] : []),

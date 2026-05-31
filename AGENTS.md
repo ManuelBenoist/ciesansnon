@@ -5,8 +5,7 @@ Stack : Nuxt 4 (SSG) · Tailwind CSS · Nuxt Content v3 · Formspree · motion-v
 ## Commands
 ```bash
 npm run dev        # dev server on localhost:3000
-npm run generate   # static export → .output/public/
-npm run build      # build (not needed for SSG)
+npm run generate   # static export → .output/public/ (commande de vérité)
 npm run preview    # preview production build locally
 ```
 
@@ -19,13 +18,12 @@ npm run preview    # preview production build locally
 - Animations: CSS transitions + motion-v (plugin at `app/plugins/motion.client.ts`)
 - Icons: @nuxt/icon (Iconify) — use `<Icon name="mdi:instagram" />`
 - Form: Formspree AJAX via `useFormspree` composable (set `NUXT_PUBLIC_FORMSPREE_ID` in `.env`)
-- SEO: `useSeo()` composable wraps useSeoMeta + useHead (french lang, OG, Twitter card)
+- SEO: `useSeo()` composable wraps useSeoMeta + useHead (french lang, OG, Twitter card). Import `safeJsonLd` from `app/utils/safeJsonLd.ts` for JSON-LD script tags.
 - Logo (`logo_csn.webp`) is dark on dark bg → `brightness-[1.6]` in AppHeader/AppFooter/AppNav. Remove filter if logo is replaced.
 
 ## Content collections (`content.config.ts`)
 - This file is **mandatory** for `queryCollection` `where()`/`order()` on custom fields
-- `creations` has a full zod schema → all YAML fields are queryable SQL columns
-- `membres` and `actus` have **NO schema** (`type: 'page'` only). Add a zod schema before using `where()`/`order()` on custom fields
+- `creations`, `membres`, `ateliers`, `ateliers_creation` have full zod schemas → all YAML fields are queryable SQL columns
 - Use `type: 'data'` for non-page content (no auto `path` field generated)
 - Always `await useAsyncData('key', () => queryCollection(...).all())` inside page `<script setup>`
 
@@ -52,7 +50,7 @@ npm run preview    # preview production build locally
 
 ### 2. Never use `definePageMeta({ key: route => route.fullPath })` on dynamic pages
 - This breaks client-side navigation when combined with `pageTransition: { mode: 'out-in' }`.
-- Root cause: `definePageMeta` macro + a functional `key` conflicts with Vue’s out-in transition, preventing the incoming page component from mounting.
+- Root cause: `definePageMeta` macro + a functional `key` conflicts with Vue's out-in transition, preventing the incoming page component from mounting.
 - **Fix**: remove `definePageMeta({ key: ... })`. For dynamic data, make `useAsyncData` reactive by passing a **function** as the key:
   ```ts
   const { data: creation } = await useAsyncData(
@@ -82,6 +80,17 @@ The `public/.nojekyll` file prevents GitHub Pages from processing the site with 
 
 **Custom domain**: `https://ciesansnon.com` — configure in repo Settings > Pages, or add a CNAME record to your DNS provider pointing to `ciesansnon.github.io`.
 
-## Current gaps & next steps
-1. `content/membres/*.md` files exist but need `bio:` body content and `photo:` paths filled
-2. `content/creations/simple.md` body content (synopsis) is placeholder — VENAVI is complete
+## Pre-deployment checklist (SEO & integrity)
+Before merging to `main` or deploying, run these checks:
+- [ ] `npm run generate` passes without errors
+- [ ] `.output/public/sitemap.xml` exists and contains all routes
+- [ ] Every page calls `useSeo()` (title, description, canonical, OG tags)
+- [ ] JSON-LD is valid on key pages (home, compagnie, spectacle, contact)
+- [ ] Images referenced in `content/` files exist in `public/images/`
+- [ ] No accidental `noindex` on public pages
+- [ ] `robots.txt` is present in `public/`
+- [ ] Formspree ID is set in environment for production
+
+## Dead code to avoid re-creating
+- `app/components/spectacle/SpectacleGallery.vue` and `app/components/ui/UiLightbox.vue` were removed as unused. If you need a gallery, re-implement from scratch rather than restoring stale code.
+- Collection `actus` was removed from `content.config.ts` and `content/actus/` — it was defined but never queried in the app.

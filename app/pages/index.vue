@@ -13,10 +13,6 @@ useSeo({
   type: 'website',
 })
 
-function safeJsonLd(obj: any) {
-  return JSON.stringify(obj).replace(/</g, '\\u003c')
-}
-
 useHead({
   script: [{
     type: 'application/ld+json',
