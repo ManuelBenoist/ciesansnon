@@ -9,7 +9,7 @@
 <script setup lang="ts">
 useSeo({
   title: 'La Cie Sans Non',
-  description: 'Compagnie de théâtre : créations, actions culturelles et médiation. Des mots, des corps, des silences — un théâtre qui ne dit jamais non à la vie.',
+  description: "Toucher l'imaginaire et les émotions d'un public qui ne fait pas forcément du théâtre une pratique culturelle habituelle.",
   type: 'website',
 })
 
@@ -21,7 +21,7 @@ useHead({
       '@type': 'WebSite',
       name: 'La Cie Sans Non',
       url: 'https://ciesansnon.com',
-      description: 'Compagnie de théâtre — créations et actions culturelles',
+      description: "Toucher l'imaginaire et les émotions d'un public qui ne fait pas forcément du théâtre une pratique culturelle habituelle",
     }),
   }, {
     type: 'application/ld+json',
@@ -30,7 +30,7 @@ useHead({
       '@type': 'Organization',
       name: 'La Cie Sans Non',
       url: 'https://ciesansnon.com',
-      description: 'Compagnie de théâtre — créations et actions culturelles',
+      description: "Toucher l'imaginaire et les émotions d'un public qui ne fait pas forcément du théâtre une pratique culturelle habituelle",
     }),
   }],
 })
